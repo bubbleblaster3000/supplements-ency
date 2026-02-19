@@ -35,20 +35,99 @@
 
 ```text
 supplements-ency/
-├── index.html                 ← Home page (categories grid + global ranked list)
+├── index.html                 ← Home page (categories grid + stacks + global ranked list)
 ├── category.html              ← Category view (sort toggle: evidence / alpha)
 ├── supplement.html            ← Individual supplement detail page
+├── stack.html                 ← Stack detail page (timing blocks, synergies, potency)
 ├── css/
 │   └── style.css              ← All styles (CSS variables, dark/light themes, responsive)
 ├── js/
 │   ├── evidence.js            ← Evidence scoring engine (weights, normalization, tiers)
-│   ├── render.js              ← HTML template generators for all pages/components
-│   └── app.js                 ← Core logic (data loading, routing, search, theme toggle)
+│   ├── render.js              ← HTML template generators for all pages/components (incl. stacks)
+│   └── app.js                 ← Core logic (data loading, routing, search, theme toggle, stacks)
 ├── data/
 │   ├── categories.json        ← Category definitions (id, name, icon, description, color)
-│   └── supplements.json       ← All supplement entries (full schema — see below)
+│   ├── supplements.json       ← All supplement entries (full schema — see below)
+│   └── stacks.json            ← Supplement stack protocols (timing, synergies, potency)
 └── WORKFLOW.md                ← This file
 ```
+
+---
+
+## Data Schema: Stacks
+
+Each stack in `data/stacks.json` represents a complete supplement protocol with timing blocks, synergy analysis, and evidence assessment.
+
+```jsonc
+{
+  "id": "kebab-case-id",
+  "name": "Display Name",
+  "tagline": "One-sentence summary (<150 chars)",
+  "description": "Multi-paragraph overview of the stack",
+  "targetAudience": "Who this stack is designed for",
+  "blocks": [
+    {
+      "id": "timing-block-id",
+      "name": "Block Name (Localized)",
+      "timing": "When to take these supplements",
+      "icon": "🌅",
+      "rationale": "Why this timing matters — biochemical justification",
+      "items": [
+        {
+          "supplementId": "id-or-null",  // Links to supplements.json entry, null if not in DB
+          "name": "Display Name",
+          "dose": "Dose with units",
+          "role": "What this supplement does in this stack context"
+        }
+      ]
+    }
+  ],
+  "synergies": [
+    {
+      "supplements": ["Name A", "Name B"],
+      "type": "synergy-type",           // e.g., substrate-replenishment, biochemical-synergy
+      "strength": "strong | moderate",
+      "evidenceLevel": "strong | moderate | emerging",
+      "description": "What the synergy is and why it matters",
+      "mechanism": "Biochemical mechanism explanation"
+    }
+  ],
+  "categoryPotency": [
+    {
+      "categoryId": "cognitive",
+      "rating": 9,
+      "maxRating": 10,
+      "rationale": "Why this stack scores X/10 in this category"
+    }
+  ],
+  "evidenceAssessment": {
+    "overallScore": 72,               // 0–100, same scale as individual supplements
+    "overallTier": "A",
+    "overallLabel": "Strong Evidence Base",
+    "rationale": "Overall assessment of the stack's evidence quality",
+    "strongestComponents": ["Component descriptions"],
+    "weakestComponents": ["Component descriptions"]
+  },
+  "warnings": ["Warning strings"],
+  "costEstimate": {
+    "currency": "EUR",
+    "monthlyLow": 80,
+    "monthlyHigh": 150,
+    "note": "Additional cost context"
+  },
+  "references": ["Formatted citation strings"]
+}
+```
+
+### Workflow: Adding a New Stack
+
+1. **Define timing blocks** — group supplements by their optimal intake window
+2. **Identify synergies** — document all meaningful interactions between stack components
+3. **Rate category potency** — score the stack's effectiveness in each relevant category (1–10)
+4. **Assess overall evidence** — provide an honest composite score based on component evidence
+5. **Document warnings** — flag all prescription medications, interaction risks, and contraindications
+6. **Link supplements** — set `supplementId` for any supplement that exists in `supplements.json`
+7. **Validate JSON** — ensure the file parses correctly after editing
 
 ---
 

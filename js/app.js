@@ -8,6 +8,7 @@ const App = (() => {
 
   let categoriesData = null;
   let supplementsData = null;
+  let stacksData = null;
 
   // ──────────────────────────────
   // DATA LOADING
@@ -20,13 +21,15 @@ const App = (() => {
   }
 
   async function loadData() {
-    const [catResult, suppResult] = await Promise.all([
+    const [catResult, suppResult, stackResult] = await Promise.all([
       loadJSON('data/categories.json'),
-      loadJSON('data/supplements.json')
+      loadJSON('data/supplements.json'),
+      loadJSON('data/stacks.json').catch(() => ({ stacks: [] }))
     ]);
     categoriesData = catResult.categories;
     supplementsData = suppResult.supplements;
-    return { categories: categoriesData, supplements: supplementsData };
+    stacksData = stackResult.stacks || [];
+    return { categories: categoriesData, supplements: supplementsData, stacks: stacksData };
   }
 
   // ──────────────────────────────
@@ -50,9 +53,9 @@ const App = (() => {
   // ──────────────────────────────
 
   async function initHomePage() {
-    const { categories, supplements } = await loadData();
+    const { categories, supplements, stacks } = await loadData();
     const container = document.getElementById('app');
-    container.innerHTML = Render.homePage(categories, supplements);
+    container.innerHTML = Render.homePage(categories, supplements, stacks);
     initSearch(supplements, categories);
   }
 
@@ -131,6 +134,40 @@ const App = (() => {
     });
 
     // Highlight active sidebar section on scroll
+    initScrollSpy();
+  }
+
+  async function initStackPage() {
+    const { categories, supplements, stacks } = await loadData();
+    const stackId = getQueryParam('id');
+    const stack = stacks.find(s => s.id === stackId);
+
+    if (!stack) {
+      document.getElementById('app').innerHTML = `
+        <div class="container" style="padding: 4rem 0; text-align: center;">
+          <h1>Stack Not Found</h1>
+          <p>The stack "${stackId}" does not exist.</p>
+          <a href="index.html" class="btn">← Back to Home</a>
+        </div>
+      `;
+      return;
+    }
+
+    const container = document.getElementById('app');
+    container.innerHTML = Render.stackPage(stack, supplements, categories);
+
+    // Smooth scroll for sidebar links
+    document.querySelectorAll('.sidebar-nav__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
     initScrollSpy();
   }
 
@@ -263,6 +300,7 @@ const App = (() => {
     initHomePage,
     initCategoryPage,
     initSupplementPage,
+    initStackPage,
     initThemeToggle,
     loadData
   };

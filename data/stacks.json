@@ -1,0 +1,406 @@
+{
+  "stacks": [
+    {
+      "id": "daily-performance-recovery",
+      "name": "Daily Performance & Recovery Protocol",
+      "tagline": "A comprehensive full-day stack optimizing focus, training output, digestion, and deep sleep through evidence-based timing windows.",
+      "description": "This protocol distributes supplements across six timing windows — from a fasted morning cognitive block through a dedicated nighttime wind-down — to maximize absorption, minimize interactions, and align each compound with its optimal physiological window. The stack addresses five major axes: cognitive performance (Elvanse + Tyrosin + Huperzine A), metabolic health (Berberine + digestive enzymes), foundational nutrition (D3K2 + multivitamin + Q10), training performance and recovery (maltodextrin + protein + electrolytes), and deep recovery (NAC + glycine + magnesium + taurine + inositol + omega-3 + trazodone + melatonin).",
+      "targetAudience": "Active individuals (resistance training 4–6×/week) with ADHD medication, seeking to maximize cognitive output during the day and protect sleep architecture at night.",
+      "blocks": [
+        {
+          "id": "fasted",
+          "name": "Nüchtern (Fasted)",
+          "timing": "Morning, immediately upon waking, on an empty stomach",
+          "icon": "🌅",
+          "rationale": "Amino acid precursors like tyrosine compete with other large neutral amino acids (LNAAs) for the LAT1 transporter at the blood-brain barrier. Taking tyrosine fasted eliminates competition and maximizes brain uptake. Stimulant medications also absorb faster on an empty stomach. Huperzine A's long half-life (~10–14 h) means a single morning dose provides all-day acetylcholinesterase inhibition.",
+          "items": [
+            {
+              "supplementId": "l-tyrosine",
+              "name": "L-Tyrosin (L-Tyrosine)",
+              "dose": "500–2,000 mg",
+              "role": "Dopamine & norepinephrine precursor — replenishes catecholamine stores depleted by stimulant use"
+            },
+            {
+              "supplementId": "elvanse",
+              "name": "Elvanse (Lisdexamfetamine)",
+              "dose": "As prescribed (typically 30–70 mg)",
+              "role": "Core ADHD medication — prodrug releasing d-amphetamine for sustained dopamine/norepinephrine enhancement"
+            },
+            {
+              "supplementId": null,
+              "name": "Huperzin A (Huperzine A)",
+              "dose": "100–200 μg",
+              "role": "Reversible acetylcholinesterase inhibitor — boosts acetylcholine levels for memory and learning"
+            }
+          ]
+        },
+        {
+          "id": "breakfast",
+          "name": "Frühstück (Breakfast)",
+          "timing": "With first meal of the day",
+          "icon": "🍳",
+          "rationale": "Fat-soluble vitamins (D3, K2) and CoQ10 require dietary fat for absorption — taking them with a meal containing fats increases bioavailability 2–3×. Berberine is best taken with meals to reduce GI side effects and to target postprandial glucose spikes. Digestive enzymes by definition require food as substrate.",
+          "items": [
+            {
+              "supplementId": null,
+              "name": "Berberin (Berberine)",
+              "dose": "500 mg",
+              "role": "AMPK activator — blunts postprandial glucose spike, improves insulin sensitivity"
+            },
+            {
+              "supplementId": null,
+              "name": "Digestive Enzymes",
+              "dose": "1 capsule (broad-spectrum)",
+              "role": "Protease, lipase, amylase complex — supports macronutrient breakdown and absorption"
+            },
+            {
+              "supplementId": "vitamin-d3-k2",
+              "name": "D3K2",
+              "dose": "5,000 IU D3 + 200 μg K2 (MK-7)",
+              "role": "Vitamin D for immune function and calcium absorption; K2 directs calcium to bones, away from arteries"
+            },
+            {
+              "supplementId": "gn-vitamins-sports-complex",
+              "name": "Multivitamin",
+              "dose": "1 serving",
+              "role": "Covers micronutrient gaps — B-vitamins, zinc, selenium, trace minerals"
+            },
+            {
+              "supplementId": null,
+              "name": "Coenzym Q10",
+              "dose": "100–200 mg (Ubiquinol form preferred)",
+              "role": "Mitochondrial electron transport support — cellular energy production and antioxidant defense"
+            }
+          ]
+        },
+        {
+          "id": "pre-workout",
+          "name": "Preworkout Meal",
+          "timing": "60–90 minutes before training",
+          "icon": "🏋️",
+          "rationale": "A second dose of berberine with the pre-workout meal targets the second major glucose load of the day. Digestive enzymes ensure efficient nutrient partitioning before a demanding training session.",
+          "items": [
+            {
+              "supplementId": null,
+              "name": "Berberin (Berberine)",
+              "dose": "500 mg",
+              "role": "Second AMPK activation pulse — manages pre-workout meal glucose disposal"
+            },
+            {
+              "supplementId": null,
+              "name": "Digestive Enzymes",
+              "dose": "1 capsule",
+              "role": "Optimizes pre-workout meal digestion for training readiness"
+            }
+          ]
+        },
+        {
+          "id": "intra-workout",
+          "name": "Intra-Workout Drink",
+          "timing": "Sipped throughout training session",
+          "icon": "💧",
+          "rationale": "Fast-acting carbohydrates (maltodextrin) maintain blood glucose and glycogen resynthesis during training. Hydrolyzed whey protein (Hydroclear) provides rapidly absorbed amino acids to shift the muscle protein balance toward synthesis during the session. Sodium replaces sweat losses and maintains plasma volume for performance.",
+          "items": [
+            {
+              "supplementId": null,
+              "name": "Maltodextrin",
+              "dose": "50 g",
+              "role": "High-GI carbohydrate — fuels glycolytic demand and spares muscle glycogen"
+            },
+            {
+              "supplementId": null,
+              "name": "Hydroclear (Hydrolyzed Whey Protein)",
+              "dose": "25 g",
+              "role": "Rapidly absorbed protein — initiates muscle protein synthesis during training"
+            },
+            {
+              "supplementId": null,
+              "name": "Salz (Sodium / Salt)",
+              "dose": "1 g (~400 mg sodium)",
+              "role": "Electrolyte replacement — maintains hydration, plasma volume, and muscle contractility"
+            }
+          ]
+        },
+        {
+          "id": "post-workout",
+          "name": "Post-Workout Meal",
+          "timing": "Within 60 minutes after training",
+          "icon": "🥗",
+          "rationale": "The post-workout window is characterized by elevated GLUT4 translocation and muscle sensitivity to nutrients. Digestive enzymes maximize absorption of the recovery meal.",
+          "items": [
+            {
+              "supplementId": null,
+              "name": "Digestive Enzymes",
+              "dose": "1 capsule",
+              "role": "Supports breakdown and absorption of post-workout protein and carbohydrates"
+            }
+          ]
+        },
+        {
+          "id": "dinner",
+          "name": "Abendessen (Dinner)",
+          "timing": "At least 4 hours before bedtime",
+          "icon": "🍽️",
+          "rationale": "Curcumin and ashwagandha are fat-soluble and benefit from meal co-ingestion. Placing the third berberine dose here covers the final major meal. The ≥4-hour gap before sleep prevents digestive activity from interfering with sleep onset. Ashwagandha (Shoden extract) has a calming trajectory — taken at dinner, cortisol-lowering effects peak as bedtime approaches.",
+          "items": [
+            {
+              "supplementId": null,
+              "name": "Probiotic Complex",
+              "dose": "1 capsule (multi-strain, ≥10 billion CFU)",
+              "role": "Gut microbiome support — immune modulation and gut-brain axis signaling"
+            },
+            {
+              "supplementId": null,
+              "name": "Berberin (Berberine)",
+              "dose": "500 mg",
+              "role": "Third AMPK activation pulse — covers the final meal's glycemic load"
+            },
+            {
+              "supplementId": null,
+              "name": "Digestive Enzymes",
+              "dose": "1 capsule",
+              "role": "Dinner meal digestion support"
+            },
+            {
+              "supplementId": null,
+              "name": "Curcumin",
+              "dose": "500–1,000 mg (with piperine or liposomal form)",
+              "role": "NF-κB and COX-2 inhibition — systemic anti-inflammatory and antioxidant"
+            },
+            {
+              "supplementId": "ashwagandha",
+              "name": "Ashwagandha",
+              "dose": "120–240 mg Shoden extract (35% withanolides)",
+              "role": "Adaptogen — lowers cortisol, promotes GABAergic calm, transitions toward recovery mode"
+            }
+          ]
+        },
+        {
+          "id": "winddown",
+          "name": "Winddown / Nighttime Supplements",
+          "timing": "30–60 minutes before bed",
+          "icon": "🌙",
+          "rationale": "This block targets sleep architecture from multiple angles: GABAergic modulation (magnesium, taurine, inositol), glycine's thermoregulatory sleep-onset effect, NAC for glutathione resynthesis during overnight repair, omega-3 for neuronal membrane maintenance, trazodone for 5-HT₂A antagonism and sleep maintenance, and melatonin as a circadian phase-setter. Spreading across these mechanisms creates redundancy — if one pathway underperforms, others compensate.",
+          "items": [
+            {
+              "supplementId": "nac",
+              "name": "N-Acetyl-L-Cystein (NAC)",
+              "dose": "600–1,200 mg",
+              "role": "Glutathione precursor — supports overnight detoxification and antioxidant repair cycles"
+            },
+            {
+              "supplementId": null,
+              "name": "Glycin (Glycine)",
+              "dose": "3 g",
+              "role": "Lowers core body temperature via peripheral vasodilation — accelerates sleep onset and deepens slow-wave sleep"
+            },
+            {
+              "supplementId": "magnesium",
+              "name": "Magnesiumbisglycinate (Magnesium Bisglycinate)",
+              "dose": "300–400 mg elemental magnesium",
+              "role": "NMDA antagonist and GABA potentiator — promotes muscular relaxation and sleep quality"
+            },
+            {
+              "supplementId": null,
+              "name": "Taurin (Taurine)",
+              "dose": "1,000–2,000 mg",
+              "role": "GABA-A receptor agonist and glycine receptor modulator — anxiolytic and sleep-supportive"
+            },
+            {
+              "supplementId": null,
+              "name": "Myo-Inositol",
+              "dose": "2,000–4,000 mg",
+              "role": "Second messenger in serotonin and insulin signaling — calms anxious rumination, improves sleep onset"
+            },
+            {
+              "supplementId": "omega-3",
+              "name": "Omega-3 (DHA/EPA)",
+              "dose": "2–3 g (high-DHA formulation)",
+              "role": "Neuronal membrane fluidity and anti-inflammatory — supports overnight neural repair"
+            },
+            {
+              "supplementId": "trazodone",
+              "name": "Trazodon (Trazodone)",
+              "dose": "25–100 mg (as prescribed)",
+              "role": "5-HT₂A antagonist — promotes sleep maintenance without next-day sedation at low doses"
+            },
+            {
+              "supplementId": null,
+              "name": "Melatonin",
+              "dose": "0.3–1 mg (low-dose, physiological)",
+              "role": "Circadian rhythm phase-setter — signals sleep onset to SCN, most effective at low doses"
+            }
+          ]
+        }
+      ],
+      "synergies": [
+        {
+          "supplements": ["L-Tyrosin", "Elvanse"],
+          "type": "substrate-replenishment",
+          "strength": "strong",
+          "evidenceLevel": "moderate",
+          "description": "Elvanse (lisdexamfetamine) promotes dopamine release and blocks reuptake, which over time can deplete presynaptic dopamine stores. L-Tyrosine provides the rate-limiting precursor for dopamine biosynthesis (Tyrosine → L-DOPA → Dopamine), helping to sustain dopamine availability throughout the day. Taking tyrosine fasted and before the stimulant maximizes brain uptake via the LAT1 transporter.",
+          "mechanism": "Tyrosine hydroxylase converts L-Tyrosine to L-DOPA, the direct precursor to dopamine. Amphetamines increase dopamine turnover, making substrate availability rate-limiting."
+        },
+        {
+          "supplements": ["Elvanse", "Huperzin A"],
+          "type": "dual-neurotransmitter",
+          "strength": "moderate",
+          "evidenceLevel": "emerging",
+          "description": "Elvanse primarily enhances dopaminergic/noradrenergic signaling, while Huperzine A boosts acetylcholine by inhibiting acetylcholinesterase. This dual-system approach targets both the motivational (dopamine) and attentional/memory-encoding (acetylcholine) dimensions of cognition. The combination may provide more complete cognitive enhancement than either alone.",
+          "mechanism": "Dopaminergic enhancement (Elvanse) + cholinergic enhancement (Huperzine A) = complementary activation of frontal executive networks and hippocampal memory circuits."
+        },
+        {
+          "supplements": ["NAC", "Glycin"],
+          "type": "biochemical-synergy",
+          "strength": "strong",
+          "evidenceLevel": "strong",
+          "description": "NAC provides cysteine (the rate-limiting amino acid) and glycine provides the other key substrate for glutathione (GSH) synthesis — the body's master antioxidant. This is the basis of the GlyNAC protocol, which has shown remarkable results in aging studies: restoring glutathione levels, reducing oxidative stress, improving mitochondrial function, and reversing hallmarks of aging in older adults.",
+          "mechanism": "Glutathione = γ-glutamyl-cysteinyl-glycine. NAC → cysteine (rate-limiting). Glycine is the final amino acid added by glutathione synthetase. Co-supplementation ensures neither substrate is limiting."
+        },
+        {
+          "supplements": ["D3K2", "Magnesiumbisglycinate"],
+          "type": "cofactor-dependency",
+          "strength": "strong",
+          "evidenceLevel": "strong",
+          "description": "Magnesium is required for the enzymatic activation of vitamin D — specifically, the CYP27B1 enzyme that converts 25(OH)D to the active 1,25(OH)₂D form. Without adequate magnesium, vitamin D remains inactive regardless of supplementation dose. K2 then directs the calcium mobilized by active vitamin D to bones and teeth rather than soft tissues and arteries.",
+          "mechanism": "Mg²⁺ is a cofactor for CYP27B1 (1α-hydroxylase) and CYP2R1 (25-hydroxylase). K2 activates osteocalcin (bone) and matrix GLA protein (anti-calcification). The triad D3+K2+Mg ensures complete calcium metabolism."
+        },
+        {
+          "supplements": ["Magnesiumbisglycinate", "Taurin", "Glycin"],
+          "type": "GABAergic-convergence",
+          "strength": "moderate",
+          "evidenceLevel": "moderate",
+          "description": "All three compounds converge on inhibitory neurotransmission. Magnesium blocks excitatory NMDA receptors and potentiates GABA-A. Taurine directly activates GABA-A and glycine receptors. Glycine activates inhibitory glycine receptors in the brainstem and spinal cord. Together they create a multi-layered inhibitory tone that promotes deep relaxation without the tolerance or dependence risks of pharmacological GABAergics.",
+          "mechanism": "Mg²⁺ → NMDA blockade + GABA-A positive allosteric modulation. Taurine → GABA-A agonism + GlyR agonism. Glycine → GlyR agonism + NMDA co-agonism (at glycine binding site). Net effect: enhanced inhibitory neurotransmission."
+        },
+        {
+          "supplements": ["Trazodon", "Melatonin"],
+          "type": "complementary-sleep-mechanisms",
+          "strength": "strong",
+          "evidenceLevel": "strong",
+          "description": "Melatonin acts as a chronobiotic — it signals the suprachiasmatic nucleus (SCN) that it's time to sleep, facilitating sleep onset. Trazodone, at low doses, acts primarily as a 5-HT₂A antagonist and mild histamine H1 antagonist, which improves sleep maintenance and increases slow-wave sleep (N3). Together, they address both sleep onset (melatonin) and sleep continuity (trazodone), the two dimensions where stimulant medication users most commonly struggle.",
+          "mechanism": "Melatonin → MT1/MT2 receptor activation in SCN → circadian phase advance. Trazodone → 5-HT₂A antagonism → increased deep sleep + reduced cortical arousal."
+        },
+        {
+          "supplements": ["Ashwagandha", "Magnesiumbisglycinate"],
+          "type": "HPA-axis-modulation",
+          "strength": "moderate",
+          "evidenceLevel": "moderate",
+          "description": "Ashwagandha reduces cortisol output via HPA axis modulation (14–28% reduction demonstrated in RCTs). Magnesium independently modulates the HPA axis and reduces stress-related cortisol. The combination provides robust cortisol management — ashwagandha addresses the central regulation while magnesium supports the peripheral enzymatic processes.",
+          "mechanism": "Ashwagandha withanolides → modulate cortisol at the hypothalamic-pituitary level. Mg²⁺ → normalizes ACTH sensitivity and cortisol clearance. Combined: multi-level HPA axis buffering."
+        },
+        {
+          "supplements": ["Berberin", "Digestive Enzymes"],
+          "type": "metabolic-optimization",
+          "strength": "moderate",
+          "evidenceLevel": "moderate",
+          "description": "Berberine activates AMPK (the cellular energy sensor), improving glucose uptake and insulin sensitivity — but it can also alter gut motility and microbiome composition. Digestive enzymes ensure that despite berberine's GI effects, macronutrient breakdown and absorption remain efficient. The combination optimizes metabolic health without sacrificing nutrient absorption.",
+          "mechanism": "Berberine → AMPK activation → GLUT4 translocation → glucose clearance. Digestive enzymes → mechanical breakdown of proteins, fats, carbohydrates → optimal absorption despite berberine-induced GI changes."
+        },
+        {
+          "supplements": ["Curcumin", "Omega-3"],
+          "type": "anti-inflammatory-convergence",
+          "strength": "strong",
+          "evidenceLevel": "strong",
+          "description": "Curcumin inhibits NF-κB and COX-2 (upstream inflammatory master switches). Omega-3 fatty acids (EPA/DHA) serve as substrates for specialized pro-resolving mediators (SPMs: resolvins, protectins, maresins) that actively resolve inflammation rather than merely suppressing it. Together, they provide both anti-inflammatory suppression and pro-resolution signaling — a more complete inflammatory management strategy.",
+          "mechanism": "Curcumin → NF-κB inhibition + COX-2 downregulation → reduced pro-inflammatory cytokine production. EPA/DHA → SPM biosynthesis → active inflammation resolution. Combined: suppress + resolve."
+        },
+        {
+          "supplements": ["Myo-Inositol", "Magnesiumbisglycinate"],
+          "type": "anxiolytic-synergy",
+          "strength": "moderate",
+          "evidenceLevel": "moderate",
+          "description": "Myo-inositol is a second messenger in serotonin receptor signaling (5-HT₂ receptors use inositol trisphosphate/IP3 as their second messenger). Magnesium reduces neuronal excitability via NMDA blockade. Together, they address anxiety from two angles: inositol normalizes serotonergic signaling (especially effective for panic and OCD-spectrum anxiety) while magnesium dampens glutamatergic overactivation.",
+          "mechanism": "Inositol → PI/PIP2/IP3 cycle → normalized 5-HT₂ receptor signal transduction. Mg²⁺ → NMDA receptor blockade → reduced excitotoxic glutamate signaling. Combined: serotonergic normalization + glutamatergic dampening."
+        }
+      ],
+      "categoryPotency": [
+        {
+          "categoryId": "cognitive",
+          "rating": 9,
+          "maxRating": 10,
+          "rationale": "Triple-stack nootropic core (Elvanse + Tyrosine + Huperzine A) covers dopaminergic, noradrenergic, and cholinergic systems. Omega-3 DHA supports neuronal membrane integrity. This is a near-maximal cognitive protocol for ADHD management."
+        },
+        {
+          "categoryId": "sleep",
+          "rating": 9,
+          "maxRating": 10,
+          "rationale": "Seven dedicated sleep compounds covering circadian signaling (melatonin), sleep maintenance (trazodone), GABAergic inhibition (Mg, taurine, inositol), thermoregulation (glycine), and HPA modulation (ashwagandha). Extremely comprehensive sleep stack."
+        },
+        {
+          "categoryId": "recovery",
+          "rating": 8,
+          "maxRating": 10,
+          "rationale": "Anti-inflammatory coverage from curcumin + omega-3, glutathione support from GlyNAC protocol, magnesium for muscle relaxation, taurine for membrane stabilization, and intra-workout nutrition for real-time recovery. Strong."
+        },
+        {
+          "categoryId": "performance",
+          "rating": 7,
+          "maxRating": 10,
+          "rationale": "Intra-workout carb + protein + electrolyte drink directly fuels training. No dedicated ergogenic compounds like creatine or beta-alanine, but metabolic support (berberine, Q10) and recovery compounds enable higher training frequency."
+        },
+        {
+          "categoryId": "foundational",
+          "rating": 8,
+          "maxRating": 10,
+          "rationale": "D3K2 + multivitamin + magnesium + omega-3 + digestive enzymes + probiotics cover the foundational bases comprehensively. Only missing standalone zinc/selenium (covered partially by the multivitamin)."
+        },
+        {
+          "categoryId": "longevity",
+          "rating": 8,
+          "maxRating": 10,
+          "rationale": "GlyNAC protocol (glutathione restoration), omega-3 (telomere protection), curcumin (NF-κB inhibition), Q10 (mitochondrial support), and berberine (AMPK activation — the same pathway as caloric restriction). Strong longevity profile."
+        },
+        {
+          "categoryId": "mood",
+          "rating": 7,
+          "maxRating": 10,
+          "rationale": "Ashwagandha (cortisol reduction), inositol (serotonin signaling), magnesium (HPA axis modulation), omega-3 (anti-neuroinflammatory). Solid mood coverage, though no direct serotonergic supplements beyond inositol's indirect effects."
+        }
+      ],
+      "evidenceAssessment": {
+        "overallScore": 72,
+        "overallTier": "A",
+        "overallLabel": "Strong Evidence Base",
+        "rationale": "The majority of individual compounds in this stack have moderate-to-strong evidence (magnesium, omega-3, creatine-level evidence for some). The overall protocol draws on well-established pharmacology. However, evidence for specific multi-compound synergies (as opposed to individual compound evidence) is more limited — most synergy claims are mechanistically sound but lack dedicated combination RCTs.",
+        "strongestComponents": [
+          "Magnesium — S-tier evidence (35+ meta-analyses)",
+          "Omega-3 — S-tier evidence (extensive RCTs for cardiovascular and neurological outcomes)",
+          "Vitamin D3+K2 — A-tier evidence (robust data for bone health and immune function)",
+          "Creatine-level compounds absent but partially offset by Q10 and berberine evidence",
+          "Trazodone — A-tier evidence (well-established in sleep medicine)",
+          "NAC — A-tier evidence (strong antioxidant and respiratory data)"
+        ],
+        "weakestComponents": [
+          "Huperzine A — C-tier evidence (promising but limited Western RCTs, mostly Chinese literature)",
+          "Digestive enzymes — evidence is condition-specific (strong for pancreatic insufficiency, weaker for general use)",
+          "Specific GlyNAC protocol — strong mechanistic basis but limited to a few landmark trials (Kumar et al.)"
+        ]
+      },
+      "warnings": [
+        "Elvanse (lisdexamfetamine) is a Schedule II controlled substance — prescription required, misuse potential exists.",
+        "Trazodone is a prescription antidepressant — do not combine with MAOIs or other strong serotonergic agents (serotonin syndrome risk).",
+        "Berberine at 1,500 mg/day total has drug-like potency — it inhibits CYP3A4 and CYP2D6, potentially affecting metabolism of other medications including Elvanse.",
+        "Huperzine A should not be combined with prescription acetylcholinesterase inhibitors (e.g., donepezil) — additive cholinergic effects.",
+        "This stack contains two prescription medications — always consult a physician before implementing.",
+        "High-dose inositol (>4 g) may cause GI discomfort in some individuals — titrate up gradually."
+      ],
+      "costEstimate": {
+        "currency": "EUR",
+        "monthlyLow": 80,
+        "monthlyHigh": 150,
+        "note": "Excluding prescription medications. Cost varies significantly by brand and source."
+      },
+      "references": [
+        "Kumar, P. et al. (2021). Glycine and N-acetylcysteine (GlyNAC) supplementation in older adults improves glutathione deficiency, oxidative stress, mitochondrial dysfunction, inflammation, insulin resistance, endothelial dysfunction, genotoxicity, muscle strength, and cognition. Clinical and Translational Medicine, 11(3), e372.",
+        "Ueki, M. et al. (2015). Effects of magnesium on sleep quality. Journal of Research in Medical Sciences, 17(12), 1161–1169.",
+        "Chandrasekhar, K. et al. (2012). A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults. Indian Journal of Psychological Medicine, 34(3), 255–262.",
+        "Bannai, M. & Kawai, N. (2012). New therapeutic strategy for amino acid medicine: glycine improves the quality of sleep. Journal of Pharmacological Sciences, 118(2), 145–148.",
+        "Dong, H. et al. (2012). Berberine in the treatment of type 2 diabetes mellitus: a systemic review and meta-analysis. Evidence-Based Complementary and Alternative Medicine, 2012, 591654.",
+        "Serhan, C.N. (2014). Pro-resolving lipid mediators are leads for resolution physiology. Nature, 510(7503), 92–101.",
+        "Roth, T. et al. (2011). Low-dose trazodone for insomnia. The Journal of Clinical Psychiatry, 72(12), 1592–1596."
+      ]
+    }
+  ]
+}

@@ -79,7 +79,7 @@ const Render = (() => {
   // HOME PAGE
   // ──────────────────────────────
 
-  function homePage(categories, supplements) {
+  function homePage(categories, supplements, stacks) {
     const categoryCards = categories.map(cat => {
       const catSupplements = supplements.filter(s => s.categories.includes(cat.id));
       const sortedByEvidence = EvidenceScoring.sortByEvidence(catSupplements);
@@ -143,6 +143,8 @@ const Render = (() => {
           </div>
         </div>
       </section>
+
+      ${stacksSection(stacks)}
 
       <section class="section section--alt">
         <div class="container">
@@ -484,6 +486,344 @@ const Render = (() => {
     `;
   }
 
+  // ──────────────────────────────
+  // STACK CARD (for home page)
+  // ──────────────────────────────
+
+  function stackCard(stack) {
+    const tierInfo = EvidenceScoring.getTier(stack.evidenceAssessment.overallScore);
+    const blockCount = stack.blocks.length;
+    const totalItems = stack.blocks.reduce((sum, b) => sum + b.items.length, 0);
+    const synergyCount = stack.synergies.length;
+
+    return `
+      <a href="stack.html?id=${stack.id}" class="stack-card">
+        <div class="stack-card__header">
+          <div class="stack-card__icon">📋</div>
+          <div class="stack-card__tier" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
+            <span class="stack-card__tier-letter">${tierInfo.tier}</span>
+            <span class="stack-card__tier-score">${stack.evidenceAssessment.overallScore}</span>
+          </div>
+        </div>
+        <h3 class="stack-card__name">${stack.name}</h3>
+        <p class="stack-card__tagline">${stack.tagline}</p>
+        <div class="stack-card__meta">
+          <span class="stack-card__meta-item">🕐 ${blockCount} timing blocks</span>
+          <span class="stack-card__meta-item">💊 ${totalItems} supplements</span>
+          <span class="stack-card__meta-item">🔗 ${synergyCount} synergies</span>
+        </div>
+        <div class="stack-card__potency">
+          ${stack.categoryPotency.slice(0, 4).map(cp => {
+            const filled = cp.rating;
+            const empty = cp.maxRating - cp.rating;
+            return `<span class="stack-card__potency-item" title="${cp.categoryId}: ${cp.rating}/${cp.maxRating}">${cp.categoryId === 'cognitive' ? '🧠' : cp.categoryId === 'sleep' ? '🌙' : cp.categoryId === 'recovery' ? '💪' : cp.categoryId === 'performance' ? '⚡' : cp.categoryId === 'foundational' ? '🏛️' : cp.categoryId === 'longevity' ? '🧬' : cp.categoryId === 'mood' ? '🧘' : '📊'} ${'●'.repeat(filled)}${'○'.repeat(empty)}</span>`;
+          }).join('')}
+        </div>
+      </a>
+    `;
+  }
+
+  function stacksSection(stacks) {
+    if (!stacks || stacks.length === 0) return '';
+
+    return `
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">Supplement Stacks</h2>
+            <p class="section__subtitle">Complete protocols with timing, synergies, and evidence analysis</p>
+          </div>
+          <div class="stacks-grid">
+            ${stacks.map(s => stackCard(s)).join('')}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  // ──────────────────────────────
+  // STACK DETAIL PAGE
+  // ──────────────────────────────
+
+  function stackPage(stack, supplements, categories) {
+    const tierInfo = EvidenceScoring.getTier(stack.evidenceAssessment.overallScore);
+    const totalItems = stack.blocks.reduce((sum, b) => sum + b.items.length, 0);
+
+    return `
+      <section class="stack-hero">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb__sep">›</span>
+            <span>Stacks</span>
+            <span class="breadcrumb__sep">›</span>
+            <span>${stack.name}</span>
+          </nav>
+          <div class="stack-hero__header">
+            <div class="stack-hero__text">
+              <h1 class="stack-hero__title">${stack.name}</h1>
+              <p class="stack-hero__tagline">${stack.tagline}</p>
+              <div class="stack-hero__stats">
+                <span class="stack-hero__stat">🕐 ${stack.blocks.length} Timing Blocks</span>
+                <span class="stack-hero__stat">💊 ${totalItems} Supplements</span>
+                <span class="stack-hero__stat">🔗 ${stack.synergies.length} Synergies</span>
+              </div>
+            </div>
+            <div class="stack-hero__evidence">
+              <div class="evidence-badge" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
+                <span class="evidence-badge__tier">${tierInfo.tier}</span>
+                <span class="evidence-badge__score">${stack.evidenceAssessment.overallScore}</span>
+              </div>
+              <div class="stack-hero__evidence-meta">
+                <h3>${stack.evidenceAssessment.overallLabel}</h3>
+                <p>${tierInfo.description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="stack-content">
+        <div class="container stack-layout">
+          <nav class="supplement-sidebar">
+            <div class="sidebar-nav">
+              <h4 class="sidebar-nav__title">Contents</h4>
+              <ul class="sidebar-nav__list">
+                <li><a href="#overview" class="sidebar-nav__link">Overview</a></li>
+                <li><a href="#timeline" class="sidebar-nav__link">Daily Timeline</a></li>
+                ${stack.blocks.map(b => `<li><a href="#block-${b.id}" class="sidebar-nav__link sidebar-nav__link--indent">${b.icon} ${b.name.split(' (')[0]}</a></li>`).join('')}
+                <li><a href="#synergies" class="sidebar-nav__link">Synergies</a></li>
+                <li><a href="#potency" class="sidebar-nav__link">Category Potency</a></li>
+                <li><a href="#evidence" class="sidebar-nav__link">Evidence Assessment</a></li>
+                <li><a href="#warnings" class="sidebar-nav__link">Warnings</a></li>
+                <li><a href="#references" class="sidebar-nav__link">References</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-quickfacts">
+              <h4 class="sidebar-quickfacts__title">Stack Overview</h4>
+              <div class="sidebar-quickfacts__item">
+                <span class="sidebar-quickfacts__label">Evidence Tier</span>
+                <span class="sidebar-quickfacts__value" style="color: ${tierInfo.color}">${tierInfo.tier} — ${tierInfo.label}</span>
+              </div>
+              <div class="sidebar-quickfacts__item">
+                <span class="sidebar-quickfacts__label">Supplements</span>
+                <span class="sidebar-quickfacts__value">${totalItems}</span>
+              </div>
+              <div class="sidebar-quickfacts__item">
+                <span class="sidebar-quickfacts__label">Synergies</span>
+                <span class="sidebar-quickfacts__value">${stack.synergies.length} identified</span>
+              </div>
+              ${stack.costEstimate ? `
+              <div class="sidebar-quickfacts__item">
+                <span class="sidebar-quickfacts__label">Est. Cost</span>
+                <span class="sidebar-quickfacts__value">€${stack.costEstimate.monthlyLow}–${stack.costEstimate.monthlyHigh}/mo</span>
+              </div>
+              ` : ''}
+            </div>
+          </nav>
+
+          <main class="supplement-main">
+            ${renderSection('overview', 'Overview', `
+              <p>${stack.description}</p>
+              ${stack.targetAudience ? `<p class="stack-target"><strong>Target Audience:</strong> ${stack.targetAudience}</p>` : ''}
+            `)}
+
+            ${renderStackTimeline(stack.blocks, supplements)}
+            ${renderStackBlocks(stack.blocks, supplements)}
+            ${renderSynergiesSection(stack.synergies)}
+            ${renderCategoryPotency(stack.categoryPotency, categories)}
+            ${renderEvidenceAssessment(stack.evidenceAssessment)}
+            ${renderStackWarnings(stack.warnings)}
+            ${renderReferencesSection(stack.references)}
+          </main>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderStackTimeline(blocks, supplements) {
+    const timelineHtml = blocks.map((block, index) => `
+      <div class="timeline-block">
+        <div class="timeline-block__marker">
+          <span class="timeline-block__icon">${block.icon}</span>
+          ${index < blocks.length - 1 ? '<div class="timeline-block__line"></div>' : ''}
+        </div>
+        <div class="timeline-block__content">
+          <a href="#block-${block.id}" class="timeline-block__link">
+            <h4 class="timeline-block__name">${block.name}</h4>
+            <span class="timeline-block__timing">${block.timing}</span>
+            <div class="timeline-block__pills">
+              ${block.items.map(item => {
+                const isLinked = item.supplementId !== null;
+                return `<span class="timeline-pill ${isLinked ? 'timeline-pill--linked' : ''}">${item.name.split(' (')[0]}</span>`;
+              }).join('')}
+            </div>
+          </a>
+        </div>
+      </div>
+    `).join('');
+
+    return renderSection('timeline', 'Daily Timeline', `<div class="stack-timeline">${timelineHtml}</div>`);
+  }
+
+  function renderStackBlocks(blocks, supplements) {
+    return blocks.map(block => {
+      const itemsHtml = block.items.map(item => {
+        const linkedClass = item.supplementId ? 'stack-item--linked' : '';
+        const linkStart = item.supplementId ? `<a href="supplement.html?id=${item.supplementId}" class="stack-item__link">` : '';
+        const linkEnd = item.supplementId ? '</a>' : '';
+
+        return `
+          <div class="stack-item ${linkedClass}">
+            <div class="stack-item__header">
+              <h4 class="stack-item__name">${linkStart}${item.name}${linkEnd}</h4>
+              <span class="stack-item__dose">${item.dose}</span>
+            </div>
+            <p class="stack-item__role">${item.role}</p>
+            ${item.supplementId ? `<span class="stack-item__view">View full profile →</span>` : ''}
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <section id="block-${block.id}" class="content-section stack-block">
+          <div class="stack-block__header">
+            <span class="stack-block__icon">${block.icon}</span>
+            <div>
+              <h2 class="content-section__title">${block.name}</h2>
+              <p class="stack-block__timing">${block.timing}</p>
+            </div>
+          </div>
+          <div class="stack-block__rationale">
+            <h4>Why this timing?</h4>
+            <p>${block.rationale}</p>
+          </div>
+          <div class="stack-block__items">
+            ${itemsHtml}
+          </div>
+        </section>
+      `;
+    }).join('');
+  }
+
+  function renderSynergiesSection(synergies) {
+    if (!synergies || synergies.length === 0) return '';
+
+    const strengthColors = {
+      strong: '#4CAF50',
+      moderate: '#FF9800',
+      emerging: '#2196F3'
+    };
+
+    const html = synergies.map(syn => {
+      const color = strengthColors[syn.strength] || '#8B949E';
+      return `
+        <div class="synergy-card" style="--synergy-color: ${color}">
+          <div class="synergy-card__header">
+            <div class="synergy-card__supplements">
+              ${syn.supplements.map(s => `<span class="synergy-card__pill">${s}</span>`).join('<span class="synergy-card__connector">+</span>')}
+            </div>
+            <div class="synergy-card__badges">
+              <span class="synergy-card__strength">${syn.strength}</span>
+              <span class="synergy-card__evidence">${syn.evidenceLevel} evidence</span>
+            </div>
+          </div>
+          <span class="synergy-card__type">${syn.type.replace(/-/g, ' ')}</span>
+          <p class="synergy-card__description">${syn.description}</p>
+          <div class="synergy-card__mechanism">
+            <strong>Mechanism:</strong> ${syn.mechanism}
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    return renderSection('synergies', `Synergies (${synergies.length})`, `<div class="synergies-grid">${html}</div>`);
+  }
+
+  function renderCategoryPotency(potencies, categories) {
+    if (!potencies || potencies.length === 0) return '';
+
+    const html = potencies.map(cp => {
+      const cat = categories.find(c => c.id === cp.categoryId);
+      const icon = cat ? cat.icon : '📊';
+      const name = cat ? cat.name : cp.categoryId;
+      const color = cat ? cat.color : '#8B949E';
+      const pct = (cp.rating / cp.maxRating) * 100;
+
+      return `
+        <div class="potency-row">
+          <div class="potency-row__label">
+            <span class="potency-row__icon">${icon}</span>
+            <span class="potency-row__name">${name}</span>
+          </div>
+          <div class="potency-row__bar-container">
+            <div class="potency-row__bar" style="width: ${pct}%; background: ${color}"></div>
+          </div>
+          <span class="potency-row__score">${cp.rating}/${cp.maxRating}</span>
+          <p class="potency-row__rationale">${cp.rationale}</p>
+        </div>
+      `;
+    }).join('');
+
+    return renderSection('potency', 'Category Potency', `<div class="potency-grid">${html}</div>`);
+  }
+
+  function renderEvidenceAssessment(assessment) {
+    if (!assessment) return '';
+
+    const tierInfo = EvidenceScoring.getTier(assessment.overallScore);
+
+    const html = `
+      <div class="stack-evidence">
+        <div class="stack-evidence__header">
+          <div class="evidence-badge" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
+            <span class="evidence-badge__tier">${assessment.overallTier}</span>
+            <span class="evidence-badge__score">${assessment.overallScore}</span>
+          </div>
+          <div class="stack-evidence__meta">
+            <h3>${assessment.overallLabel}</h3>
+            <p>${assessment.rationale}</p>
+          </div>
+        </div>
+
+        <div class="stack-evidence__columns">
+          <div class="stack-evidence__col stack-evidence__col--strong">
+            <h4>✅ Strongest Components</h4>
+            <ul>
+              ${assessment.strongestComponents.map(c => `<li>${c}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="stack-evidence__col stack-evidence__col--weak">
+            <h4>⚠️ Weakest Components</h4>
+            <ul>
+              ${assessment.weakestComponents.map(c => `<li>${c}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+
+    return renderSection('evidence', 'Evidence Assessment', html);
+  }
+
+  function renderStackWarnings(warnings) {
+    if (!warnings || warnings.length === 0) return '';
+
+    const html = `
+      <div class="stack-warnings">
+        ${warnings.map(w => `
+          <div class="stack-warning">
+            <span class="stack-warning__icon">⚠️</span>
+            <p class="stack-warning__text">${w}</p>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    return renderSection('warnings', 'Warnings & Contraindications', html);
+  }
+
   return {
     homePage,
     categoryPage,
@@ -492,7 +832,10 @@ const Render = (() => {
     evidenceBadge,
     evidenceBar,
     evidenceDetail,
-    evidenceTierExplainer
+    evidenceTierExplainer,
+    stackCard,
+    stacksSection,
+    stackPage
   };
 
 })();
