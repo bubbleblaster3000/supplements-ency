@@ -27,7 +27,7 @@
               "role": "Core ADHD medication — prodrug releasing d-amphetamine for sustained dopamine/norepinephrine enhancement"
             },
             {
-              "supplementId": null,
+              "supplementId": "huperzine-a",
               "name": "Huperzin A (Huperzine A)",
               "dose": "100–200 μg",
               "role": "Reversible acetylcholinesterase inhibitor — boosts acetylcholine levels for memory and learning"
@@ -42,13 +42,13 @@
           "rationale": "Fat-soluble vitamins (D3, K2) and CoQ10 require dietary fat for absorption — taking them with a meal containing fats increases bioavailability 2–3×. Berberine is best taken with meals to reduce GI side effects and to target postprandial glucose spikes. Digestive enzymes by definition require food as substrate.",
           "items": [
             {
-              "supplementId": null,
+              "supplementId": "berberine",
               "name": "Berberin (Berberine)",
               "dose": "500 mg",
               "role": "AMPK activator — blunts postprandial glucose spike, improves insulin sensitivity"
             },
             {
-              "supplementId": null,
+              "supplementId": "gn-digestive-enzymes",
               "name": "Digestive Enzymes",
               "dose": "1 capsule (broad-spectrum)",
               "role": "Protease, lipase, amylase complex — supports macronutrient breakdown and absorption"
@@ -66,7 +66,7 @@
               "role": "Covers micronutrient gaps — B-vitamins, zinc, selenium, trace minerals"
             },
             {
-              "supplementId": null,
+              "supplementId": "coenzyme-q10",
               "name": "Coenzym Q10",
               "dose": "100–200 mg (Ubiquinol form preferred)",
               "role": "Mitochondrial electron transport support — cellular energy production and antioxidant defense"
@@ -81,13 +81,13 @@
           "rationale": "A second dose of berberine with the pre-workout meal targets the second major glucose load of the day. Digestive enzymes ensure efficient nutrient partitioning before a demanding training session.",
           "items": [
             {
-              "supplementId": null,
+              "supplementId": "berberine",
               "name": "Berberin (Berberine)",
               "dose": "500 mg",
               "role": "Second AMPK activation pulse — manages pre-workout meal glucose disposal"
             },
             {
-              "supplementId": null,
+              "supplementId": "gn-digestive-enzymes",
               "name": "Digestive Enzymes",
               "dose": "1 capsule",
               "role": "Optimizes pre-workout meal digestion for training readiness"
@@ -129,7 +129,7 @@
           "rationale": "The post-workout window is characterized by elevated GLUT4 translocation and muscle sensitivity to nutrients. Digestive enzymes maximize absorption of the recovery meal.",
           "items": [
             {
-              "supplementId": null,
+              "supplementId": "gn-digestive-enzymes",
               "name": "Digestive Enzymes",
               "dose": "1 capsule",
               "role": "Supports breakdown and absorption of post-workout protein and carbohydrates"
@@ -150,19 +150,19 @@
               "role": "Gut microbiome support — immune modulation and gut-brain axis signaling"
             },
             {
-              "supplementId": null,
+              "supplementId": "berberine",
               "name": "Berberin (Berberine)",
               "dose": "500 mg",
               "role": "Third AMPK activation pulse — covers the final meal's glycemic load"
             },
             {
-              "supplementId": null,
+              "supplementId": "gn-digestive-enzymes",
               "name": "Digestive Enzymes",
               "dose": "1 capsule",
               "role": "Dinner meal digestion support"
             },
             {
-              "supplementId": null,
+              "supplementId": "curcumin",
               "name": "Curcumin",
               "dose": "500–1,000 mg (with piperine or liposomal form)",
               "role": "NF-κB and COX-2 inhibition — systemic anti-inflammatory and antioxidant"
@@ -189,7 +189,7 @@
               "role": "Glutathione precursor — supports overnight detoxification and antioxidant repair cycles"
             },
             {
-              "supplementId": null,
+              "supplementId": "glycine",
               "name": "Glycin (Glycine)",
               "dose": "3 g",
               "role": "Lowers core body temperature via peripheral vasodilation — accelerates sleep onset and deepens slow-wave sleep"
@@ -201,13 +201,13 @@
               "role": "NMDA antagonist and GABA potentiator — promotes muscular relaxation and sleep quality"
             },
             {
-              "supplementId": null,
+              "supplementId": "taurine",
               "name": "Taurin (Taurine)",
               "dose": "1,000–2,000 mg",
               "role": "GABA-A receptor agonist and glycine receptor modulator — anxiolytic and sleep-supportive"
             },
             {
-              "supplementId": null,
+              "supplementId": "myo-inositol",
               "name": "Myo-Inositol",
               "dose": "2,000–4,000 mg",
               "role": "Second messenger in serotonin and insulin signaling — calms anxious rumination, improves sleep onset"
@@ -225,7 +225,7 @@
               "role": "5-HT₂A antagonist — promotes sleep maintenance without next-day sedation at low doses"
             },
             {
-              "supplementId": null,
+              "supplementId": "melatonin",
               "name": "Melatonin",
               "dose": "0.3–1 mg (low-dose, physiological)",
               "role": "Circadian rhythm phase-setter — signals sleep onset to SCN, most effective at low doses"

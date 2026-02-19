@@ -146,6 +146,18 @@ const Render = (() => {
 
       ${stacksSection(stacks)}
 
+      <section class="section">
+        <div class="container">
+          <div class="builder-cta">
+            <div class="builder-cta__text">
+              <h2 class="builder-cta__title">🛠️ Custom Stack Builder</h2>
+              <p class="builder-cta__description">Build your own supplement stack from our database. Get instant synergy detection, risk analysis, category coverage scoring, and a full evidence breakdown — all in real time.</p>
+            </div>
+            <a href="builder.html" class="btn builder-cta__btn">Open Stack Builder →</a>
+          </div>
+        </div>
+      </section>
+
       <section class="section section--alt">
         <div class="container">
           <div class="section__header">

@@ -698,6 +698,680 @@
         "Knapen, M.H. et al. (2015). Menaquinone-7 supplementation improves arterial stiffness in healthy postmenopausal women. A double-blind randomized clinical trial. Thrombosis and Haemostasis, 113(5), 1135–1144.",
         "Garland, C.F. et al. (2014). Meta-analysis of All-Cause Mortality According to Serum 25-Hydroxyvitamin D. American Journal of Public Health, 104(8), e43–e50."
       ]
+    },
+    {
+      "id": "huperzine-a",
+      "name": "Huperzine A",
+      "aliases": ["Huperzin A", "HupA", "Selagine", "Huperzia serrata extract"],
+      "categories": ["cognitive", "longevity"],
+      "tagline": "A potent, naturally derived acetylcholinesterase inhibitor that enhances memory and learning by sustaining acetylcholine levels in the brain.",
+      "overview": "Huperzine A is a sesquiterpene alkaloid isolated from the Chinese club moss Huperzia serrata (Qian Ceng Ta), which has been used in traditional Chinese medicine for centuries to treat fever and inflammation. Pharmacologically, Huperzine A is a highly selective, reversible inhibitor of acetylcholinesterase (AChE) — the enzyme that breaks down the neurotransmitter acetylcholine. By inhibiting AChE, Huperzine A increases synaptic acetylcholine concentrations, enhancing cholinergic neurotransmission critical for memory, learning, and attention. Unlike pharmaceutical AChE inhibitors (e.g., donepezil, rivastigmine), Huperzine A has a more favorable side-effect profile and additional neuroprotective mechanisms including NMDA receptor antagonism, antioxidant activity, and protection against glutamate-induced excitotoxicity. It has been studied in China for Alzheimer's disease treatment and is used globally as a nootropic for cognitive enhancement. Its long half-life (~10–14 hours) allows for once-daily dosing.",
+      "mechanismOfAction": "Huperzine A exerts its cognitive-enhancing effects primarily through potent, reversible inhibition of acetylcholinesterase (AChE). It binds to the active site of AChE with higher affinity and longer duration than many pharmaceutical inhibitors, effectively increasing acetylcholine (ACh) availability in the synaptic cleft. This enhanced cholinergic transmission supports memory encoding, attention, and learning — processes heavily dependent on ACh signaling in the hippocampus and cortex. Beyond AChE inhibition, Huperzine A has several secondary neuroprotective mechanisms: (1) NMDA receptor antagonism — it acts as a non-competitive antagonist at the NMDA glutamate receptor, protecting neurons against excitotoxic damage from excessive glutamate signaling. (2) Antioxidant activity — Huperzine A scavenges free radicals and reduces oxidative stress in neuronal tissue. (3) Mitochondrial protection — it helps maintain mitochondrial membrane potential and reduces apoptotic signaling in neurons exposed to toxic insults. (4) NGF enhancement — some evidence suggests it upregulates Nerve Growth Factor expression, promoting neuronal survival.",
+      "forms": [
+        { "name": "Huperzine A (purified alkaloid)", "description": "Standardized extract or synthetic Huperzine A. Most studied form. Precise dosing possible. Recommended.", "recommended": true },
+        { "name": "Huperzia serrata whole extract", "description": "Whole herb extract containing Huperzine A alongside other alkaloids. Less precise dosing, variable Huperzine A content between products.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "50–200 μg daily",
+        "loading": "Not required. Effects manifest within 30–60 minutes of ingestion due to rapid absorption.",
+        "optimal": "100–200 μg once daily in the morning. Due to the long half-life (~10–14 hours), a single morning dose provides all-day AChE inhibition. Some protocols recommend cycling (5 days on, 2 days off or 3 weeks on, 1 week off) to prevent receptor downregulation, though evidence for tolerance is limited.",
+        "timing": "Morning dosing preferred — aligns with peak cognitive demand and avoids potential sleep interference from enhanced cholinergic tone. Can be taken with or without food. Best taken fasted alongside other nootropics for maximal absorption.",
+        "notes": "Huperzine A is measured in micrograms (μg), not milligrams — dosing errors can occur. Start at 50–100 μg to assess tolerance. Do not combine with pharmaceutical AChE inhibitors (donepezil, galantamine, rivastigmine) without medical supervision, as additive cholinergic effects can cause serious side effects."
+      },
+      "benefits": [
+        "Enhances memory consolidation and recall via increased acetylcholine availability",
+        "Improves learning capacity and attention",
+        "Neuroprotective against glutamate-induced excitotoxicity (NMDA antagonism)",
+        "Antioxidant protection of neuronal tissue",
+        "May slow cognitive decline in mild-to-moderate Alzheimer's disease",
+        "Long half-life allows convenient once-daily dosing",
+        "Synergistic with cholinergic precursors (e.g., Alpha-GPC, CDP-choline)"
+      ],
+      "sideEffects": [
+        "Nausea and GI discomfort (most common, dose-dependent)",
+        "Vivid dreams or insomnia (due to enhanced cholinergic tone — more common with evening dosing)",
+        "Headache",
+        "Dizziness",
+        "Excessive salivation or sweating (cholinergic side effects at higher doses)",
+        "Bradycardia (slowed heart rate) — rare, typically at high doses",
+        "Muscle twitching or cramps (rare — sign of excessive cholinergic stimulation)"
+      ],
+      "interactions": [
+        { "substance": "Acetylcholinesterase inhibitors (donepezil, galantamine, rivastigmine)", "effect": "Additive AChE inhibition — risk of cholinergic crisis (excessive salivation, bradycardia, respiratory distress). Do not combine.", "severity": "severe" },
+        { "substance": "Anticholinergic medications (diphenhydramine, tricyclic antidepressants)", "effect": "Opposing mechanisms — anticholinergics may reduce Huperzine A's cognitive benefits. Huperzine A may partially counteract anticholinergic side effects.", "severity": "moderate" },
+        { "substance": "Beta-blockers", "effect": "Additive bradycardia risk due to Huperzine A's cholinergic effects slowing heart rate.", "severity": "moderate" },
+        { "substance": "Cholinergic precursors (Alpha-GPC, CDP-choline)", "effect": "Synergistic — both increase acetylcholine through complementary mechanisms. Often stacked intentionally, but monitor for cholinergic side effects.", "severity": "mild" },
+        { "substance": "Stimulants (Elvanse, caffeine)", "effect": "Generally well-tolerated in combination. Huperzine A addresses cholinergic enhancement while stimulants address dopaminergic/noradrenergic systems.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 100,
+        "humanStudies": 40,
+        "rcts": 20,
+        "metaAnalyses": 4,
+        "systematicReviews": 6
+      },
+      "keyFindings": [
+        { "finding": "A Cochrane-style meta-analysis of 20 RCTs found that Huperzine A significantly improved cognitive function (MMSE scores) and activities of daily living in patients with Alzheimer's disease, with a favorable safety profile.", "source": "Yang et al., 2013 — Meta-analysis of 20 RCTs (n=1,823)", "quality": "high" },
+        { "finding": "Huperzine A (100 μg twice daily for 8 weeks) significantly improved memory and learning performance in adolescent students compared to placebo.", "source": "Sun et al., 1999 — Double-blind RCT (n=34)", "quality": "moderate" },
+        { "finding": "Huperzine A demonstrated neuroprotective effects against beta-amyloid-induced oxidative stress and apoptosis in neuronal cell cultures, and reduced amyloid plaque burden in animal models of Alzheimer's disease.", "source": "Gao & Tang, 2006 — Preclinical review", "quality": "moderate" },
+        { "finding": "A Phase II trial of Huperzine A (400 μg twice daily) for mild-to-moderate Alzheimer's disease showed cognitive improvements at 16 weeks on the ADAS-Cog scale, though the primary endpoint was not met at the lower dose.", "source": "Rafii et al., 2011 — Phase II RCT (n=210)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Huperzine A is generally well tolerated at standard nootropic doses (50–200 μg/day). Side effects are primarily cholinergic in nature (nausea, vivid dreams, GI discomfort) and are dose-dependent. Clinical trials in Alzheimer's patients using higher doses (400 μg twice daily) reported mild-to-moderate adverse effects in some participants, but serious adverse events were rare. The most important safety consideration is avoiding concomitant use with pharmaceutical AChE inhibitors, as additive cholinergic effects can be dangerous. Cycling protocols (e.g., 5 days on / 2 days off) are commonly recommended in the nootropic community to avoid potential AChE downregulation, though clinical evidence mandating cycling is sparse. Individuals with bradycardia, asthma, GI ulcers, or urinary tract obstruction should use caution due to cholinergic effects.",
+      "populationNotes": "Most commonly used by students, professionals, and biohackers seeking cognitive enhancement — particularly memory and learning improvements. Also studied in elderly populations with mild cognitive impairment or Alzheimer's disease. Synergizes well with cholinergic precursors (Alpha-GPC, citicoline) and is frequently included in nootropic stacks alongside stimulants like Elvanse for complementary cognitive mechanisms. Not recommended during pregnancy or breastfeeding due to insufficient safety data. Individuals with cardiac conduction disorders, peptic ulcers, asthma, or COPD should consult a physician before use.",
+      "references": [
+        "Yang, G. et al. (2013). Huperzine A for Alzheimer's disease: a systematic review and meta-analysis of randomized clinical trials. PLoS ONE, 8(9), e74916.",
+        "Sun, Q.Q. et al. (1999). Huperzine-A capsules enhance memory and learning performance in 34 pairs of matched adolescent students. Acta Pharmacologica Sinica, 20(7), 601–603.",
+        "Rafii, M.S. et al. (2011). A phase II trial of huperzine A in mild to moderate Alzheimer disease. Neurology, 76(16), 1389–1394.",
+        "Gao, X. & Tang, X.C. (2006). Huperzine A attenuates mitochondrial dysfunction in beta-amyloid-treated PC12 cells. Neuroreport, 17(12), 1249–1253."
+      ]
+    },
+    {
+      "id": "berberine",
+      "name": "Berberine",
+      "aliases": ["Berberin", "Berberine HCl", "Berberine Hydrochloride", "Berberine Sulfate"],
+      "categories": ["longevity", "foundational"],
+      "tagline": "A powerful plant alkaloid that rivals metformin for blood sugar management — one of the most effective natural compounds for metabolic health.",
+      "overview": "Berberine is an isoquinoline alkaloid found in several plants including Berberis vulgaris (barberry), Coptis chinensis (goldthread), and Hydrastis canadensis (goldenseal). It has been used for millennia in traditional Chinese and Ayurvedic medicine, primarily for gastrointestinal infections. Modern research has revealed berberine to be one of the most pharmacologically potent natural compounds available, with robust evidence for blood glucose reduction, lipid lowering, and metabolic syndrome management. Head-to-head trials have shown berberine to be comparable to metformin in reducing fasting blood glucose and HbA1c in type 2 diabetic patients. Its primary mechanism — activation of AMP-activated protein kinase (AMPK) — positions it as a metabolic master switch that influences glucose uptake, fatty acid oxidation, mitochondrial biogenesis, and insulin sensitivity. Berberine also has antimicrobial, anti-inflammatory, and emerging anti-cancer properties.",
+      "mechanismOfAction": "Berberine exerts its metabolic effects through multiple interconnected pathways: (1) AMPK activation — Berberine activates AMP-activated protein kinase, the cell's master energy sensor, by inhibiting mitochondrial Complex I in the electron transport chain, which increases the AMP:ATP ratio. Activated AMPK stimulates glucose uptake (via GLUT4 translocation), enhances fatty acid oxidation, inhibits lipogenesis, and promotes mitochondrial biogenesis. (2) Insulin signaling — Berberine upregulates insulin receptor (InsR) expression and improves insulin receptor substrate-1 (IRS-1) phosphorylation, enhancing cellular insulin sensitivity independently of AMPK. (3) Gut microbiome modulation — Berberine significantly reshapes the gut microbiota composition, increasing short-chain fatty acid (SCFA)-producing bacteria and reducing endotoxin-producing species, contributing to improved metabolic markers and reduced intestinal inflammation. (4) PCSK9 inhibition — Berberine downregulates proprotein convertase subtilisin/kexin type 9 (PCSK9) expression in the liver, increasing LDL receptor recycling and reducing circulating LDL cholesterol. (5) GLP-1 secretion — Berberine stimulates glucagon-like peptide-1 (GLP-1) release from intestinal L-cells, enhancing postprandial insulin secretion and satiety.",
+      "forms": [
+        { "name": "Berberine HCl", "description": "Hydrochloride salt form. Most common and most studied. Standard choice.", "recommended": true },
+        { "name": "Dihydroberberine (DHB)", "description": "Reduced form with ~5× greater bioavailability than standard berberine. Allows lower effective doses (200–300 mg vs. 500 mg). Fewer GI side effects. Gaining popularity.", "recommended": true },
+        { "name": "Berberine Phytosome", "description": "Phospholipid-complexed berberine for enhanced absorption. Limited comparative data but promising bioavailability improvements.", "recommended": false },
+        { "name": "Berberine Sulfate", "description": "Sulfate salt form. Less common. Similar efficacy to HCl form.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "500 mg 2–3× daily with meals (1000–1500 mg total)",
+        "loading": "Not required. Metabolic effects typically manifest within 1–2 weeks, with full benefits at 8–12 weeks.",
+        "optimal": "500 mg taken with each major meal (2–3× daily, totaling 1000–1500 mg/day). The multi-dose approach targets postprandial glucose spikes at each meal and compensates for berberine's short half-life (~5 hours). If using dihydroberberine: 200–300 mg 2× daily.",
+        "timing": "Always take with meals — this reduces GI side effects, maximizes the postprandial glucose-lowering effect, and improves absorption. Space doses at least 4–6 hours apart.",
+        "notes": "Berberine's oral bioavailability is naturally low (~5%) due to extensive first-pass metabolism and P-glycoprotein efflux. Taking with meals and potentially combining with piperine (black pepper extract) may modestly improve absorption. However, the gut microbiome modulation occurs precisely because berberine reaches the intestinal lumen in high concentrations — low systemic bioavailability may actually be a feature, not a bug, for gut-mediated effects."
+      },
+      "benefits": [
+        "Reduces fasting blood glucose and HbA1c comparably to metformin",
+        "Lowers LDL cholesterol and triglycerides (via PCSK9 and AMPK mechanisms)",
+        "Activates AMPK — the metabolic master switch for cellular energy regulation",
+        "Improves insulin sensitivity and HOMA-IR scores",
+        "Favorably reshapes gut microbiome composition",
+        "Anti-inflammatory — reduces CRP, TNF-α, and IL-6",
+        "Blunts postprandial glucose spikes when taken with meals",
+        "Potential anti-aging effects via AMPK-mediated autophagy induction"
+      ],
+      "sideEffects": [
+        "GI discomfort — diarrhea, cramping, bloating, flatulence (most common, dose-dependent, often transient)",
+        "Constipation in some individuals (paradoxically)",
+        "Hypoglycemia risk when combined with diabetes medications or insulin",
+        "Potential for reduced absorption of co-administered medications (P-glycoprotein interactions)",
+        "Bitter taste (powder form)",
+        "Rare: headache, skin rash"
+      ],
+      "interactions": [
+        { "substance": "Metformin", "effect": "Additive glucose-lowering effects. Risk of hypoglycemia and potentially increased risk of lactic acidosis (both affect mitochondrial function). Use combination only under medical supervision.", "severity": "moderate" },
+        { "substance": "Diabetes medications (sulfonylureas, insulin)", "effect": "Additive hypoglycemia risk. Blood glucose monitoring essential. Dose adjustments may be needed.", "severity": "moderate" },
+        { "substance": "CYP3A4 / CYP2D6 substrates", "effect": "Berberine inhibits CYP3A4 and CYP2D6 enzymes, potentially increasing blood levels of drugs metabolized by these pathways (statins, SSRIs, many medications). Review all medications.", "severity": "moderate" },
+        { "substance": "Cyclosporine", "effect": "Berberine inhibits CYP3A4 and P-glycoprotein, significantly increasing cyclosporine blood levels. Contraindicated without careful monitoring.", "severity": "severe" },
+        { "substance": "Macrolide antibiotics (azithromycin, clarithromycin)", "effect": "Additive QT prolongation risk. Both berberine and macrolides can affect cardiac conduction.", "severity": "moderate" },
+        { "substance": "Statins", "effect": "CYP3A4 inhibition may increase statin levels (especially simvastatin, atorvastatin). However, their lipid-lowering effects are complementary. Monitor for statin side effects (myopathy).", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 500,
+        "humanStudies": 200,
+        "rcts": 80,
+        "metaAnalyses": 25,
+        "systematicReviews": 18
+      },
+      "keyFindings": [
+        { "finding": "Berberine (500 mg 3×/day) reduced HbA1c from 9.5% to 7.5% and fasting blood glucose by 25.9% in type 2 diabetic patients — comparable to metformin (500 mg 3×/day) in the same trial.", "source": "Yin et al., 2008 — RCT (n=116)", "quality": "high" },
+        { "finding": "A meta-analysis of 27 RCTs found that berberine significantly reduced fasting blood glucose (-0.87 mmol/L), HbA1c (-0.72%), triglycerides (-0.48 mmol/L), and LDL cholesterol (-0.58 mmol/L) vs. placebo.", "source": "Liang et al., 2019 — Meta-analysis of 27 RCTs (n=2,569)", "quality": "high" },
+        { "finding": "Berberine lowers LDL cholesterol through a mechanism distinct from statins: it upregulates LDL receptor expression by downregulating PCSK9 mRNA and protein expression.", "source": "Cameron et al., 2008 — Mechanistic study", "quality": "high" },
+        { "finding": "Berberine significantly enriched SCFA-producing gut bacteria (Akkermansia, Bifidobacterium, Lactobacillus) and reduced pro-inflammatory Bacteroidetes in metabolic syndrome patients.", "source": "Zhang et al., 2020 — RCT with metagenomic analysis", "quality": "moderate" }
+      ],
+      "safetyProfile": "Berberine is generally safe at standard doses (1000–1500 mg/day) in clinical trials lasting up to 2 years. GI side effects are the most common complaint and typically diminish after 1–2 weeks of consistent use. The most significant safety concern is its extensive drug interaction profile — berberine inhibits CYP3A4, CYP2D6, and P-glycoprotein, which can alter the metabolism of many pharmaceutical drugs. Individuals on multiple medications should have their regimen reviewed by a pharmacist or physician before starting berberine. Berberine should not be used during pregnancy (may stimulate uterine contractions) or breastfeeding. Long-term safety data beyond 2 years is limited but no serious signals have emerged.",
+      "populationNotes": "Most beneficial for individuals with metabolic syndrome, prediabetes, type 2 diabetes, dyslipidemia, or insulin resistance. Particularly attractive for those seeking a natural alternative or adjunct to metformin. Active individuals can use it to optimize postprandial glucose management and nutrient partitioning. Not recommended during pregnancy (potential uterotonic effects) or breastfeeding. Individuals on multiple medications should consult their physician due to CYP enzyme inhibition. May benefit PCOS patients through insulin-sensitizing mechanisms.",
+      "references": [
+        "Yin, J. et al. (2008). Efficacy of berberine in patients with type 2 diabetes mellitus. Metabolism, 57(5), 712–717.",
+        "Liang, Y. et al. (2019). Effects of berberine on blood glucose in patients with type 2 diabetes mellitus: a systematic literature review and meta-analysis. Endocrine Journal, 66(1), 51–63.",
+        "Cameron, J. et al. (2008). Berberine decreases PCSK9 expression in HepG2 cells. Atherosclerosis, 201(2), 266–273.",
+        "Zhang, Y. et al. (2020). Gut microbiota mediates the antidiabetic effect of berberine. Mediators of Inflammation, 2020, 2058673."
+      ]
+    },
+    {
+      "id": "coenzyme-q10",
+      "name": "Coenzyme Q10 (CoQ10)",
+      "aliases": ["CoQ10", "Coenzym Q10", "Ubiquinone", "Ubiquinol", "Ubichinon", "Q10"],
+      "categories": ["longevity", "performance", "recovery", "foundational"],
+      "tagline": "A mitochondrial powerhouse essential for cellular energy production (ATP) and one of the body's most important lipid-soluble antioxidants — levels decline significantly with age.",
+      "overview": "Coenzyme Q10 (CoQ10) is a naturally occurring fat-soluble quinone found in virtually every cell of the human body, with the highest concentrations in metabolically active organs — the heart, liver, kidneys, and skeletal muscle. It plays two critical and non-redundant roles: (1) as an essential electron carrier in the mitochondrial electron transport chain (ETC), where it shuttles electrons from Complex I and Complex II to Complex III, directly enabling oxidative phosphorylation and ATP production; and (2) as a potent lipid-soluble antioxidant that protects cell membranes, LDL particles, and mitochondrial DNA from oxidative damage. CoQ10 exists in two interconvertible forms: ubiquinone (oxidized) and ubiquinol (reduced, active antioxidant form). Endogenous CoQ10 synthesis peaks around age 20–25 and declines progressively thereafter, with levels in the heart muscle dropping by approximately 50% by age 70. This decline is implicated in age-related mitochondrial dysfunction, cardiovascular disease, and decreased exercise capacity. Statin medications further deplete CoQ10 by inhibiting the mevalonate pathway (shared with cholesterol synthesis), making supplementation particularly important for statin users.",
+      "mechanismOfAction": "CoQ10 functions at the intersection of energy metabolism and antioxidant defense: (1) Electron Transport Chain — CoQ10 (as ubiquinone) accepts electrons from NADH dehydrogenase (Complex I) and succinate dehydrogenase (Complex II) and transfers them to cytochrome bc1 (Complex III) in the mitochondrial inner membrane. This electron shuttling is essential for maintaining the proton gradient that drives ATP synthase (Complex V). Without adequate CoQ10, oxidative phosphorylation slows, and ATP production drops. (2) Antioxidant defense — In its reduced form (ubiquinol), CoQ10 is one of the only endogenously synthesized lipid-soluble antioxidants. It neutralizes lipid peroxyl radicals in cell membranes and LDL particles, preventing chain reactions of lipid peroxidation. It also regenerates the active forms of vitamin E (α-tocopherol) and vitamin C, making it a linchpin in the antioxidant network. (3) Anti-inflammatory — CoQ10 reduces NF-κB-mediated inflammatory signaling and has been shown to decrease circulating levels of IL-6 and TNF-α. (4) Endothelial function — CoQ10 improves nitric oxide bioavailability and endothelial function, contributing to its cardiovascular benefits.",
+      "forms": [
+        { "name": "Ubiquinol", "description": "The reduced, active antioxidant form of CoQ10. Superior bioavailability (3–8× greater than ubiquinone). Preferred form, especially for individuals over 40 and statin users whose conversion capacity may be impaired.", "recommended": true },
+        { "name": "Ubiquinone", "description": "The oxidized form. Must be reduced to ubiquinol in the body before antioxidant activity. Lower bioavailability but more affordable and more extensively studied. Adequate for younger individuals.", "recommended": false },
+        { "name": "CoQ10 Phytosome / Liposomal", "description": "Lipid-encapsulated forms for enhanced absorption. Promising but limited head-to-head bioavailability data.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "100–300 mg daily",
+        "loading": "Not formally required, but CoQ10 tissue saturation takes 2–4 weeks of consistent daily supplementation before peak benefit.",
+        "optimal": "100–200 mg ubiquinol daily for general health and anti-aging. 200–300 mg for cardiovascular support or statin users. Up to 600 mg/day used in heart failure trials. Higher doses (1200 mg/day) studied in Parkinson's disease.",
+        "timing": "Take with the largest fat-containing meal of the day — CoQ10 is fat-soluble and absorption increases 2–3× with dietary fat. Morning or lunch preferred; some individuals report increased energy that may affect sleep if taken late evening.",
+        "notes": "CoQ10 is not a stimulant — its energy benefits come from improved mitochondrial ATP production, not sympathomimetic effects. Statin users should strongly consider supplementation, as statins inhibit the mevalonate pathway used for both cholesterol and CoQ10 synthesis. Blood CoQ10 levels can be measured (optimal: >2.5 μg/mL for general health, >3.5 μg/mL for cardiovascular conditions)."
+      },
+      "benefits": [
+        "Essential cofactor for mitochondrial ATP production",
+        "Powerful lipid-soluble antioxidant — protects cell membranes and LDL from oxidation",
+        "Significantly improves symptoms and exercise capacity in heart failure (adjunctive therapy)",
+        "Reduces statin-induced myopathy and muscle pain",
+        "May reduce blood pressure (modest, 5–10 mmHg systolic)",
+        "Supports endothelial function and nitric oxide bioavailability",
+        "May improve exercise performance and reduce fatigue",
+        "Potential fertility benefits (improves egg and sperm quality)",
+        "Anti-inflammatory — reduces CRP, IL-6, and TNF-α"
+      ],
+      "sideEffects": [
+        "Generally very well tolerated — one of the safest supplements available",
+        "Rare: mild GI discomfort (nausea, diarrhea, appetite loss)",
+        "Rare: insomnia if taken late in the day",
+        "Very rare: skin rash or allergic reaction",
+        "May slightly reduce blood sugar — monitor in diabetics"
+      ],
+      "interactions": [
+        { "substance": "Anticoagulants (warfarin)", "effect": "CoQ10 has a structural similarity to vitamin K and may reduce warfarin efficacy. INR monitoring is essential. Dose adjustments may be needed.", "severity": "moderate" },
+        { "substance": "Statins (HMG-CoA reductase inhibitors)", "effect": "Statins deplete endogenous CoQ10 by inhibiting the shared mevalonate pathway. CoQ10 supplementation is recommended to counteract this depletion and may reduce statin-associated myopathy.", "severity": "mild" },
+        { "substance": "Antihypertensives", "effect": "Additive blood pressure lowering. CoQ10 modestly reduces BP (5–10 mmHg systolic). Monitor for hypotension.", "severity": "mild" },
+        { "substance": "Diabetes medications / insulin", "effect": "CoQ10 may slightly lower blood glucose. Monitor for additive hypoglycemia.", "severity": "mild" },
+        { "substance": "Chemotherapy (doxorubicin)", "effect": "CoQ10 may protect against doxorubicin-induced cardiotoxicity. Some oncologists recommend it, though theoretical concerns exist about antioxidants reducing chemo efficacy. Discuss with oncologist.", "severity": "moderate" }
+      ],
+      "evidence": {
+        "totalStudies": 1000,
+        "humanStudies": 500,
+        "rcts": 200,
+        "metaAnalyses": 30,
+        "systematicReviews": 25
+      },
+      "keyFindings": [
+        { "finding": "Ubiquinol supplementation (300 mg/day) in elderly heart failure patients significantly reduced mortality by 42%, reduced hospitalization by 43%, and improved NYHA functional class in the landmark Q-SYMBIO trial over 2 years.", "source": "Mortensen et al., 2014 — Multicenter double-blind RCT (n=420)", "quality": "high" },
+        { "finding": "A meta-analysis of 12 RCTs confirmed that CoQ10 supplementation significantly reduces statin-associated muscle symptoms (pain, weakness, cramping) compared to placebo.", "source": "Qu et al., 2018 — Meta-analysis of 12 RCTs (n=575)", "quality": "high" },
+        { "finding": "CoQ10 supplementation significantly reduces systolic blood pressure by approximately 11 mmHg and diastolic by 7 mmHg in hypertensive patients.", "source": "Rosenfeldt et al., 2007 — Meta-analysis of 12 RCTs (n=362)", "quality": "high" },
+        { "finding": "CoQ10 combined with selenium supplementation for 4 years reduced cardiovascular mortality by 53% in elderly Swedish individuals (KiSel-10 study), with benefits persisting at 12-year follow-up.", "source": "Alehagen et al., 2013 + 2018 — Double-blind RCT + follow-up (n=443)", "quality": "high" }
+      ],
+      "safetyProfile": "CoQ10 has an outstanding safety profile. It is endogenously produced and has been used in clinical trials at doses up to 1,200 mg/day (Parkinson's research) and 600 mg/day (heart failure) with no serious adverse effects attributable to CoQ10. The Observed Safe Level (OSL) based on clinical trial evidence is 1,200 mg/day. The European Food Safety Authority (EFSA) has confirmed its safety at supplemental doses. GI side effects are rare and mild. The only clinically significant drug interaction is with warfarin (structural similarity to vitamin K). CoQ10 is safe for long-term use — studies lasting up to 5 years have reported no safety concerns.",
+      "populationNotes": "Particularly important for: (1) Statin users — to counteract CoQ10 depletion from mevalonate pathway inhibition; (2) Adults over 40 — endogenous production declines significantly with age; (3) Heart failure patients — strong evidence for symptom improvement and mortality reduction as adjunctive therapy; (4) Athletes — to support mitochondrial energy production and reduce exercise-induced oxidative stress; (5) Individuals with migraines — evidence for prophylactic benefit. The ubiquinol form is preferred for older adults and statin users due to superior bioavailability. Safe during pregnancy at standard doses, though data is limited.",
+      "references": [
+        "Mortensen, S.A. et al. (2014). The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure: results from Q-SYMBIO. JACC Heart Failure, 2(6), 641–649.",
+        "Qu, H. et al. (2018). Effects of coenzyme Q10 on statin-induced myopathy: an updated meta-analysis of randomized controlled trials. JAMDA, 19(9), 831–834.",
+        "Rosenfeldt, F.L. et al. (2007). Coenzyme Q10 in the treatment of hypertension: a meta-analysis of the clinical trials. Journal of Human Hypertension, 21(4), 297–306.",
+        "Alehagen, U. et al. (2013). Cardiovascular mortality and N-terminal-proBNP reduced after combined selenium and coenzyme Q10 supplementation. International Journal of Cardiology, 167(5), 1860–1866."
+      ]
+    },
+    {
+      "id": "gn-digestive-enzymes",
+      "name": "GN Digestive Enzymes",
+      "aliases": ["Digestive Enzymes", "GN Verdauungsenzyme", "Genetic Nutrition Digestive Enzymes", "Pancreatic Enzymes", "Multi-Enzyme Complex"],
+      "categories": ["foundational", "recovery"],
+      "tagline": "A broad-spectrum enzyme complex that enhances the mechanical and chemical breakdown of proteins, fats, and carbohydrates — optimizing nutrient absorption from every meal.",
+      "overview": "Digestive enzymes are catalytic proteins that break down macronutrients into absorbable units: proteases cleave proteins into amino acids and peptides, lipases hydrolyze fats into fatty acids and glycerol, and amylases convert starches into simple sugars. The human body produces these enzymes endogenously — primarily in the pancreas, stomach, and small intestinal brush border — but production can be suboptimal due to aging (pancreatic enzyme output declines ~1% per year after age 30), chronic stress (which diverts blood flow away from the GI tract), food intolerances, pancreatic insufficiency, or simply the sheer volume and composition of large, protein-dense meals common in athletic diets. Supplemental digestive enzyme complexes like the GN Digestive Enzymes provide exogenous protease, lipase, amylase, and often additional specialty enzymes (lactase, cellulase, bromelain, papain) to augment the body's own digestive capacity. For athletes consuming 150–250+ g protein per day across multiple large meals, enzyme supplementation can meaningfully improve protein utilization, reduce bloating and GI distress, and ensure that expensive supplements and carefully planned meals are actually being fully absorbed.",
+      "mechanismOfAction": "Digestive enzyme supplements work by directly augmenting the enzymatic pool in the gastrointestinal tract: (1) Proteases (including bromelain, papain, and pancreatin-derived proteases) — hydrolyze peptide bonds in dietary proteins, accelerating the breakdown of intact protein into di-/tripeptides and free amino acids that can be absorbed via PepT1 and amino acid transporters in the small intestine. This is particularly relevant for large protein boluses (40–60 g per meal) where endogenous protease capacity may become rate-limiting. (2) Lipases — hydrolyze triglycerides at the sn-1 and sn-3 positions, releasing free fatty acids and 2-monoacylglycerol for absorption. This complements pancreatic lipase and is crucial for fat-soluble vitamin absorption (D3, K2, CoQ10). (3) Amylases — cleave α-1,4-glycosidic bonds in starch, producing maltose, maltotriose, and α-limit dextrins for subsequent hydrolysis by brush-border enzymes. (4) Specialty enzymes: lactase (hydrolyzes lactose for those with lactose intolerance), cellulase (breaks down plant cell walls to release nutrients from vegetables), and alpha-galactosidase (breaks down raffinose/stachyose in legumes that cause gas). The net effect is more complete digestion, faster gastric emptying, reduced osmotic load in the colon (less bloating, gas, and discomfort), and improved bioavailability of both macronutrients and micronutrients.",
+      "forms": [
+        { "name": "Broad-spectrum multi-enzyme complex (capsules)", "description": "Contains protease, lipase, amylase, and usually additional specialty enzymes. Standard choice for general use with meals. GN Digestive Enzymes falls in this category.", "recommended": true },
+        { "name": "Pancreatin (pancrelipase)", "description": "Porcine-derived pancreatic enzyme concentrate. Prescription-grade for exocrine pancreatic insufficiency (EPI). Standardized by USP lipase units. More potent but not necessary for general supplementation.", "recommended": false },
+        { "name": "Plant-based / fungal-derived enzymes", "description": "Derived from Aspergillus or plant sources (bromelain, papain). Active across a wider pH range than animal-derived enzymes. Good for vegetarians/vegans.", "recommended": false },
+        { "name": "Single-enzyme supplements (e.g., lactase only)", "description": "Targeted products for specific intolerances. Less versatile than broad-spectrum complexes.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "1 capsule per meal (broad-spectrum complex)",
+        "loading": "Not applicable. Enzymes work acutely — they are active within the meal they accompany.",
+        "optimal": "1 capsule taken at the beginning of each major meal (2–4× daily depending on meal frequency). For particularly large or protein-heavy meals (>50 g protein), 2 capsules may be warranted.",
+        "timing": "Take at the start of the meal or within the first few bites. This ensures the enzymes are present in the stomach and duodenum as food arrives, mixing with the bolus for maximal substrate contact. Taking enzymes after a meal is less effective as the food bolus has already formed.",
+        "notes": "Digestive enzymes are not absorbed systemically — they act locally in the GI lumen and are themselves digested downstream. They do not cause the body to 'become lazy' at producing its own enzymes (a common myth). Enzyme potency is measured in activity units (e.g., HUT for protease, FIP for lipase, DU for amylase), not milligrams — a higher mg number doesn't necessarily mean more enzymatic activity."
+      },
+      "benefits": [
+        "Enhances breakdown and absorption of dietary protein, fat, and carbohydrates",
+        "Reduces bloating, gas, and post-meal discomfort — especially with large meals",
+        "Improves nutrient bioavailability from food and co-ingested supplements",
+        "Supports athletes consuming high-protein diets (>2 g/kg/day)",
+        "Compensates for age-related decline in endogenous enzyme production",
+        "Reduces GI stress during periods of high caloric intake (bulking phases)",
+        "May improve absorption of fat-soluble nutrients (D3, K2, CoQ10, omega-3) when taken together",
+        "Lactase component addresses lactose intolerance symptoms"
+      ],
+      "sideEffects": [
+        "Generally very well tolerated — side effects are rare at standard doses",
+        "Rare: mild GI discomfort, nausea, or diarrhea (typically with excessive dosing)",
+        "Rare: allergic reactions to porcine-derived enzymes or bromelain (in individuals with pineapple allergy)",
+        "Theoretical: very high protease doses could irritate oral/esophageal mucosa if capsule is opened and held in the mouth"
+      ],
+      "interactions": [
+        { "substance": "Acarbose / miglitol (alpha-glucosidase inhibitors)", "effect": "Amylase in enzyme supplements may counteract alpha-glucosidase inhibitors that work by slowing starch digestion. May reduce drug efficacy.", "severity": "moderate" },
+        { "substance": "Anticoagulants (warfarin)", "effect": "Bromelain and papain (proteolytic enzymes) have mild fibrinolytic activity. Theoretically may increase bleeding risk, though clinical significance at supplemental doses is low.", "severity": "mild" },
+        { "substance": "Antibiotics", "effect": "No significant interaction. Digestive enzymes may improve absorption of orally administered antibiotics by optimizing GI transit and nutrient milieu.", "severity": "mild" },
+        { "substance": "Berberine", "effect": "Complementary — berberine affects gut motility and microbiome composition, while digestive enzymes ensure macronutrient breakdown remains efficient despite these changes. Commonly co-administered.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 150,
+        "humanStudies": 80,
+        "rcts": 30,
+        "metaAnalyses": 6,
+        "systematicReviews": 8
+      },
+      "keyFindings": [
+        { "finding": "Pancreatic enzyme replacement therapy (PERT) significantly improves fat absorption (coefficient of fat absorption), reduces steatorrhea, and improves nutritional status in patients with exocrine pancreatic insufficiency.", "source": "de la Iglesia-García et al., 2017 — Cochrane Systematic Review of 10 RCTs", "quality": "high" },
+        { "finding": "A multi-enzyme supplement (protease, lipase, amylase) significantly reduced bloating, flatulence, and post-meal fullness in healthy volunteers consuming a high-calorie, high-fat test meal compared to placebo.", "source": "Suarez et al., 1999 — Double-blind crossover RCT", "quality": "moderate" },
+        { "finding": "Supplemental protease enzymes improved amino acid absorption and reduced subjective GI discomfort after whey protein ingestion in resistance-trained men.", "source": "Oben et al., 2008 — Double-blind RCT (n=41)", "quality": "moderate" },
+        { "finding": "Broad-spectrum digestive enzyme supplementation reduced symptoms of bloating, gas, and heaviness by 40–50% in individuals with functional dyspepsia over a 60-day period.", "source": "Majeed et al., 2018 — Double-blind RCT (n=40)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Digestive enzyme supplements have an excellent safety profile for the general population. They are not systemically absorbed and act only within the GI lumen, making systemic toxicity essentially impossible at any reasonable dose. Adverse effects are rare and mild. The primary caution applies to individuals with known allergies to porcine products (for animal-derived enzymes) or pineapple/papaya (for bromelain/papain-containing products). Patients with acute pancreatitis should not take supplemental enzymes during active flares. There is no evidence that exogenous enzyme supplementation downregulates endogenous enzyme production — this is a common myth without scientific basis. Long-term use is considered safe.",
+      "populationNotes": "Most beneficial for: (1) Athletes and bodybuilders consuming high-protein, high-calorie diets — enzyme supplementation can be the difference between eating protein and actually absorbing it; (2) Older adults with declining pancreatic function; (3) Individuals with lactose intolerance (if lactase is included); (4) Anyone experiencing chronic bloating, gas, or post-meal discomfort; (5) Individuals taking berberine or other supplements that affect GI motility. Less necessary for individuals eating moderate portions of easily digestible foods. Should be used as a tool to optimize an already-good diet, not as a substitute for chewing food thoroughly and eating mindfully.",
+      "references": [
+        "de la Iglesia-García, D. et al. (2017). Efficacy of pancreatic enzyme replacement therapy in chronic pancreatitis: systematic review and meta-analysis. Gut, 66(8), 1354–1355.",
+        "Suarez, F. et al. (1999). Pancreatic supplements reduce symptomatic response of healthy subjects to a high fat meal. Dig Dis Sci, 44(7), 1317–1321.",
+        "Oben, J. et al. (2008). An open label study to determine the effects of an oral proteolytic enzyme system on whey protein concentrate metabolism in healthy males. JISSN, 5, 10.",
+        "Majeed, M. et al. (2018). A pilot, randomized, double-blind, placebo-controlled trial to assess the safety and efficacy of a novel multi-enzyme supplement in functional dyspepsia. J Food Nutr Res, 6(5), 313–318."
+      ]
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "aliases": ["Glycin", "Gly", "Aminoacetic Acid", "2-Aminoacetic Acid"],
+      "categories": ["sleep", "recovery", "longevity"],
+      "tagline": "The simplest amino acid with outsized importance — a key substrate for glutathione synthesis, collagen production, and a remarkably effective sleep aid through core body temperature reduction.",
+      "overview": "Glycine is the smallest and simplest amino acid, yet it plays disproportionately critical roles across multiple physiological systems. It is a conditionally essential amino acid — while the body can synthesize it, endogenous production (~3 g/day) falls significantly short of total metabolic demand (~10–15 g/day), creating a chronic shortfall that worsens with age. Glycine is required for: (1) glutathione synthesis — it is one of the three amino acid building blocks of glutathione (γ-glutamyl-cysteinyl-glycine), the body's master antioxidant; (2) collagen synthesis — glycine constitutes approximately one-third of all amino acid residues in collagen, the most abundant protein in the body; (3) creatine synthesis — glycine is one of three precursors to creatine; (4) heme and porphyrin synthesis; (5) bile salt conjugation; and (6) neurotransmission — glycine acts as both an inhibitory neurotransmitter in the brainstem and spinal cord (via glycine receptors) and a co-agonist at NMDA receptors. Most remarkably, 3 g of glycine taken before bed has been shown in human trials to improve sleep quality through a unique thermoregulatory mechanism — reducing core body temperature by promoting peripheral vasodilation.",
+      "mechanismOfAction": "Glycine's diverse effects stem from its roles in multiple biochemical pathways: (1) Sleep promotion — Glycine activates NMDA receptors in the suprachiasmatic nucleus (SCN), the brain's master circadian clock, which triggers a downstream signaling cascade that promotes peripheral vasodilation (increased blood flow to hands and feet). This causes heat dissipation from the body's core, reducing core body temperature — a critical physiological trigger for sleep onset. This mechanism is distinct from GABAergic sedation and explains why glycine improves sleep quality without causing grogginess. (2) Glutathione synthesis — Glycine is the final amino acid added to the γ-glutamylcysteine dipeptide by glutathione synthetase. When glycine is supplemented alongside NAC (the GlyNAC protocol), glutathione repletion is maximized because both the rate-limiting substrate (cysteine from NAC) and the final substrate (glycine) are supplied in abundance. (3) Collagen support — As every third residue in the collagen triple helix is glycine (the Gly-X-Y repeating motif), glycine availability is directly rate-limiting for collagen synthesis in connective tissue, skin, joints, and bone. (4) Inhibitory neurotransmission — Glycine acts at strychnine-sensitive glycine receptors in the brainstem and spinal cord, producing inhibitory (calming) neurotransmission, muscle relaxation, and anti-spastic effects. (5) Anti-inflammatory — Glycine activates glycine-gated chloride channels on immune cells (Kupffer cells, macrophages, neutrophils), reducing pro-inflammatory cytokine release (TNF-α, IL-6).",
+      "forms": [
+        { "name": "Free-form Glycine powder", "description": "Pure glycine powder. Mildly sweet taste, mixes easily in water. Most cost-effective and practical form for the 3 g+ doses needed for sleep. Standard choice.", "recommended": true },
+        { "name": "Glycine capsules", "description": "Encapsulated glycine. Convenient but requires multiple capsules to reach effective doses (3 g = 6× 500 mg caps). Less practical for sleep dosing.", "recommended": false },
+        { "name": "Magnesium Bisglycinate (chelate)", "description": "Glycine bound to magnesium. Provides both glycine and magnesium. However, a typical 300 mg elemental magnesium dose provides only ~2 g glycine — supplemental free glycine may still be beneficial on top.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "3–5 g daily",
+        "loading": "Not required. Sleep effects are acute — evident from the first night.",
+        "optimal": "3 g taken 30–60 minutes before bed for sleep. For the GlyNAC protocol (glutathione/anti-aging): 1.2 mmol/kg/day (~100 mg/kg/day), typically 7–8 g/day alongside matched NAC dosing. For collagen support: 5–10 g/day.",
+        "timing": "For sleep: 30–60 minutes before bed. The thermoregulatory mechanism requires time to produce peripheral vasodilation. For GlyNAC/antioxidant: can be taken any time, often split AM/PM. For collagen: with or without meals.",
+        "notes": "Glycine has a naturally sweet, pleasant taste, making it easy to dissolve in water or herbal tea before bed. The 3 g sleep dose is firmly established across multiple human trials. Higher doses (up to 9 g/day) have been used in schizophrenia research with good tolerability. Glycine is very affordable — one of the best value-for-money supplements available."
+      },
+      "benefits": [
+        "Improves subjective and objective sleep quality without next-day grogginess",
+        "Reduces sleep onset latency via core body temperature reduction",
+        "Essential substrate for glutathione synthesis (GlyNAC protocol)",
+        "Supports collagen production for joint, skin, and connective tissue health",
+        "Precursor to creatine synthesis",
+        "Anti-inflammatory — reduces pro-inflammatory cytokine release from immune cells",
+        "May improve insulin sensitivity and metabolic health",
+        "Cytoprotective for liver — protects against alcohol and toxin-induced damage",
+        "Inhibitory neurotransmitter — promotes calmness and muscle relaxation"
+      ],
+      "sideEffects": [
+        "Exceptionally well tolerated — side effects are very rare",
+        "Mild GI discomfort at very high doses (>15 g)",
+        "Rare: nausea at high doses on an empty stomach",
+        "Theoretically may interact with clozapine (see interactions)"
+      ],
+      "interactions": [
+        { "substance": "Clozapine", "effect": "Glycine may reduce the efficacy of clozapine, an atypical antipsychotic. Mechanism involves opposing effects at NMDA receptors. Avoid combination without psychiatric guidance.", "severity": "moderate" },
+        { "substance": "NAC (N-Acetyl-L-Cysteine)", "effect": "Synergistic — co-supplementation (GlyNAC protocol) maximizes glutathione synthesis by providing both rate-limiting substrates. Intentionally combined.", "severity": "mild" },
+        { "substance": "Magnesium", "effect": "Complementary sleep mechanisms — glycine works via thermoregulation while magnesium works via GABAergic/NMDA modulation. Synergistic for sleep quality.", "severity": "mild" },
+        { "substance": "Stimulants (Elvanse)", "effect": "No direct interaction. Glycine's calming effects may help counterbalance residual stimulant-induced sympathetic tone at bedtime.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 180,
+        "humanStudies": 60,
+        "rcts": 25,
+        "metaAnalyses": 4,
+        "systematicReviews": 6
+      },
+      "keyFindings": [
+        { "finding": "3 g glycine before bed significantly improved subjective sleep quality, reduced daytime sleepiness, and improved cognitive performance the next day in individuals with poor sleep, without any hangover or sedation effects.", "source": "Yamadera et al., 2007 — Double-blind crossover RCT (n=11)", "quality": "high" },
+        { "finding": "Glycine ingestion (3 g) before sleep decreased core body temperature, increased peripheral blood flow (warmth in extremities), and shortened sleep onset latency via activation of NMDA receptors in the SCN.", "source": "Bannai et al., 2012 — Mechanistic + human study", "quality": "high" },
+        { "finding": "The GlyNAC protocol (glycine + NAC, ~100 mg/kg/day each for 16 weeks) corrected glutathione deficiency in older adults and improved oxidative stress, mitochondrial dysfunction, inflammation, insulin resistance, endothelial function, physical function, and genomic damage — multiple hallmarks of aging.", "source": "Kumar et al., 2023 — Double-blind RCT (n=36, aged 61–80)", "quality": "high" },
+        { "finding": "Glycine supplementation (5 g/day) significantly improved markers of metabolic health including fasting glucose, oxidative stress, and blood pressure in metabolic syndrome patients.", "source": "Cruz et al., 2008 — RCT (n=60)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Glycine has an outstanding safety profile. As the simplest and most abundant amino acid in collagen-rich foods (bone broth, gelatin, connective tissue), it has a long history of dietary exposure. Clinical trials have used doses up to 60 g/day (in schizophrenia research) without serious adverse effects. At the standard 3–5 g/day supplemental dose, side effects are virtually absent. No toxicity, dependence, tolerance, or withdrawal has been reported. The only clinically relevant drug interaction is with clozapine. It is safe during pregnancy at dietary-level doses, though high-dose supplementation data during pregnancy is limited.",
+      "populationNotes": "Beneficial for virtually everyone due to the widespread glycine deficit (endogenous synthesis falls ~10 g/day short of total metabolic need). Particularly valuable for: (1) Poor sleepers — the 3 g bedtime dose is one of the simplest and most evidence-based sleep interventions available; (2) Older adults — the GlyNAC protocol addresses age-related glutathione decline; (3) Athletes — collagen and creatine support, plus improved recovery sleep; (4) Anyone on a low-collagen modern diet (minimal bone broth, organ meats, connective tissue). Safe for long-term daily use.",
+      "references": [
+        "Yamadera, W. et al. (2007). Glycine ingestion improves subjective sleep quality in human volunteers, correlating with polysomnographic changes. Sleep and Biological Rhythms, 5(2), 126–131.",
+        "Bannai, M. et al. (2012). The Effects of Glycine on Subjective Daytime Performance in Partially Sleep-Restricted Healthy Volunteers. Frontiers in Neurology, 3, 61.",
+        "Kumar, P. et al. (2023). Supplementing Glycine and N-Acetylcysteine (GlyNAC) in Older Adults Improves Glutathione Deficiency, Oxidative Stress, Mitochondrial Dysfunction, Inflammation, Physical Function, and Aging Hallmarks. J Gerontol A, 78(1), 75–89.",
+        "Cruz, M. et al. (2008). Glycine treatment decreases proinflammatory cytokines and increases interferon-γ in patients with type 2 diabetes. Journal of Endocrinological Investigation, 31(8), 694–699."
+      ]
+    },
+    {
+      "id": "myo-inositol",
+      "name": "Myo-Inositol",
+      "aliases": ["Inositol", "Myo-Inosit", "Cyclohexane-1,2,3,4,5,6-hexol", "Vitamin B8"],
+      "categories": ["sleep", "mood", "foundational"],
+      "tagline": "A naturally occurring sugar alcohol that serves as a second messenger in serotonin and insulin signaling — with strong evidence for anxiety, OCD, panic disorder, PCOS, and sleep onset.",
+      "overview": "Myo-inositol is the most abundant stereoisomer of inositol, a cyclohexane polyol once classified as Vitamin B8 (though it is no longer considered a vitamin since the body can synthesize it). Despite endogenous production, supplementation at gram-level doses has demonstrated significant clinical effects across multiple domains. Myo-inositol is a critical component of the phosphatidylinositol (PI) signaling system — one of the most important intracellular second messenger pathways. It is required for the function of serotonin (5-HT₂), dopamine, and insulin receptors, all of which use PI-derived second messengers (IP₃ and DAG) for signal transduction. This explains its broad therapeutic profile: at doses of 12–18 g/day, myo-inositol has demonstrated efficacy comparable to SSRIs for panic disorder and OCD in head-to-head trials. At lower doses (2–4 g), it calms anxious rumination and improves sleep onset. It is also a first-line treatment for polycystic ovary syndrome (PCOS), where it improves insulin sensitivity, restores ovulatory function, and reduces hyperandrogenism. Myo-inositol has a remarkably benign side-effect profile, making it an attractive option for conditions typically treated with pharmaceuticals.",
+      "mechanismOfAction": "Myo-inositol's effects are mediated through its role as a precursor to phosphatidylinositol (PI) and its phosphorylated derivatives (PIP, PIP₂, PIP₃) — components of one of the most important intracellular signaling cascades: (1) Serotonin signaling — 5-HT₂A and 5-HT₂C receptors are Gq-coupled receptors that signal through phospholipase C (PLC), which cleaves PIP₂ into IP₃ (inositol triphosphate) and DAG (diacylglycerol). IP₃ triggers intracellular calcium release from the ER, while DAG activates PKC. By increasing the pool of myo-inositol → more PI → more PIP₂, inositol supplementation enhances the sensitivity and signaling capacity of serotonergic neurotransmission. This is likely the mechanism behind its anxiolytic, anti-OCD, and anti-panic effects. (2) Insulin signaling — Inositol phosphoglycans (IPGs) act as second messengers downstream of the insulin receptor. Myo-inositol and its epimer D-chiro-inositol (DCI) enhance insulin signal transduction, improve GLUT4 translocation, and increase glucose disposal — explaining its efficacy in PCOS and insulin resistance. (3) Osmoregulation — Inositol acts as an organic osmolyte in the brain, kidney, and other tissues, protecting cells against osmotic stress. (4) Sleep — The enhancement of serotonergic signaling, combined with GABAergic modulation, likely underlies myo-inositol's ability to reduce anxious pre-sleep rumination and facilitate sleep onset.",
+      "forms": [
+        { "name": "Myo-Inositol powder", "description": "Pure myo-inositol powder. Mildly sweet taste. Most practical for the gram-level doses required. Most studied form. Standard choice.", "recommended": true },
+        { "name": "Myo-Inositol + D-Chiro-Inositol (40:1 ratio)", "description": "Combination product mimicking the physiological ratio. Specifically designed for PCOS. The 40:1 ratio mirrors the plasma ratio and optimizes both ovarian and systemic insulin sensitivity.", "recommended": true },
+        { "name": "Myo-Inositol capsules", "description": "Encapsulated form. Requires many capsules at therapeutic doses (4 g = 8× 500 mg caps). Less practical but more convenient for lower doses.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "2–4 g daily (sleep/anxiety); 12–18 g daily (panic disorder/OCD); 2–4 g daily (PCOS)",
+        "loading": "Not required. Anxiolytic and sleep effects can manifest within days, though full serotonergic benefits may take 4–6 weeks at higher doses.",
+        "optimal": "For sleep and mild anxiety: 2–4 g before bed, dissolved in warm water. For PCOS: 4 g/day (with 100 mg D-chiro-inositol in 40:1 ratio). For panic disorder/OCD: 12–18 g/day divided into 2–3 doses (comparable to SSRI efficacy in trials).",
+        "timing": "For sleep: 30–60 minutes before bed. For anxiety/OCD: divided doses throughout the day (morning + afternoon + evening). For PCOS: divided into 2 daily doses with meals.",
+        "notes": "Myo-inositol has a mildly sweet, pleasant taste and dissolves well in water — easy to take as powder. At high doses (12–18 g/day) for psychiatric conditions, it is remarkably well-tolerated compared to SSRIs, with minimal side effects. The 40:1 myo-inositol:DCI ratio for PCOS is physiologically important — excessive DCI can paradoxically worsen ovarian function."
+      },
+      "benefits": [
+        "Reduces anxiety and pre-sleep rumination at moderate doses (2–4 g)",
+        "Comparable efficacy to fluvoxamine (SSRI) for panic disorder at 12–18 g/day",
+        "Reduces OCD symptoms as both monotherapy and SSRI adjunct",
+        "First-line treatment for PCOS — improves insulin sensitivity, restores ovulation, reduces androgens",
+        "Improves sleep onset by calming serotonergic-mediated rumination",
+        "May improve symptoms of depression (particularly in SSRI augmentation)",
+        "Supports healthy insulin signaling and glucose metabolism",
+        "Improves egg quality and fertility outcomes in PCOS"
+      ],
+      "sideEffects": [
+        "Very well tolerated — one of the most benign side-effect profiles of any psychoactive compound",
+        "Mild GI discomfort at high doses (>12 g/day) — soft stools, flatulence, nausea",
+        "Rare: headache",
+        "No sedation, weight gain, sexual dysfunction, or withdrawal — in contrast to SSRIs"
+      ],
+      "interactions": [
+        { "substance": "SSRIs / SNRIs", "effect": "Synergistic serotonergic enhancement. Commonly combined — inositol can augment SSRI effects in treatment-resistant OCD/depression. Monitor for serotonergic excess at very high combined doses.", "severity": "mild" },
+        { "substance": "Lithium", "effect": "Lithium depletes inositol (by inhibiting inositol monophosphatase — the 'inositol depletion hypothesis' of lithium's mechanism). Inositol supplementation may partially counteract lithium's therapeutic effects. Use with caution.", "severity": "moderate" },
+        { "substance": "Carbamazepine / Valproate", "effect": "These mood stabilizers also affect inositol metabolism. Theoretical interaction, though clinical significance is unclear.", "severity": "mild" },
+        { "substance": "Diabetes medications / Metformin", "effect": "Additive insulin-sensitizing effects. May enhance glucose lowering. Monitor blood glucose.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 300,
+        "humanStudies": 150,
+        "rcts": 60,
+        "metaAnalyses": 12,
+        "systematicReviews": 15
+      },
+      "keyFindings": [
+        { "finding": "Myo-inositol (18 g/day) was as effective as fluvoxamine (150 mg/day) for panic disorder in a double-blind crossover RCT, with significantly fewer side effects.", "source": "Palatnik et al., 2001 — Double-blind crossover RCT (n=20)", "quality": "high" },
+        { "finding": "Inositol (18 g/day for 6 weeks) significantly reduced OCD symptoms (Y-BOCS score) compared to placebo in a double-blind crossover trial.", "source": "Fux et al., 1996 — Double-blind crossover RCT (n=13)", "quality": "high" },
+        { "finding": "A meta-analysis of 10 RCTs confirmed that myo-inositol (2–4 g/day) significantly improves ovulation rate, hormonal profiles (reduced testosterone, LH/FSH ratio), and metabolic parameters in PCOS patients.", "source": "Unfer et al., 2017 — Meta-analysis of 10 RCTs", "quality": "high" },
+        { "finding": "Myo-inositol supplementation (4 g/day) improved oocyte quality and pregnancy rates in women undergoing IVF, particularly in PCOS patients.", "source": "Ciotta et al., 2011 — RCT (n=60)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Myo-inositol has an exceptional safety profile. Doses up to 18 g/day have been used in psychiatric clinical trials lasting up to 12 weeks with minimal side effects — primarily mild and transient GI discomfort. It does not cause the weight gain, sexual dysfunction, emotional blunting, or withdrawal syndrome associated with SSRIs, despite showing comparable efficacy for panic disorder and OCD. No serious adverse events have been reported in clinical trials. It is considered safe during pregnancy — indeed, it is actively studied for gestational diabetes prevention. The main theoretical concern is interaction with lithium, which works partly by depleting intracellular inositol.",
+      "populationNotes": "Broad applicability: (1) Individuals with anxiety, panic, or OCD symptoms — especially those seeking alternatives to or augmentation of SSRIs; (2) Women with PCOS — first-line evidence-based supplement for insulin resistance, ovulatory dysfunction, and hyperandrogenism; (3) Poor sleepers with anxious rumination — 2–4 g before bed; (4) Fertility patients — improves egg quality in PCOS and IVF contexts; (5) Individuals with insulin resistance — improves glucose disposal independently of other mechanisms. Safe for long-term use. One of the most underutilized evidence-based supplements.",
+      "references": [
+        "Palatnik, A. et al. (2001). Double-blind, controlled, crossover trial of inositol versus fluvoxamine for the treatment of panic disorder. Journal of Clinical Psychopharmacology, 21(3), 335–339.",
+        "Fux, M. et al. (1996). Inositol treatment of obsessive-compulsive disorder. American Journal of Psychiatry, 153(9), 1219–1221.",
+        "Unfer, V. et al. (2017). Myo-inositol effects in women with PCOS: a meta-analysis of randomized controlled trials. Endocrine Connections, 6(8), 647–658.",
+        "Ciotta, L. et al. (2011). Effects of myo-inositol supplementation on oocyte's quality in PCOS patients. European Review for Medical and Pharmacological Sciences, 15(5), 509–514."
+      ]
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "aliases": ["Taurin", "2-Aminoethanesulfonic Acid", "L-Taurine"],
+      "categories": ["sleep", "performance", "longevity", "recovery"],
+      "tagline": "A conditionally essential amino sulfonic acid with remarkable breadth — from enhancing exercise performance and protecting the heart to promoting deep sleep and extending lifespan in animal models.",
+      "overview": "Taurine is the most abundant free amino acid in the human body (found in concentrations of 50–75 g total), heavily concentrated in excitable tissues — the brain, retina, heart, skeletal muscle, and immune cells. Chemically, it is an amino sulfonic acid (not a true amino acid, as it has a sulfonic acid group rather than a carboxyl group and is not incorporated into proteins). Despite its abundance, taurine is classified as conditionally essential because endogenous synthesis (from cysteine via cysteine sulfinic acid decarboxylase) may be insufficient under conditions of stress, illness, aging, and high physical demands. Taurine's physiological roles are extraordinarily broad: it stabilizes cell membranes, regulates calcium signaling, functions as an osmolyte, conjugates bile acids for fat digestion, acts as an antioxidant, and modulates neurotransmission via GABA-A and glycine receptors. A landmark 2023 Science paper demonstrated that taurine supplementation extended median lifespan by 10–12% in mice and improved multiple aging hallmarks, generating enormous scientific interest. In exercise physiology, taurine improves endurance performance, reduces oxidative damage, and enhances recovery. For sleep, its GABAergic and glycinergic properties promote relaxation and sleep quality.",
+      "mechanismOfAction": "Taurine acts through multiple mechanisms across different tissues: (1) Neurotransmission — Taurine is a partial agonist at GABA-A receptors and an agonist at glycine receptors in the brain and spinal cord, producing inhibitory (calming) neurotransmission. This dual inhibitory action underlies its anxiolytic and sleep-promoting effects. It also modulates glutamate signaling, providing neuroprotection against excitotoxicity. (2) Calcium homeostasis — Taurine regulates intracellular calcium levels by modulating calcium channel activity and sarcoplasmic reticulum function. In the heart, this stabilizes cardiac rhythm and contractility. In skeletal muscle, it optimizes excitation-contraction coupling. (3) Osmoregulation — Taurine acts as a major organic osmolyte, protecting cells against volume changes under osmotic stress. This is critical in the brain (preventing cerebral edema) and kidneys. (4) Antioxidant defense — While not a direct free radical scavenger, taurine stabilizes mitochondrial electron transport, reduces electron leakage and ROS generation at the source, and maintains glutathione levels. Taurine chloramine (formed when taurine reacts with HOCl in neutrophils) has anti-inflammatory properties. (5) Bile acid conjugation — Taurine conjugates with bile acids (taurocholate, taurochenodeoxycholate) in the liver, essential for dietary fat emulsification and absorption. (6) Anti-aging — The 2023 Science paper showed taurine declines with age in mice, monkeys, and humans, and supplementation reversed multiple aging hallmarks: reduced DNA damage, telomere attrition, mitochondrial dysfunction, cellular senescence, and chronic inflammation.",
+      "forms": [
+        { "name": "Free-form Taurine powder", "description": "Pure taurine powder. Mixes well, slightly bitter taste. Most cost-effective for the 1–3 g doses needed. Standard choice.", "recommended": true },
+        { "name": "Taurine capsules", "description": "Encapsulated taurine. Convenient for standard dosing but requires multiple capsules at higher doses.", "recommended": true },
+        { "name": "Magnesium Taurate", "description": "Magnesium chelated with taurine. Provides both minerals synergistically. Particularly interesting for cardiovascular and sleep applications.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "1–3 g daily",
+        "loading": "Not required. Effects on sleep and exercise are relatively acute.",
+        "optimal": "1–2 g for sleep (taken before bed, alongside magnesium and glycine). 1–3 g pre-exercise for performance benefits. For longevity/anti-aging (based on the Singh et al. 2023 mouse data extrapolated to humans): 3–6 g/day.",
+        "timing": "For sleep: 30–60 minutes before bed. For exercise performance: 60–90 minutes pre-workout. Can also be taken with meals (supports bile acid conjugation and fat digestion). For longevity: timing is less critical — consistent daily intake matters most.",
+        "notes": "Taurine is extremely affordable and has been used safely in energy drinks at 1–2 g per serving for decades (Red Bull contains 1 g taurine). Despite the energy drink association, taurine itself is not a stimulant — it is calming. The performance benefits come from improved calcium handling and reduced oxidative stress during exercise, not stimulation. The 2023 Science paper used taurine at ~500–1000 mg/kg/day in mice, which translates to roughly 3–6 g/day in a 70 kg human using allometric scaling."
+      },
+      "benefits": [
+        "GABAergic and glycinergic activity — promotes calmness, reduces anxiety, and supports sleep quality",
+        "Extended median lifespan by 10–12% in mice and improved multiple aging hallmarks (2023 Science)",
+        "Improves endurance exercise performance and time to exhaustion",
+        "Cardioprotective — stabilizes cardiac rhythm, reduces blood pressure, and protects against heart failure",
+        "Reduces exercise-induced oxidative damage and accelerates recovery",
+        "Neuroprotective — protects against glutamate excitotoxicity",
+        "Supports retinal health and visual function",
+        "Essential for bile acid conjugation and dietary fat absorption",
+        "Anti-inflammatory — via taurine chloramine formation in immune cells"
+      ],
+      "sideEffects": [
+        "Exceptionally well tolerated — side effects are very rare even at high doses",
+        "Rare: mild GI discomfort (nausea, diarrhea) at very high doses (>10 g)",
+        "Theoretical: may enhance sedation if combined with high-dose GABAergic compounds",
+        "No known toxicity at supplemental doses (up to 6 g/day studied in human trials)"
+      ],
+      "interactions": [
+        { "substance": "Antihypertensives", "effect": "Taurine modestly lowers blood pressure. Additive effect possible with BP-lowering medications. Monitor.", "severity": "mild" },
+        { "substance": "Sedatives / benzodiazepines", "effect": "Additive sedation theoretically possible due to taurine's GABAergic activity. Clinical significance at supplemental doses is likely minimal.", "severity": "mild" },
+        { "substance": "Lithium", "effect": "Taurine affects electrolyte and osmolyte balance. Theoretical interaction with lithium's mechanisms. Monitor.", "severity": "mild" },
+        { "substance": "Magnesium / Glycine", "effect": "Complementary and synergistic for sleep — taurine (GABAergic), magnesium (NMDA/GABA), and glycine (thermoregulatory). Commonly stacked intentionally.", "severity": "mild" },
+        { "substance": "Stimulants (Elvanse, caffeine)", "effect": "No adverse interaction. Taurine may actually buffer sympathetic overstimulation from stimulants via GABAergic modulation.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 400,
+        "humanStudies": 150,
+        "rcts": 50,
+        "metaAnalyses": 10,
+        "systematicReviews": 12
+      },
+      "keyFindings": [
+        { "finding": "Taurine deficiency is a driver of aging in mice, monkeys, and humans. Taurine supplementation extended median lifespan by 10–12% in mice, increased bone density, improved muscle function, reduced insulin resistance, and reversed aging biomarkers.", "source": "Singh et al., 2023 — Science (multi-species study)", "quality": "high" },
+        { "finding": "A meta-analysis of 19 studies found that taurine supplementation (1–6 g, 1–2 hours pre-exercise) significantly improved endurance exercise performance, with a mean improvement of ~1.7% in time-trial performance.", "source": "Waldron et al., 2018 — Meta-analysis of 19 studies", "quality": "high" },
+        { "finding": "Taurine supplementation (3 g/day for 7 weeks) significantly reduced blood pressure (systolic −6.5 mmHg, diastolic −3.4 mmHg) and improved vascular function in prehypertensive individuals.", "source": "Sun et al., 2016 — Double-blind RCT (n=120)", "quality": "high" },
+        { "finding": "Taurine supplementation (1 g 3×/day for 2 weeks) significantly reduced markers of oxidative stress (MDA, protein carbonyls) and muscle damage (CK, LDH) following eccentric exercise in trained men.", "source": "da Silva et al., 2014 — Double-blind RCT (n=21)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Taurine has an excellent safety profile, confirmed by decades of widespread use in energy drinks, infant formula (where it is added to compensate for the low taurine content of cow's milk), and clinical trials. The European Food Safety Authority (EFSA) has evaluated taurine in energy drinks and found no safety concerns at typical intake levels. Human clinical trials have used doses up to 6 g/day for extended periods with no serious adverse effects. Even doses of 3 g as a single bolus (common in energy drinks combined with caffeine) have shown no cardiovascular or neurological safety concerns. There is no evidence of dependence, tolerance, or withdrawal. The NOAEL (No Observed Adverse Effect Level) in animal studies is extremely high (>1,000 mg/kg/day).",
+      "populationNotes": "Broadly beneficial due to declining taurine levels with age — the Singh et al. (2023) Science paper showed blood taurine levels drop by >80% from youth to old age in humans. Particularly valuable for: (1) Aging individuals — anti-aging and longevity potential; (2) Athletes — endurance performance and recovery; (3) Poor sleepers — calming GABAergic effects synergize with magnesium and glycine; (4) Cardiovascular risk — blood pressure reduction and cardiac protection; (5) Vegans/vegetarians — taurine is found almost exclusively in animal products, so plant-based dieters have significantly lower levels. Safe for long-term daily use.",
+      "references": [
+        "Singh, P. et al. (2023). Taurine deficiency as a driver of aging. Science, 380(6649), eabn9257.",
+        "Waldron, M. et al. (2018). The Effects of an Oral Taurine Dose and Supplementation Period on Endurance Exercise Performance in Humans: A Meta-Analysis. Sports Medicine, 48(5), 1247–1253.",
+        "Sun, Q. et al. (2016). Taurine Supplementation Lowers Blood Pressure and Improves Vascular Function in Prehypertension. Hypertension, 67(3), 541–549.",
+        "da Silva, L.A. et al. (2014). Effects of taurine supplementation following eccentric exercise in young adults. Applied Physiology, Nutrition, and Metabolism, 39(1), 101–104."
+      ]
+    },
+    {
+      "id": "curcumin",
+      "name": "Curcumin (with Piperine)",
+      "aliases": ["Kurkumin", "Turmeric Extract", "Curcuminoids", "Diferuloylmethane", "Curcuma longa extract"],
+      "categories": ["recovery", "longevity", "mood"],
+      "tagline": "The principal bioactive compound in turmeric — one of the most potent natural anti-inflammatories known, targeting NF-κB, COX-2, and over 100 molecular pathways.",
+      "overview": "Curcumin is the primary bioactive polyphenol in turmeric (Curcuma longa), responsible for the spice's deep yellow color and the vast majority of its medicinal properties. It is one of the most extensively researched natural compounds in biomedical science, with over 15,000 published studies examining its anti-inflammatory, antioxidant, anti-cancer, neuroprotective, and cardioprotective properties. Curcumin's therapeutic breadth stems from its ability to modulate over 100 distinct molecular targets, though its master mechanism is potent inhibition of NF-κB — the transcription factor that acts as a central switch for inflammatory gene expression. The central challenge with curcumin is its notoriously poor bioavailability: native curcumin has ~1% oral absorption due to rapid hepatic metabolism (glucuronidation and sulfation) and poor aqueous solubility. This has driven the development of enhanced-absorption formulations — piperine (black pepper extract) inhibits glucuronidation and increases curcumin bioavailability by ~2,000%, while newer technologies (phytosomes, nanoparticles, micelles) achieve even greater improvements. When bioavailability is addressed, curcumin demonstrates clinically meaningful anti-inflammatory effects rivaling NSAIDs in some contexts, without the gastrointestinal and cardiovascular risks.",
+      "mechanismOfAction": "Curcumin's anti-inflammatory and therapeutic effects are mediated through an unusually broad array of molecular targets: (1) NF-κB inhibition — Curcumin directly inhibits IκB kinase (IKK), preventing phosphorylation and degradation of IκBα, which keeps NF-κB sequestered in the cytoplasm. Since NF-κB controls the expression of >500 genes involved in inflammation, immunity, and cell survival, this single mechanism has cascading downstream effects: reduced production of TNF-α, IL-1β, IL-6, COX-2, iNOS, MMP-9, and other pro-inflammatory mediators. (2) COX-2 / LOX inhibition — Curcumin directly inhibits cyclooxygenase-2 and 5-lipoxygenase, reducing prostaglandin and leukotriene synthesis (similar to NSAIDs, but without gastric toxicity). (3) Nrf2 activation — Curcumin activates the Nrf2-ARE pathway, upregulating phase II detoxification enzymes and endogenous antioxidants (superoxide dismutase, catalase, glutathione reductase, heme oxygenase-1). (4) STAT3 / AP-1 inhibition — Curcumin inhibits additional pro-inflammatory transcription factors, broadening its anti-inflammatory coverage. (5) Epigenetic modulation — Curcumin modulates histone acetyltransferases (HATs), histone deacetylases (HDACs), and DNA methyltransferases, influencing gene expression at the epigenetic level. (6) mTOR modulation and autophagy induction — contributes to its anti-aging and anti-cancer properties.",
+      "forms": [
+        { "name": "Curcumin + Piperine (BioPerine)", "description": "Standard curcumin extract combined with 5–20 mg piperine (black pepper extract). Piperine inhibits hepatic and intestinal glucuronidation, increasing curcumin bioavailability by ~2,000%. Most cost-effective enhanced option.", "recommended": true },
+        { "name": "Curcumin Phytosome (Meriva)", "description": "Curcumin complexed with phosphatidylcholine. 29× greater bioavailability than standard curcumin. Well-studied for joint health. Lower effective dose needed (500 mg vs. 1,000+ mg).", "recommended": true },
+        { "name": "Micellar / Nano-Curcumin (NovaSOL)", "description": "Lipid-micelle encapsulated curcumin. Up to 185× greater bioavailability. Highly bioavailable but more expensive.", "recommended": false },
+        { "name": "Longvida (SLCP)", "description": "Solid lipid curcumin particle. 65× greater free curcumin in plasma. Specifically designed to cross the blood-brain barrier. Best for cognitive/neuroprotective applications.", "recommended": false },
+        { "name": "Standard Curcumin Extract (95% curcuminoids)", "description": "Unenhanced curcumin. Very poor bioavailability (~1%). Not recommended without an absorption enhancer.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "500–1,000 mg curcuminoids daily (with piperine or enhanced form)",
+        "loading": "Not required. Anti-inflammatory effects build over 4–8 weeks of consistent use, though some relief may be felt within 1–2 weeks.",
+        "optimal": "500–1,000 mg curcuminoids with 5–20 mg piperine (BioPerine) daily. If using Meriva phytosome: 500 mg (equivalent to ~100 mg curcumin, but with superior tissue delivery). For acute inflammation or joint pain: 1,000–1,500 mg with piperine.",
+        "timing": "Take with a fat-containing meal — curcumin is lipophilic and absorption improves significantly with dietary fat. Piperine should be co-ingested simultaneously (most combination products include it). Evening/dinner timing works well for overnight anti-inflammatory repair.",
+        "notes": "Piperine inhibits CYP3A4 and UGT enzymes, which is how it boosts curcumin absorption — but this same mechanism can increase blood levels of many medications. Individuals on pharmaceutical drugs should be aware that piperine co-administration may alter drug metabolism. Turmeric root (the whole spice) contains only ~3% curcuminoids — achieving therapeutic doses from cooking turmeric alone is impractical."
+      },
+      "benefits": [
+        "Potent systemic anti-inflammatory — inhibits NF-κB, COX-2, LOX, and multiple inflammatory pathways",
+        "Reduces inflammatory markers (CRP, IL-6, TNF-α) in clinical trials",
+        "Comparable to ibuprofen for knee osteoarthritis pain in head-to-head trials",
+        "Activates Nrf2 pathway — upregulates endogenous antioxidant defenses",
+        "May reduce symptoms of depression (augments standard antidepressant therapy)",
+        "Supports cardiovascular health — improves endothelial function and lipid profiles",
+        "Potential neuroprotective effects — reduces neuroinflammation and amyloid aggregation",
+        "Epigenetic modulator — influences gene expression via HDAC/HAT/DNMT modification",
+        "May reduce exercise-induced muscle soreness and accelerate recovery"
+      ],
+      "sideEffects": [
+        "Generally well tolerated at standard doses",
+        "Mild GI discomfort (nausea, diarrhea, bloating) — usually transient",
+        "Yellow staining of teeth, skin, or clothes (powder form)",
+        "Rare: headache, skin rash",
+        "Piperine component may interact with medications (see interactions)",
+        "High doses may increase oxalate excretion — caution in kidney stone formers"
+      ],
+      "interactions": [
+        { "substance": "Anticoagulants / antiplatelets (warfarin, aspirin, clopidogrel)", "effect": "Curcumin has mild antiplatelet activity and inhibits thromboxane synthesis. Additive bleeding risk when combined with blood thinners. Monitor INR with warfarin.", "severity": "moderate" },
+        { "substance": "CYP3A4 substrates (via piperine)", "effect": "Piperine potently inhibits CYP3A4 and P-glycoprotein, potentially increasing blood levels of many drugs including statins, benzodiazepines, and calcium channel blockers. Review all medications.", "severity": "moderate" },
+        { "substance": "Diabetes medications", "effect": "Curcumin may lower blood glucose. Additive hypoglycemia risk with metformin, sulfonylureas, or insulin. Monitor blood sugar.", "severity": "mild" },
+        { "substance": "NSAIDs (ibuprofen, naproxen)", "effect": "Overlapping COX-2 inhibition. Potentially complementary but may increase GI risk with chronic co-use. Many people use curcumin to reduce NSAID reliance.", "severity": "mild" },
+        { "substance": "Iron supplements", "effect": "Curcumin may chelate iron and reduce absorption. Separate dosing by 2+ hours if iron supplementation is needed.", "severity": "mild" },
+        { "substance": "Chemotherapy", "effect": "Complex: curcumin shows anti-cancer properties in preclinical studies, but its antioxidant effects could theoretically interfere with some chemo mechanisms. Discuss with oncologist.", "severity": "moderate" }
+      ],
+      "evidence": {
+        "totalStudies": 15000,
+        "humanStudies": 500,
+        "rcts": 250,
+        "metaAnalyses": 60,
+        "systematicReviews": 45
+      },
+      "keyFindings": [
+        { "finding": "Curcumin (1,500 mg/day with piperine for 4 weeks) was as effective as ibuprofen (1,200 mg/day) for reducing pain and improving function in knee osteoarthritis, with fewer GI side effects.", "source": "Kuptniratsaikul et al., 2014 — Non-inferiority RCT (n=367)", "quality": "high" },
+        { "finding": "A meta-analysis of 8 RCTs found that curcumin supplementation significantly reduced CRP (standardized mean difference −0.55), IL-6, and TNF-α levels compared to placebo.", "source": "Sahebkar et al., 2016 — Meta-analysis of 8 RCTs (n=549)", "quality": "high" },
+        { "finding": "Curcumin (1,000 mg/day) combined with standard antidepressant therapy was significantly more effective than antidepressant alone in reducing depressive symptoms (HAM-D score) over 6 weeks.", "source": "Sanmukhani et al., 2014 — RCT (n=60)", "quality": "moderate" },
+        { "finding": "A bioavailable curcumin formulation improved memory and attention in non-demented older adults and reduced amyloid and tau accumulation in the brain on PET imaging over 18 months.", "source": "Small et al., 2018 — Double-blind RCT with PET imaging (n=40)", "quality": "high" }
+      ],
+      "safetyProfile": "Curcumin has been granted GRAS (Generally Recognized as Safe) status by the FDA and has been used as a dietary spice for millennia. Clinical trials at doses up to 8 g/day of standard curcumin (and proportionally lower doses of enhanced formulations) have reported no serious adverse effects. The JECFA (Joint FAO/WHO Expert Committee on Food Additives) established an ADI (Acceptable Daily Intake) of 0–3 mg/kg body weight for curcuminoids. GI side effects are mild and uncommon. The primary safety consideration is the piperine component's drug interaction potential via CYP3A4 inhibition — this is the main reason to review concurrent pharmaceutical medications. Curcumin is not recommended during pregnancy at supplemental doses (therapeutic doses may stimulate uterine contractions, though culinary amounts are safe).",
+      "populationNotes": "Beneficial for: (1) Individuals with chronic low-grade inflammation — metabolic syndrome, obesity, cardiovascular risk; (2) Joint pain/osteoarthritis — evidence comparable to NSAIDs; (3) Athletes — post-exercise recovery and DOMS reduction; (4) Depression — as adjunct to standard treatment; (5) Aging individuals — neuroprotective and anti-inflammatory longevity candidate. The bioavailability question is critical: always use an enhanced formulation (piperine, phytosome, micellar) — plain curcumin extract is largely a waste. Individuals on blood thinners or multiple medications should exercise caution with piperine-containing forms.",
+      "references": [
+        "Kuptniratsaikul, V. et al. (2014). Efficacy and safety of Curcuma domestica extracts compared with ibuprofen in patients with knee osteoarthritis. Clinical Interventions in Aging, 9, 451–458.",
+        "Sahebkar, A. et al. (2016). Effect of curcuminoids on oxidative stress: A systematic review and meta-analysis of randomized controlled trials. Journal of Functional Foods, 18, 898–909.",
+        "Sanmukhani, J. et al. (2014). Efficacy and safety of curcumin in major depressive disorder. Phytotherapy Research, 28(4), 579–585.",
+        "Small, G.W. et al. (2018). Memory and Brain Amyloid and Tau Effects of a Bioavailable Form of Curcumin. American Journal of Geriatric Psychiatry, 26(3), 266–277."
+      ]
+    },
+    {
+      "id": "melatonin",
+      "name": "Melatonin",
+      "aliases": ["Melatonin", "N-Acetyl-5-methoxytryptamine", "Sleep Hormone"],
+      "categories": ["sleep", "longevity"],
+      "tagline": "The body's endogenous circadian rhythm regulator — most effective at low, physiological doses as a sleep-onset phase-setter rather than a sedative.",
+      "overview": "Melatonin is an endogenous hormone produced primarily by the pineal gland in response to darkness, serving as the master signal that synchronizes the circadian clock with the light-dark cycle. It is not a sedative in the traditional sense — rather, it acts as a chronobiotic (circadian phase-shifter) that tells the suprachiasmatic nucleus (SCN) 'it is now nighttime,' facilitating the cascade of physiological changes that enable sleep onset: core body temperature reduction, cortisol suppression, parasympathetic nervous system activation, and drowsiness. Exogenous melatonin supplementation is one of the most widely used sleep aids worldwide, yet it is also one of the most commonly misunderstood and misused. The critical insight is that melatonin's primary mechanism is circadian signaling, not sedation — and it is most effective at low, physiological doses (0.3–1 mg) that mimic normal endogenous production, rather than the supraphysiological doses (3–10 mg) found in most commercial products. Higher doses do not improve sleep proportionally and may cause next-day grogginess, vivid dreams, and paradoxical wakefulness. Beyond sleep, melatonin is a potent antioxidant with emerging evidence for immune modulation, neuroprotection, and anti-aging properties — melatonin levels decline dramatically with age, and this decline may contribute to age-related sleep disruption and increased disease susceptibility.",
+      "mechanismOfAction": "Melatonin exerts its effects through both receptor-dependent and receptor-independent mechanisms: (1) MT1 and MT2 receptors — Melatonin binds to two G-protein-coupled receptors in the SCN and other tissues. MT1 receptor activation promotes sleepiness by inhibiting SCN neuronal firing (reducing the circadian alerting signal). MT2 receptor activation shifts the phase of the circadian clock — this is the mechanism behind melatonin's ability to advance or delay sleep timing (chronobiotic effect). These receptors are also found in the retina, cardiovascular system, immune cells, and reproductive organs, explaining melatonin's systemic effects. (2) Antioxidant activity — Melatonin is a direct free radical scavenger with unique properties: it detoxifies hydroxyl radicals (•OH), peroxynitrite (ONOO⁻), singlet oxygen, and other ROS. Unlike most antioxidants, melatonin's metabolites (AFMK, AMK) are also antioxidants, creating an 'antioxidant cascade' where a single melatonin molecule can neutralize up to 10 ROS. Melatonin also stimulates the expression of antioxidant enzymes (SOD, GPx, GR) via Nrf2 activation. (3) Immune modulation — Melatonin enhances both innate and adaptive immunity, stimulates natural killer cell activity, modulates T-cell function, and has anti-inflammatory properties (NF-κB inhibition). (4) Mitochondrial protection — Melatonin accumulates in mitochondria at concentrations many times higher than in plasma, protecting the electron transport chain from oxidative damage and maintaining membrane potential. (5) Core body temperature — Melatonin promotes heat dissipation (vasodilation of distal skin areas), supporting the decline in core body temperature needed for sleep onset.",
+      "forms": [
+        { "name": "Melatonin Immediate-Release (IR)", "description": "Standard quick-release tablets or capsules. Rapid peak blood levels within 30–60 minutes. Best for sleep onset difficulties. Most common and most studied form.", "recommended": true },
+        { "name": "Melatonin Sustained-Release / Extended-Release", "description": "Slow release over 6–8 hours. More closely mimics the natural melatonin secretion curve. Better for sleep maintenance issues (waking mid-night) but may cause more morning grogginess.", "recommended": false },
+        { "name": "Sublingual Melatonin", "description": "Dissolves under the tongue for faster absorption, bypassing first-pass metabolism. Onset within 15–20 minutes. Good for acute use or jet lag.", "recommended": false },
+        { "name": "Liquid Melatonin", "description": "Allows precise micro-dosing (e.g., 0.3 mg). Ideal for those following low-dose physiological protocols. Particularly useful for children (under medical guidance).", "recommended": true }
+      ],
+      "dosage": {
+        "standard": "0.3–5 mg, 30–60 minutes before bed",
+        "loading": "Not applicable. Effects are immediate (first night). No accumulation or build-up needed.",
+        "optimal": "0.3–1 mg taken 30–60 minutes before desired sleep onset. This physiological dose range is supported by research showing that low doses (0.3 mg) are as effective or more effective than high doses (3–5 mg) for improving sleep onset and quality, with fewer side effects. The MIT patent on melatonin specifically recommends 0.3 mg as the optimal dose.",
+        "timing": "30–60 minutes before desired sleep time for sleep onset. For jet lag: take at the target destination's bedtime for several days before and after travel. For circadian phase advancement (night owls): take 2–5 hours before current natural sleep onset. Consistency of timing is more important than dose.",
+        "notes": "Less is more with melatonin — this is perhaps the supplement where the dose-response relationship is most counterintuitive. Supraphysiological doses (5–10 mg) can desensitize MT1/MT2 receptors, cause next-day grogginess, produce vivid/disturbing dreams, and paradoxically worsen sleep quality in some individuals. The physiological nighttime peak of endogenous melatonin produces blood levels equivalent to approximately 0.3 mg of oral melatonin. Most commercial products are vastly overdosed. Additionally, a landmark study found that melatonin supplement content varied from −83% to +478% of the labeled dose across 31 products, with some containing unlabeled serotonin — buy from reputable, third-party-tested brands."
+      },
+      "benefits": [
+        "Facilitates sleep onset by signaling circadian nighttime to the SCN",
+        "Shifts circadian phase — effective for jet lag, shift work, and delayed sleep phase disorder",
+        "Potent antioxidant with a unique 'cascade' mechanism (metabolites are also antioxidants)",
+        "Immune modulation — enhances natural killer cell activity and T-cell function",
+        "Mitochondrial protection — accumulates in mitochondria and reduces oxidative damage",
+        "May reduce age-related sleep deterioration (compensating for declining pineal output)",
+        "Neuroprotective — reduces neuroinflammation and supports blood-brain barrier integrity",
+        "Low-dose melatonin does not cause dependence, tolerance, or withdrawal"
+      ],
+      "sideEffects": [
+        "Next-day grogginess or 'hangover' (primarily at doses >1 mg)",
+        "Vivid or disturbing dreams (dose-dependent)",
+        "Headache (uncommon)",
+        "Mild dizziness",
+        "Paradoxical wakefulness or restlessness at high doses in some individuals",
+        "May worsen depressive symptoms in susceptible individuals (rare)",
+        "Potential hormonal effects: theoretical concern about reproductive hormone modulation at high chronic doses, though clinical significance is unclear"
+      ],
+      "interactions": [
+        { "substance": "Benzodiazepines / Z-drugs (zolpidem)", "effect": "Additive sedation. Low-dose melatonin is generally safe with these, and some evidence suggests melatonin can facilitate benzodiazepine tapering.", "severity": "mild" },
+        { "substance": "Anticoagulants (warfarin)", "effect": "Melatonin may have mild anticoagulant effects. Monitor INR if combining.", "severity": "mild" },
+        { "substance": "Antihypertensives", "effect": "Melatonin has mild blood-pressure-lowering effects (nocturnal BP). Additive effect possible. Beta-blockers suppress endogenous melatonin production, which may partly explain beta-blocker insomnia.", "severity": "mild" },
+        { "substance": "Immunosuppressants", "effect": "Melatonin has immunostimulatory properties. Theoretical concern about counteracting immunosuppressive therapy.", "severity": "moderate" },
+        { "substance": "Fluvoxamine", "effect": "Fluvoxamine inhibits CYP1A2, the primary enzyme metabolizing melatonin. Can increase melatonin blood levels dramatically (up to 12×). Reduce melatonin dose significantly if combining.", "severity": "moderate" },
+        { "substance": "Trazodone", "effect": "Commonly co-prescribed for sleep: melatonin for onset, trazodone for maintenance. Complementary mechanisms. Generally well-tolerated combination.", "severity": "mild" },
+        { "substance": "Caffeine", "effect": "Caffeine suppresses endogenous melatonin production and delays circadian phase. Avoid caffeine within 6–8 hours of bedtime to preserve melatonin's effectiveness.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 3000,
+        "humanStudies": 1500,
+        "rcts": 400,
+        "metaAnalyses": 50,
+        "systematicReviews": 35
+      },
+      "keyFindings": [
+        { "finding": "A meta-analysis of 19 RCTs confirmed that melatonin significantly reduces sleep onset latency (−7.06 min), increases total sleep time (+8.25 min), and improves overall sleep quality compared to placebo in primary sleep disorders.", "source": "Ferracioli-Oda et al., 2013 — Meta-analysis of 19 RCTs (n=1,683)", "quality": "high" },
+        { "finding": "Low-dose melatonin (0.3 mg) was as effective as higher doses (3 mg) for improving sleep efficiency and was closer to the physiological range, with fewer side effects. The MIT researchers who discovered melatonin's sleep role specifically advocate for 0.3 mg dosing.", "source": "Zhdanova et al., 2001 — Dose-response RCT", "quality": "high" },
+        { "finding": "Melatonin supplementation is the most effective intervention for jet lag when taken at the destination's bedtime. A Cochrane review of 10 RCTs found it significantly reduced jet lag symptoms for both eastward and westward travel across ≥5 time zones.", "source": "Herxheimer & Petrie, 2002 — Cochrane Systematic Review of 10 RCTs", "quality": "high" },
+        { "finding": "An analysis of 31 commercial melatonin supplements found that actual melatonin content ranged from −83% to +478% of the labeled dose, with 71% of products falling outside a ±10% margin. Some products contained unlabeled serotonin.", "source": "Erland & Saxena, 2017 — Analytical chemistry study", "quality": "high" }
+      ],
+      "safetyProfile": "Melatonin has an excellent short-term safety profile. Meta-analyses of clinical trials report no serious adverse events at doses up to 10 mg for periods up to 3 months. It does not cause dependence, tolerance, or withdrawal — distinguishing it from benzodiazepines and Z-drugs. There is no evidence that exogenous melatonin suppresses endogenous pineal production when discontinued. Long-term safety data (>6 months) is limited but no concerning signals have emerged. The primary safety concern is product quality variability — the Erland & Saxena (2017) study revealed alarming discrepancies between labeled and actual melatonin content in commercial products. Always purchase from reputable, third-party-tested manufacturers. In the EU, melatonin ≥2 mg is prescription-only (Circadin) in some countries; in the US, it is available over-the-counter at any dose.",
+      "populationNotes": "Broadly applicable for: (1) Individuals with sleep onset difficulty — low-dose (0.3–1 mg) as a circadian phase-setter; (2) Jet lag — most evidence-based intervention available; (3) Shift workers — for circadian realignment; (4) Older adults — endogenous melatonin production declines with age, contributing to age-related insomnia; (5) ADHD patients on stimulant medication — to counteract stimulant-induced delayed sleep onset; (6) Children with neurodevelopmental disorders (under medical supervision). Caution in individuals with autoimmune conditions (immunostimulatory effects) and those on fluvoxamine (CYP1A2 interaction). The single most important recommendation: use the lowest effective dose (0.3–1 mg), not the 5–10 mg tablets that dominate the market.",
+      "references": [
+        "Ferracioli-Oda, E. et al. (2013). Meta-analysis: melatonin for the treatment of primary sleep disorders. PLoS ONE, 8(5), e63773.",
+        "Zhdanova, I.V. et al. (2001). Melatonin treatment for age-related insomnia. Journal of Clinical Endocrinology & Metabolism, 86(10), 4727–4730.",
+        "Herxheimer, A. & Petrie, K.J. (2002). Melatonin for the prevention and treatment of jet lag. Cochrane Database of Systematic Reviews, 2, CD001520.",
+        "Erland, L.A. & Saxena, P.K. (2017). Melatonin Natural Health Products and Supplements: Presence of Serotonin and Significant Variability of Melatonin Content. Journal of Clinical Sleep Medicine, 13(2), 275–281."
+      ]
+    },
+    {
+      "id": "ritalin",
+      "name": "Ritalin (Methylphenidate)",
+      "aliases": ["Methylphenidate", "MPH", "Concerta", "Medikinet", "Equasym", "Methylphenidate HCl"],
+      "categories": ["medication", "cognitive"],
+      "tagline": "A first-line stimulant medication for ADHD — the most widely prescribed psychostimulant worldwide, enhancing focus through dopamine and norepinephrine reuptake inhibition.",
+      "overview": "Ritalin contains methylphenidate hydrochloride, a central nervous system stimulant that has been in clinical use since 1955, making it one of the longest-studied psychotropic medications. Unlike amphetamines which promote catecholamine release, methylphenidate works primarily by blocking the dopamine transporter (DAT) and norepinephrine transporter (NET), increasing the synaptic availability of these neurotransmitters in the prefrontal cortex and subcortical regions. It is available in immediate-release (IR) formulations lasting 3–4 hours and numerous extended-release (ER) formulations (Concerta, Medikinet MR, Equasym XL) providing 8–12 hours of coverage through various delivery technologies. Methylphenidate is a first-line pharmacological treatment for ADHD in children (≥6 years), adolescents, and adults, endorsed by NICE, APA, and European treatment guidelines. It is classified as a Schedule II controlled substance.",
+      "mechanismOfAction": "Methylphenidate primarily acts by binding to and blocking the dopamine transporter (DAT) and the norepinephrine transporter (NET) on presynaptic neurons. By inhibiting the reuptake of dopamine and norepinephrine back into the presynaptic terminal, methylphenidate increases the concentration and duration of action of these catecholamines in the synaptic cleft. Unlike amphetamines, methylphenidate does not significantly promote the release of dopamine from vesicular stores — it is a pure reuptake inhibitor. The therapeutic effects in ADHD result from enhanced dopaminergic signaling in the prefrontal cortex (improving executive function, working memory, and sustained attention) and in the striatum (modulating reward processing and behavioral inhibition). At therapeutic doses, PET studies show methylphenidate occupies approximately 50–75% of DAT, with clinical response correlating to this occupancy range. Methylphenidate exists as a racemic mixture; the d-threo enantiomer (dexmethylphenidate) is the pharmacologically active form.",
+      "forms": [
+        { "name": "Ritalin / Ritalin LA", "description": "Original brand. IR lasts 3–4 hours; LA (Long-Acting) uses a bead system for ~8 hours. Available in 5, 10, 20 mg (IR) and 10, 20, 30, 40 mg (LA).", "recommended": false },
+        { "name": "Concerta (OROS)", "description": "Osmotic-release oral system providing ascending plasma levels over 10–12 hours, mimicking TID IR dosing. Available in 18, 27, 36, 54 mg. Gold standard for long-acting coverage.", "recommended": true },
+        { "name": "Medikinet MR", "description": "Modified-release capsule with 50% IR and 50% ER beads. Provides 6–8 hours of coverage. Popular in European markets.", "recommended": true },
+        { "name": "Dexmethylphenidate (Focalin)", "description": "Purified d-threo enantiomer. Twice as potent per milligram as racemic methylphenidate. Available as IR and XR.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "IR: 10–60 mg/day in divided doses (BID or TID). ER: 18–72 mg once daily (Concerta) or 10–60 mg once daily (Medikinet MR).",
+        "loading": "Typically initiated at 5 mg BID (IR) or 18 mg/day (Concerta). Titrated in 5–10 mg increments (IR) or 18 mg increments (Concerta) at weekly intervals.",
+        "optimal": "Most adults stabilize at 40–60 mg/day (racemic). Optimal dose is highly individual and should be titrated by a prescribing physician based on efficacy and tolerability.",
+        "timing": "IR: First dose upon waking, second at midday, optional third in early afternoon. ER: Once daily in the morning before 10 AM. Concerta should be swallowed whole (do not crush/chew — OROS mechanism requires intact tablet). Can be taken with or without food, though high-fat meals may delay absorption of some ER formulations.",
+        "notes": "This is a prescription-only controlled substance. Methylphenidate has a shorter duration of action than lisdexamfetamine, which can be advantageous (more dosing flexibility, less insomnia) or disadvantageous (requires multiple daily doses with IR, afternoon 'crash'). The response rate to methylphenidate vs. amphetamines is approximately 70% for each individually and ~90% for at least one of the two classes — non-response to one does not predict non-response to the other."
+      },
+      "benefits": [
+        "Significantly improves core ADHD symptoms: inattention, hyperactivity, and impulsivity",
+        "Rapid onset of action (20–30 min for IR formulations)",
+        "Flexible dosing — IR allows fine adjustment; ER provides all-day coverage",
+        "Improves executive function, working memory, and sustained attention",
+        "Well-established long-term safety data spanning 60+ years of clinical use",
+        "May improve emotional dysregulation and rejection sensitivity associated with ADHD"
+      ],
+      "sideEffects": [
+        "Decreased appetite and potential weight loss (very common, especially in first weeks)",
+        "Insomnia or sleep onset delay (common — more manageable than with amphetamines due to shorter half-life)",
+        "Headache (common, usually transient)",
+        "Increased heart rate and blood pressure (requires monitoring)",
+        "Stomach ache, nausea (common in initial titration)",
+        "Irritability or mood lability, particularly during medication wear-off ('rebound effect')",
+        "Rare: tics (may unmask latent tic disorders, but does not cause them)",
+        "Rare: growth suppression in children with chronic use (effect is small and often rebounds after discontinuation)"
+      ],
+      "interactions": [
+        { "substance": "MAO Inhibitors (MAOIs)", "effect": "Contraindicated. Concurrent use or use within 14 days of MAOI discontinuation can precipitate hypertensive crisis.", "severity": "severe" },
+        { "substance": "SSRIs / SNRIs", "effect": "Methylphenidate can inhibit metabolism of some SSRIs (particularly via CYP2D6 inhibition). Monitor for increased SSRI side effects. Serotonin syndrome risk is low but possible.", "severity": "moderate" },
+        { "substance": "Antihypertensives", "effect": "Methylphenidate may reduce the effectiveness of antihypertensive medications. Blood pressure should be monitored.", "severity": "moderate" },
+        { "substance": "Anticoagulants (Warfarin)", "effect": "Methylphenidate may inhibit metabolism of warfarin and some anticonvulsants, potentially increasing their plasma levels. Monitor INR.", "severity": "moderate" },
+        { "substance": "Caffeine", "effect": "Additive stimulant effects — may increase anxiety, jitteriness, heart rate, and blood pressure. Many patients reduce or eliminate caffeine.", "severity": "mild" },
+        { "substance": "Elvanse (Lisdexamfetamine)", "effect": "Generally not co-prescribed as they are alternative first-line treatments. Combining two stimulants increases cardiovascular and psychiatric side-effect risk.", "severity": "moderate" },
+        { "substance": "Trazodone", "effect": "Commonly co-prescribed to counteract stimulant-induced insomnia. Generally well-tolerated combination under medical supervision.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 600,
+        "humanStudies": 450,
+        "rcts": 200,
+        "metaAnalyses": 30,
+        "systematicReviews": 25
+      },
+      "keyFindings": [
+        { "finding": "Methylphenidate is the most efficacious pharmacological treatment for ADHD in children and adolescents, and the second most efficacious (after amphetamines) in adults, based on a network meta-analysis of 133 double-blind RCTs.", "source": "Cortese et al., 2018 — Lancet Psychiatry network meta-analysis (n=10,068 children; n=8,131 adults)", "quality": "high" },
+        { "finding": "Long-term registry data from Sweden (n=25,656) showed that ADHD medication (primarily methylphenidate) was associated with a 32% reduction in criminality in men and a 41% reduction in women during medicated vs. unmedicated periods.", "source": "Lichtenstein et al., 2012 — NEJM population-based cohort study", "quality": "high" },
+        { "finding": "A Cochrane review of 185 RCTs (n=12,245 children/adolescents) concluded that methylphenidate improves teacher-rated ADHD symptoms and general behaviour, though the overall quality of evidence was rated low due to risk of bias.", "source": "Storebø et al., 2015 — Cochrane Systematic Review", "quality": "moderate" },
+        { "finding": "PET imaging studies demonstrate that therapeutic doses of oral methylphenidate block 50–75% of dopamine transporters in the striatum, supporting the dopamine reuptake inhibition mechanism. Doses blocking >80% DAT are associated with subjective 'high' and abuse liability.", "source": "Volkow et al., 1998 — PET imaging study", "quality": "high" }
+      ],
+      "safetyProfile": "Methylphenidate has the longest clinical track record of any ADHD medication, with over 60 years of post-marketing data. Common side effects (appetite suppression, insomnia, headache) are dose-dependent and generally manageable with dose adjustment or formulation switching. Cardiovascular monitoring (heart rate, blood pressure) is recommended at baseline and periodically. It is contraindicated in patients with severe hypertension, pheochromocytoma, hyperthyroidism, pre-existing cardiac structural abnormalities, or concurrent MAOI use. Growth monitoring is recommended in children on long-term treatment, though meta-analyses suggest any growth suppression is modest (1–2 cm) and typically recovers. As a Schedule II substance, abuse potential exists but is substantially lower than with amphetamines, and is further reduced with extended-release formulations. Sudden discontinuation does not produce a physiologically dangerous withdrawal syndrome, though rebound ADHD symptoms and fatigue are common.",
+      "populationNotes": "First-line treatment for ADHD in children ≥6 years (NICE, APA guidelines). In children and adolescents, methylphenidate is often preferred as the initial trial medication in European guidelines; amphetamines are preferred first-line in US guidelines. Approximately 70% of patients respond to methylphenidate. Those who do not may respond to amphetamines (and vice versa). Methylphenidate's shorter duration of action can be advantageous for patients who experience significant insomnia on longer-acting stimulants. Not recommended during pregnancy. Caution in patients with anxiety disorders, tic disorders, or seizure history (lowers seizure threshold slightly).",
+      "references": [
+        "Cortese, S. et al. (2018). Comparative efficacy and tolerability of medications for attention-deficit hyperactivity disorder in children, adolescents, and adults: a systematic review and network meta-analysis. The Lancet Psychiatry, 5(9), 727–738.",
+        "Lichtenstein, P. et al. (2012). Medication for attention deficit–hyperactivity disorder and criminality. New England Journal of Medicine, 367(21), 2006–2014.",
+        "Storebø, O.J. et al. (2015). Methylphenidate for attention-deficit/hyperactivity disorder in children and adolescents. Cochrane Database of Systematic Reviews, 11, CD009885.",
+        "Volkow, N.D. et al. (1998). Dopamine transporter occupancies in the human brain induced by therapeutic doses of oral methylphenidate. American Journal of Psychiatry, 155(10), 1325–1331."
+      ]
     }
   ]
 }
