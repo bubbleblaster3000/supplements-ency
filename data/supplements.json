@@ -1,0 +1,703 @@
+{
+  "supplements": [
+    {
+      "id": "creatine-monohydrate",
+      "name": "Creatine Monohydrate",
+      "aliases": ["Creatine", "Cr", "Creatine Hydrate"],
+      "categories": ["performance", "cognitive", "recovery"],
+      "tagline": "One of the most researched and effective supplements in existence, primarily known for enhancing strength, power output, and lean mass.",
+      "overview": "Creatine monohydrate is an amino acid derivative naturally produced in the body from glycine, arginine, and methionine. It is stored primarily in skeletal muscle as phosphocreatine, where it plays a critical role in the rapid regeneration of adenosine triphosphate (ATP) during high-intensity, short-duration activities. Supplementation increases intramuscular creatine stores by 20–40%, enhancing the phosphocreatine energy system. Beyond its well-established ergogenic effects, emerging evidence supports cognitive benefits, particularly under conditions of sleep deprivation or mental fatigue. Creatine is one of the single most studied supplements in sports nutrition, with a robust safety profile confirmed across hundreds of trials.",
+      "mechanismOfAction": "Creatine is phosphorylated by creatine kinase to form phosphocreatine (PCr) in muscle tissue. During high-intensity exercise, PCr donates its phosphate group to ADP to rapidly regenerate ATP, the primary cellular energy currency. This replenishment of ATP allows for sustained maximal effort during short bursts of activity (e.g., sprinting, heavy lifting). In the brain, creatine similarly supports ATP regeneration in neurons, which may underlie its cognitive benefits. Additionally, creatine may enhance cellular hydration (cell volumization), activate mTOR signaling pathways involved in muscle protein synthesis, and reduce myostatin expression.",
+      "forms": [
+        { "name": "Creatine Monohydrate", "description": "The gold standard form. Most studied, most cost-effective, and proven effective.", "recommended": true },
+        { "name": "Creatine HCl", "description": "Hydrochloride salt form. Claimed better solubility but no proven advantage over monohydrate.", "recommended": false },
+        { "name": "Buffered Creatine (Kre-Alkalyn)", "description": "pH-buffered form. No evidence of superiority over monohydrate.", "recommended": false },
+        { "name": "Creatine Ethyl Ester", "description": "Esterified form. Studies show it is less effective than monohydrate.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "3–5 g daily",
+        "loading": "20 g/day (split into 4 × 5 g doses) for 5–7 days, then 3–5 g/day maintenance",
+        "optimal": "5 g daily without loading is equally effective long-term and avoids GI discomfort",
+        "timing": "Timing is not critical. Can be taken at any point during the day, with or without food.",
+        "notes": "Larger individuals (>90 kg / 200 lbs) may benefit from 7–10 g daily. Vegetarians and vegans typically have lower baseline creatine stores and may see more pronounced effects."
+      },
+      "benefits": [
+        "Increases maximal strength and power output (+5–15%)",
+        "Enhances lean body mass and muscle volume",
+        "Improves high-intensity exercise capacity",
+        "May improve cognitive function under stress or sleep deprivation",
+        "Accelerates recovery between bouts of intense exercise",
+        "Potential neuroprotective properties"
+      ],
+      "sideEffects": [
+        "Transient water retention (1–3 lbs, intracellular — not bloating)",
+        "Minor GI discomfort at loading doses (>10 g at once)",
+        "No evidence of kidney damage in healthy individuals",
+        "No evidence of hair loss causation (one study showed increased DHT, not replicated)"
+      ],
+      "interactions": [
+        { "substance": "Caffeine", "effect": "May slightly reduce ergogenic benefit when co-ingested acutely, but chronic co-use appears fine", "severity": "mild" },
+        { "substance": "NSAIDs", "effect": "Theoretical concern with renal blood flow, but no clinical evidence of harm", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 700,
+        "humanStudies": 500,
+        "rcts": 300,
+        "metaAnalyses": 35,
+        "systematicReviews": 22
+      },
+      "keyFindings": [
+        { "finding": "Creatine supplementation increases lean body mass and upper/lower body strength across all age groups.", "source": "Lanhers et al., 2017 — Meta-analysis of 60 RCTs", "quality": "high" },
+        { "finding": "5 g/day creatine improved working memory and intelligence in vegetarians.", "source": "Rae et al., 2003 — Double-blind RCT", "quality": "high" },
+        { "finding": "Creatine supplementation shows no adverse renal effects in healthy populations over periods up to 5 years.", "source": "Poortmans & Francaux, 2000 — Long-term safety review", "quality": "high" },
+        { "finding": "Creatine enhances recovery of muscle function after exercise-induced damage.", "source": "Cooke et al., 2009 — RCT", "quality": "moderate" }
+      ],
+      "safetyProfile": "Creatine monohydrate has an excellent safety profile. It is one of the few supplements explicitly deemed safe and effective by the International Society of Sports Nutrition (ISSN). No adverse effects in healthy individuals at recommended doses have been observed in studies lasting up to 5 years. It does not cause kidney damage, dehydration, or muscle cramping — common myths that have been repeatedly debunked in clinical research.",
+      "populationNotes": "Vegetarians/vegans typically respond more strongly due to lower baseline muscle creatine. Older adults benefit from creatine combined with resistance training for sarcopenia prevention. Generally safe for adolescents engaged in sport, though parental guidance is recommended.",
+      "references": [
+        "Kreider, R.B. et al. (2017). International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation. JISSN, 14, 18.",
+        "Lanhers, C. et al. (2017). Creatine Supplementation and Upper/Lower Limb Strength. Sports Medicine, 47(1), 163–173.",
+        "Rae, C. et al. (2003). Oral creatine monohydrate supplementation improves brain performance. Psychopharmacology, 167(3), 324–330.",
+        "Rawson, E.S. & Venezia, A.C. (2011). Use of creatine in the elderly and evidence for effects on cognitive function. Amino Acids, 40(5), 1349–1362."
+      ]
+    },
+    {
+      "id": "magnesium",
+      "name": "Magnesium",
+      "aliases": ["Mg", "Magnesium Glycinate", "Magnesium Threonate", "Magnesium Citrate"],
+      "categories": ["sleep", "recovery", "mood", "performance"],
+      "tagline": "An essential mineral involved in 600+ enzymatic reactions, critical for sleep, muscle function, and neurological health.",
+      "overview": "Magnesium is an essential mineral and cofactor in over 600 enzymatic reactions in the human body, including ATP production, protein synthesis, muscle and nerve function, blood glucose control, and blood pressure regulation. Despite its fundamental importance, subclinical magnesium deficiency is widespread — estimated to affect 50–80% of the population in industrialized nations due to soil depletion, processed food diets, and chronic stress. Supplementation has demonstrated benefits for sleep quality, exercise recovery, anxiety reduction, and cardiovascular health. Different forms of magnesium have different bioavailability and tissue-targeting properties.",
+      "mechanismOfAction": "Magnesium serves as a cofactor for enzymes involved in ATP synthesis and utilization, making it essential for cellular energy production. It regulates neuromuscular excitability by acting as a natural calcium channel blocker and NMDA receptor antagonist, which contributes to its calming and sleep-promoting effects. Magnesium also modulates the HPA (hypothalamic-pituitary-adrenal) axis, reducing cortisol output under stress. In skeletal muscle, adequate magnesium prevents excessive calcium influx, reducing cramping and supporting proper contraction-relaxation cycling. Magnesium threonate (Magtein) specifically crosses the blood-brain barrier and increases brain magnesium levels, supporting synaptic density and learning.",
+      "forms": [
+        { "name": "Magnesium Glycinate", "description": "Chelated with glycine. High bioavailability, calming, minimal GI effects. Best for sleep and anxiety.", "recommended": true },
+        { "name": "Magnesium L-Threonate", "description": "Patented form (Magtein). Crosses the blood-brain barrier. Best for cognitive function and brain health.", "recommended": true },
+        { "name": "Magnesium Citrate", "description": "Good bioavailability. Can have laxative effects at higher doses. Good general-purpose form.", "recommended": false },
+        { "name": "Magnesium Oxide", "description": "Very low bioavailability (~4%). Primarily used as a laxative. Not recommended for supplementation.", "recommended": false },
+        { "name": "Magnesium Taurate", "description": "Chelated with taurine. May be particularly beneficial for cardiovascular health.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "200–400 mg elemental magnesium daily",
+        "loading": "Not typically needed. Repletion of deficiency takes 4–6 weeks of consistent supplementation.",
+        "optimal": "300–400 mg elemental magnesium, split AM/PM or taken before bed for sleep",
+        "timing": "Evening dosing preferred for sleep benefits. Can be taken with or without food (glycinate/threonate). Citrate better absorbed with food.",
+        "notes": "RDA is 400–420 mg for men and 310–320 mg for women. Many people get 200–250 mg from diet alone, so 200 mg supplemental is often sufficient. Higher doses (400+ mg) may cause loose stools, especially with citrate or oxide forms."
+      },
+      "benefits": [
+        "Improves sleep quality and reduces sleep onset latency",
+        "Reduces muscle cramps and tension",
+        "Supports exercise recovery and reduces delayed-onset muscle soreness",
+        "May reduce anxiety and improve stress resilience",
+        "Supports cardiovascular health and blood pressure regulation",
+        "Magnesium threonate may improve learning and memory"
+      ],
+      "sideEffects": [
+        "Loose stools or diarrhea (primarily with citrate/oxide forms)",
+        "Rare: low blood pressure at very high doses",
+        "Potential interaction with certain medications (see interactions)"
+      ],
+      "interactions": [
+        { "substance": "Antibiotics (tetracyclines, fluoroquinolones)", "effect": "Magnesium can chelate and reduce absorption. Separate dosing by 2–4 hours.", "severity": "moderate" },
+        { "substance": "Bisphosphonates", "effect": "Magnesium may reduce absorption. Separate by at least 2 hours.", "severity": "moderate" },
+        { "substance": "Diuretics", "effect": "Loop and thiazide diuretics increase magnesium excretion, potentially worsening deficiency.", "severity": "mild" },
+        { "substance": "Zinc", "effect": "High-dose zinc (>142 mg/day) can impair magnesium absorption.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 450,
+        "humanStudies": 300,
+        "rcts": 120,
+        "metaAnalyses": 22,
+        "systematicReviews": 18
+      },
+      "keyFindings": [
+        { "finding": "Magnesium supplementation significantly improves subjective sleep quality, sleep time, and sleep onset latency in older adults with insomnia.", "source": "Abbasi et al., 2012 — Double-blind RCT", "quality": "high" },
+        { "finding": "Magnesium supplementation reduces blood pressure by approximately 2 mmHg systolic and 1.8 mmHg diastolic.", "source": "Zhang et al., 2016 — Meta-analysis of 34 RCTs", "quality": "high" },
+        { "finding": "Subclinical magnesium deficiency is common and may contribute to chronic diseases including cardiovascular disease, diabetes, and osteoporosis.", "source": "DiNicolantonio et al., 2018 — Review", "quality": "moderate" },
+        { "finding": "Magnesium L-threonate elevates brain magnesium levels and improves learning abilities, working memory, and short- and long-term memory in aged rats.", "source": "Slutsky et al., 2010 — Preclinical study", "quality": "moderate" }
+      ],
+      "safetyProfile": "Magnesium from supplements is generally safe at recommended doses (up to the Tolerable Upper Intake Level of 350 mg/day for supplemental magnesium, per the IOM — this does not include dietary magnesium). GI side effects are the most common complaint and are dose- and form-dependent. Individuals with severe kidney disease should consult a physician, as impaired renal function reduces magnesium excretion.",
+      "populationNotes": "Older adults are at higher risk of deficiency due to reduced absorption and increased excretion. Athletes lose magnesium through sweat and may need higher intakes. People under chronic stress deplete magnesium faster. Alcoholics are frequently deficient.",
+      "references": [
+        "Abbasi, B. et al. (2012). The effect of magnesium supplementation on primary insomnia in elderly. Journal of Research in Medical Sciences, 17(12), 1161–1169.",
+        "Zhang, X. et al. (2016). Effects of Magnesium Supplementation on Blood Pressure. Hypertension, 68(2), 324–333.",
+        "DiNicolantonio, J.J. et al. (2018). Subclinical magnesium deficiency: a principal driver of cardiovascular disease. Open Heart, 5(1), e000668.",
+        "Slutsky, I. et al. (2010). Enhancement of learning and memory by elevating brain magnesium. Neuron, 65(2), 165–177."
+      ]
+    },
+    {
+      "id": "ashwagandha",
+      "name": "Ashwagandha",
+      "aliases": ["Withania somnifera", "Indian Ginseng", "Winter Cherry", "KSM-66", "Sensoril"],
+      "categories": ["mood", "sleep", "performance", "cognitive"],
+      "tagline": "A premier adaptogen with strong evidence for reducing stress, improving sleep, and enhancing physical performance.",
+      "overview": "Ashwagandha (Withania somnifera) is one of the most important herbs in Ayurveda, classified as a Rasayana (rejuvenating tonic). It is an adaptogen — a class of compounds that help the body resist and adapt to physical and psychological stressors. Modern clinical research has validated many traditional uses, demonstrating significant effects on cortisol reduction, anxiety, sleep quality, testosterone levels, and exercise performance. The active compounds — withanolides, withaferin A, and withanone — exhibit anti-inflammatory, anti-anxiety, and immunomodulatory properties. Leading standardized extracts include KSM-66 (full-spectrum root extract) and Sensoril (root + leaf extract).",
+      "mechanismOfAction": "Ashwagandha's adaptogenic effects are primarily mediated through modulation of the HPA (hypothalamic-pituitary-adrenal) axis, reducing cortisol output by up to 30% in chronically stressed individuals. Withanolides act as GABAergic agonists, enhancing inhibitory neurotransmission and producing anxiolytic effects. Additionally, ashwagandha supports thyroid function by increasing T4-to-T3 conversion, may enhance testosterone through LH signaling and DHEA-S modulation, and has demonstrated anti-inflammatory properties via NF-κB pathway inhibition. It also promotes neurogenesis and protects against glutamate-induced excitotoxicity, supporting cognitive function.",
+      "forms": [
+        { "name": "KSM-66", "description": "Full-spectrum root extract standardized to ≥5% withanolides. Most studied extract. Best overall choice.", "recommended": true },
+        { "name": "Sensoril", "description": "Root + leaf extract standardized to ≥10% withanolides. Slightly more sedating. Good for sleep and anxiety.", "recommended": true },
+        { "name": "Generic Root Powder", "description": "Unstandardized whole root powder. Lower and inconsistent withanolide content.", "recommended": false },
+        { "name": "Shoden", "description": "High-potency extract standardized to ≥35% withanolide glycosides. Newer, less studied.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "300–600 mg daily (standardized extract)",
+        "loading": "Not required. Effects on stress/cortisol typically manifest within 2–4 weeks.",
+        "optimal": "600 mg KSM-66 daily (can split 300 mg AM + 300 mg PM) or 250 mg Sensoril",
+        "timing": "For anxiety/stress: morning or split AM/PM. For sleep: evening dosing. For performance: 60 minutes pre-workout.",
+        "notes": "Cycling is sometimes recommended (8 weeks on, 2–4 weeks off) to prevent tolerance, though evidence for tolerance development is limited. Higher doses (>1200 mg/day) have not shown additional benefits."
+      },
+      "benefits": [
+        "Significantly reduces cortisol levels (14–28% reduction)",
+        "Reduces perceived stress and anxiety (both clinical and subclinical)",
+        "Improves sleep quality and supports healthy sleep architecture",
+        "May increase testosterone and improve male fertility markers",
+        "Enhances muscular strength and recovery when combined with resistance training",
+        "May improve cardiorespiratory endurance (VO2 max)"
+      ],
+      "sideEffects": [
+        "Generally well-tolerated; mild GI discomfort in some individuals",
+        "Drowsiness (particularly with Sensoril or high doses)",
+        "Rare: thyroid hormone elevation — caution in hyperthyroidism",
+        "Rare: liver toxicity reports (primarily associated with multi-ingredient products, causality unclear)"
+      ],
+      "interactions": [
+        { "substance": "Thyroid medications (levothyroxine)", "effect": "May increase thyroid hormone levels, potentially requiring dose adjustment.", "severity": "moderate" },
+        { "substance": "Benzodiazepines / sedatives", "effect": "Additive sedation possible due to GABAergic activity.", "severity": "moderate" },
+        { "substance": "Immunosuppressants", "effect": "Ashwagandha may stimulate immune function, potentially counteracting immunosuppressive therapy.", "severity": "moderate" },
+        { "substance": "Blood sugar medications", "effect": "May lower blood glucose; monitor for hypoglycemia.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 200,
+        "humanStudies": 80,
+        "rcts": 45,
+        "metaAnalyses": 8,
+        "systematicReviews": 10
+      },
+      "keyFindings": [
+        { "finding": "KSM-66 ashwagandha (600 mg/day) reduced serum cortisol by 27.9% and significantly improved stress scores compared to placebo.", "source": "Chandrasekhar et al., 2012 — Double-blind RCT (n=64)", "quality": "high" },
+        { "finding": "Ashwagandha supplementation significantly improves maximal strength (bench press and leg extension) and promotes muscle recovery.", "source": "Wankhede et al., 2015 — Double-blind RCT (n=57)", "quality": "high" },
+        { "finding": "Ashwagandha extract (600 mg/day) significantly improved sleep quality compared to placebo in adults with insomnia.", "source": "Langade et al., 2019 — Double-blind RCT (n=150)", "quality": "high" },
+        { "finding": "Ashwagandha root extract improved VO2 max in healthy athletic adults and sedentary individuals.", "source": "Choudhary et al., 2015 — RCT (n=50)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Ashwagandha is generally well-tolerated at standard doses in clinical trials lasting up to 12 weeks. Rare reports of hepatotoxicity have emerged in case reports, though causality is uncertain and most involved multi-ingredient products. Not recommended during pregnancy due to potential abortifacient properties observed in animal studies. Individuals with autoimmune conditions should use caution due to immunostimulatory effects.",
+      "populationNotes": "Particularly beneficial for individuals under chronic stress, those with elevated cortisol, and athletes seeking improved recovery. Men may benefit from testosterone-supporting effects. Not recommended during pregnancy or breastfeeding. Use with caution in autoimmune thyroid conditions.",
+      "references": [
+        "Chandrasekhar, K. et al. (2012). A prospective, randomized double-blind, placebo-controlled study of safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root. Indian J Psychol Med, 34(3), 255–262.",
+        "Wankhede, S. et al. (2015). Examining the effect of Withania somnifera supplementation on muscle strength and recovery. JISSN, 12, 43.",
+        "Langade, D. et al. (2019). Efficacy and Safety of Ashwagandha Root Extract in Insomnia and Anxiety. Cureus, 11(9), e5797.",
+        "Bonilla, D.A. et al. (2021). Effects of Ashwagandha on Physical Performance: Systematic Review and Bayesian Meta-Analysis. JFMK, 6(1), 20."
+      ]
+    },
+    {
+      "id": "omega-3",
+      "name": "Omega-3 Fatty Acids (EPA/DHA)",
+      "aliases": ["Fish Oil", "EPA", "DHA", "Omega-3", "n-3 PUFA", "Algal Oil"],
+      "categories": ["longevity", "cognitive", "mood", "recovery"],
+      "tagline": "Essential fatty acids with extensive evidence for cardiovascular, cognitive, and anti-inflammatory benefits across the lifespan.",
+      "overview": "Omega-3 fatty acids — primarily eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA) — are essential polyunsaturated fats that the body cannot synthesize efficiently. They are critical structural components of cell membranes throughout the body, with DHA being particularly concentrated in the brain (comprising ~40% of brain polyunsaturated fatty acids) and retina. EPA and DHA serve as precursors to specialized pro-resolving mediators (SPMs) — resolvins, protectins, and maresins — that actively resolve inflammation rather than simply suppressing it. The modern Western diet is severely deficient in omega-3s relative to omega-6 fatty acids, with ratios often exceeding 15:1 (optimal considered ≤4:1). Supplementation is one of the most evidence-backed interventions in nutritional science.",
+      "mechanismOfAction": "EPA and DHA are incorporated into cell membrane phospholipids, where they modulate membrane fluidity, receptor function, and cell signaling. EPA is the primary anti-inflammatory omega-3: it competes with arachidonic acid (an omega-6) for cyclooxygenase (COX) and lipoxygenase (LOX) enzymes, reducing the production of pro-inflammatory eicosanoids (prostaglandins, thromboxanes, leukotrienes). Both EPA and DHA give rise to specialized pro-resolving mediators (SPMs) — resolvins, protectins, and maresins — that actively terminate inflammatory responses and promote tissue repair. DHA is the primary structural omega-3 in neuronal membranes, supporting synaptic plasticity, neurotransmitter release, and neuroprotection. Omega-3s also activate PPARs (peroxisome proliferator-activated receptors) and inhibit NF-κB, a master regulator of inflammatory gene expression.",
+      "forms": [
+        { "name": "Triglyceride (rTG) form", "description": "Re-esterified triglyceride. Superior bioavailability (up to 70% greater absorption than ethyl ester). Preferred form.", "recommended": true },
+        { "name": "Algal Oil (vegan DHA/EPA)", "description": "Derived from microalgae. Sustainable and suitable for vegetarians/vegans. Comparable efficacy to fish oil.", "recommended": true },
+        { "name": "Ethyl Ester (EE) form", "description": "Common in pharmaceutical-grade fish oils. Lower bioavailability than triglyceride form. More affordable.", "recommended": false },
+        { "name": "Phospholipid form (Krill Oil)", "description": "Bound to phospholipids. Good bioavailability but typically lower EPA/DHA per capsule. Contains astaxanthin.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "1–3 g combined EPA+DHA daily",
+        "loading": "Not required, but tissue saturation takes 2–4 weeks of consistent supplementation.",
+        "optimal": "2–3 g combined EPA+DHA daily for anti-inflammatory and mood benefits. 1 g for general maintenance. EPA:DHA ratio of ~2:1 for mood, ~1:2 for cognition.",
+        "timing": "Take with a fat-containing meal for maximal absorption (up to 3× better absorption with dietary fat).",
+        "notes": "The Omega-3 Index (EPA+DHA as % of red blood cell fatty acids) is an excellent biomarker. Optimal target: 8–12%. Average Western diet yields ~4%. Doses above 5 g/day may increase bleeding risk and require medical supervision."
+      },
+      "benefits": [
+        "Reduces triglycerides by 15–30%",
+        "Anti-inflammatory — reduces CRP and inflammatory cytokines",
+        "Supports cardiovascular health and reduces sudden cardiac death risk",
+        "DHA supports brain structure and cognitive function across the lifespan",
+        "EPA may reduce symptoms of depression (particularly with higher EPA:DHA ratios)",
+        "Supports joint health and reduces symptoms of rheumatoid arthritis",
+        "May slow age-related cognitive decline"
+      ],
+      "sideEffects": [
+        "Fishy aftertaste or burps (mitigated by enteric coating or taking with meals)",
+        "Mild GI discomfort at higher doses",
+        "Potential for increased bleeding time at very high doses (>5 g/day)",
+        "Possible LDL cholesterol elevation in some individuals (typically small)"
+      ],
+      "interactions": [
+        { "substance": "Anticoagulants (warfarin, aspirin)", "effect": "Omega-3s have mild antiplatelet effects. High doses (>3 g/day) may increase bleeding risk when combined with blood thinners.", "severity": "moderate" },
+        { "substance": "Blood pressure medications", "effect": "Additive blood-pressure-lowering effect. Monitor BP if combining.", "severity": "mild" },
+        { "substance": "Orlistat (fat blockers)", "effect": "May reduce omega-3 absorption since it blocks dietary fat absorption.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 3000,
+        "humanStudies": 2000,
+        "rcts": 800,
+        "metaAnalyses": 120,
+        "systematicReviews": 80
+      },
+      "keyFindings": [
+        { "finding": "Omega-3 supplementation (≥2 g EPA/day) reduces triglycerides by 15–30% in a dose-dependent manner.", "source": "AHA Science Advisory, Skulas-Ray et al., 2019", "quality": "high" },
+        { "finding": "Higher omega-3 index (≥8%) is associated with reduced risk of cardiovascular mortality by approximately 35%.", "source": "Harris & Von Schacky, 2004; Harris et al., 2018 — Prospective cohorts + meta-analyses", "quality": "high" },
+        { "finding": "EPA supplementation (≥1 g/day, high EPA:DHA ratio) significantly reduces depressive symptoms with effect sizes comparable to some antidepressants.", "source": "Liao et al., 2019 — Meta-analysis of 26 RCTs", "quality": "high" },
+        { "finding": "DHA supplementation during pregnancy improves infant neurodevelopmental outcomes and may reduce risk of preterm birth.", "source": "Middleton et al., 2018 — Cochrane Systematic Review of 70 RCTs", "quality": "high" }
+      ],
+      "safetyProfile": "Omega-3 fatty acids are very safe at doses up to 5 g/day of combined EPA+DHA, as confirmed by EFSA and most regulatory bodies. The U.S. FDA considers up to 3 g/day as GRAS (Generally Recognized as Safe). Concerns about mercury contamination in fish oil are largely unfounded — molecular distillation in quality products removes heavy metals effectively. Oxidized (rancid) fish oil may be harmful; products should be tested for peroxide and anisidine values.",
+      "populationNotes": "Virtually everyone in Western societies benefits from omega-3 supplementation due to dietary insufficiency. Pregnant and breastfeeding women should prioritize DHA for fetal brain development (many prenatal vitamins contain insufficient DHA). Vegans can use algal oil. Individuals on blood thinners should consult their physician regarding high-dose use.",
+      "references": [
+        "Skulas-Ray, A.C. et al. (2019). Omega-3 Fatty Acids for the Management of Hypertriglyceridemia. Circulation, 140(12), e673–e691.",
+        "Harris, W.S. & Von Schacky, C. (2004). The Omega-3 Index: a new risk factor for death from CHD? Preventive Medicine, 39(1), 212–220.",
+        "Liao, Y. et al. (2019). Efficacy of omega-3 PUFAs in depression: A meta-analysis. Translational Psychiatry, 9(1), 190.",
+        "Middleton, P. et al. (2018). Omega-3 fatty acid addition during pregnancy. Cochrane Database of Systematic Reviews, 11, CD003402."
+      ]
+    },
+    {
+      "id": "lions-mane",
+      "name": "Lion's Mane Mushroom",
+      "aliases": ["Hericium erinaceus", "Yamabushitake", "Monkey Head Mushroom"],
+      "categories": ["cognitive", "longevity", "mood"],
+      "tagline": "A medicinal mushroom with unique neurotrophic properties — one of the only natural compounds shown to stimulate Nerve Growth Factor (NGF) synthesis.",
+      "overview": "Lion's Mane (Hericium erinaceus) is an edible medicinal mushroom that has been used in traditional Chinese and Japanese medicine for centuries. What distinguishes Lion's Mane from other nootropics is its unique ability to stimulate the synthesis of Nerve Growth Factor (NGF) and Brain-Derived Neurotrophic Factor (BDNF) — proteins essential for neuronal growth, survival, and synaptic plasticity. The bioactive compounds responsible — hericenones (found in the fruiting body) and erinacines (found in the mycelium) — can cross the blood-brain barrier and directly promote neurogenesis. While the body of human clinical evidence is still growing, preclinical data is robust and early human trials are promising for cognitive enhancement, mood improvement, and neuroprotection.",
+      "mechanismOfAction": "Lion's Mane contains two families of bioactive compounds with distinct neurotrophic mechanisms: hericenones (from the fruiting body) and erinacines (from the mycelium). Erinacines are small enough to cross the blood-brain barrier and stimulate NGF synthesis in astrocytes via activation of the JNK pathway. NGF promotes the growth, maintenance, and survival of neurons, and is critical for cholinergic system function (acetylcholine-producing neurons involved in memory and learning). Hericenones also stimulate NGF but through different signaling pathways. Additionally, Lion's Mane exhibits anti-inflammatory effects in the CNS by reducing NF-κB-mediated neuroinflammation, and has demonstrated promotion of myelination (the insulating sheath around nerve fibers), which improves nerve signal conduction speed.",
+      "forms": [
+        { "name": "Fruiting Body Extract (hot-water or dual extract)", "description": "Contains hericenones and beta-glucans. Ensure ≥30% polysaccharides and verified hericenone content. Standard choice.", "recommended": true },
+        { "name": "Mycelium Extract", "description": "Contains erinacines, which are the more potent NGF stimulators. However, many commercial mycelium products are grown on grain and contain significant starch filler.", "recommended": false },
+        { "name": "Dual Extract (fruiting body + mycelium)", "description": "Combines hericenones and erinacines. Theoretically optimal but quality varies greatly between brands.", "recommended": true },
+        { "name": "Whole Powder (unextracted)", "description": "Dried mushroom powder. Bioactive compounds are locked in chitin cell walls and poorly absorbed without extraction.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "500–3000 mg daily (extract)",
+        "loading": "Not required. Neurotropic effects may take 4–8 weeks to fully manifest.",
+        "optimal": "1000 mg dual extract, taken 1–2× daily. Look for products standardized to ≥30% polysaccharides and verified hericenone/erinacine content.",
+        "timing": "Can be taken morning or divided AM/PM. No known issues with timing relative to meals.",
+        "notes": "Quality varies enormously between brands. Look for products tested for beta-glucan content (≥25%), verified low starch content (<5%), and ideally third-party tested. Mycelium-on-grain products may be mostly starch."
+      },
+      "benefits": [
+        "Stimulates Nerve Growth Factor (NGF) and BDNF synthesis",
+        "May improve cognitive function, particularly in mild cognitive impairment",
+        "Supports nerve regeneration and myelination",
+        "Anti-inflammatory effects in the central nervous system",
+        "May reduce symptoms of anxiety and depression",
+        "Potential neuroprotective properties against neurodegenerative diseases"
+      ],
+      "sideEffects": [
+        "Generally very well tolerated",
+        "Rare: mild GI discomfort (usually at higher doses)",
+        "Rare: allergic reactions in individuals with mushroom allergies",
+        "Theoretical concern: may affect blood clotting (limited evidence)"
+      ],
+      "interactions": [
+        { "substance": "Anticoagulants / antiplatelets", "effect": "Theoretical concern — Lion's Mane may have mild antiplatelet activity. Use caution.", "severity": "mild" },
+        { "substance": "Antidiabetic medications", "effect": "Lion's Mane may lower blood glucose. Monitor for hypoglycemia.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 80,
+        "humanStudies": 25,
+        "rcts": 12,
+        "metaAnalyses": 2,
+        "systematicReviews": 4
+      },
+      "keyFindings": [
+        { "finding": "Lion's Mane supplementation (3 g/day for 16 weeks) significantly improved cognitive function in elderly individuals with mild cognitive impairment compared to placebo.", "source": "Mori et al., 2009 — Double-blind RCT (n=30)", "quality": "high" },
+        { "finding": "Hericium erinaceus extract reduced symptoms of depression and anxiety in menopausal women after 4 weeks of supplementation.", "source": "Nagano et al., 2010 — RCT (n=30)", "quality": "moderate" },
+        { "finding": "Erinacine A from H. erinaceus mycelium promotes NGF synthesis and neuronal survival in vitro and in vivo, and ameliorates Alzheimer-like pathology in animal models.", "source": "Li et al., 2018 — Preclinical study", "quality": "moderate" },
+        { "finding": "A recent compound isolated from Lion's Mane (NDPIH) enhances nerve growth and memory independently of NGF, via a novel mechanism involving TrkB activation.", "source": "Martínez-Mármol et al., 2023 — Nature study (preclinical)", "quality": "moderate" }
+      ],
+      "safetyProfile": "Lion's Mane has an excellent safety profile based on traditional use spanning centuries and modern toxicological studies showing no significant adverse effects. Human clinical trials up to 16 weeks at 3 g/day have reported no serious adverse events. However, the total body of human evidence is still relatively small. Individuals with mushroom allergies should avoid it. Long-term safety data (>1 year) in humans is lacking.",
+      "populationNotes": "Most promising for older adults experiencing mild cognitive decline, individuals seeking neuroprotective benefits, and those with anxiety or depressive symptoms. Younger healthy individuals may experience subtle cognitive improvements. Due to limited human data on pregnancy/breastfeeding safety, use during these periods is not recommended.",
+      "references": [
+        "Mori, K. et al. (2009). Improving effects of the mushroom Yamabushitake on mild cognitive impairment. Phytotherapy Research, 23(3), 367–372.",
+        "Nagano, M. et al. (2010). Reduction of depression and anxiety by 4 weeks Hericium erinaceus intake. Biomedical Research, 31(4), 231–237.",
+        "Li, I.C. et al. (2018). Neurohealth Properties of Hericium erinaceus Mycelia Enriched with Erinacines. Behavioural Neurology, 2018, 5802634.",
+        "Martínez-Mármol, R. et al. (2023). Hericerin derivatives from Hericium erinaceus exert BDNF-like neurotrophic activity. Nature, pending peer-reviewed publication."
+      ]
+    },
+    {
+      "id": "elvanse",
+      "name": "Elvanse (Lisdexamfetamine)",
+      "aliases": ["Vyvanse", "Lisdexamfetamine", "Lisdexamfetamine Dimesylate", "LDX"],
+      "categories": ["medication", "cognitive"],
+      "tagline": "A prodrug stimulant medication for ADHD — one of the most effective pharmacological treatments for attention deficit hyperactivity disorder.",
+      "overview": "Elvanse (marketed as Vyvanse in the US) contains lisdexamfetamine dimesylate, a prodrug of dextroamphetamine. Unlike immediate-release amphetamine formulations, lisdexamfetamine is pharmacologically inactive until enzymatically cleaved in the bloodstream by red blood cell-associated enzymes, which convert it into l-lysine and active d-amphetamine. This prodrug design provides a smoother, longer-lasting pharmacokinetic profile (10–14 hours of therapeutic effect), reduced abuse potential compared to other amphetamines, and less pronounced peak-and-trough fluctuations. It is approved for the treatment of ADHD in children (≥6 years), adolescents, and adults, as well as moderate-to-severe binge eating disorder (BED) in adults. Elvanse is classified as a Schedule II controlled substance due to its amphetamine component.",
+      "mechanismOfAction": "After oral administration, lisdexamfetamine is absorbed in the GI tract and hydrolyzed in red blood cells by the enzyme aminopeptidase, releasing active d-amphetamine. D-amphetamine exerts its therapeutic effects primarily through two mechanisms: (1) It promotes the release of dopamine and norepinephrine from presynaptic nerve terminals into the synaptic cleft by reversing the direction of dopamine (DAT) and norepinephrine (NET) transporters. (2) It inhibits the reuptake of these catecholamines by blocking DAT and NET. Additionally, at higher concentrations, amphetamines inhibit vesicular monoamine transporter 2 (VMAT2), increasing cytoplasmic catecholamine availability, and weakly inhibit monoamine oxidase (MAO). The net effect is a significant increase in dopaminergic and noradrenergic signaling in the prefrontal cortex (improving executive function and attention) and subcortical reward circuits.",
+      "forms": [
+        { "name": "Elvanse (EU) / Vyvanse (US)", "description": "Capsule containing lisdexamfetamine dimesylate. Available in 20, 30, 40, 50, 60, and 70 mg doses. The prodrug design is integral — only this form exists.", "recommended": true },
+        { "name": "Elvanse Adult", "description": "Same compound, sometimes marketed separately for adult ADHD in some EU markets.", "recommended": true }
+      ],
+      "dosage": {
+        "standard": "30–70 mg once daily in the morning",
+        "loading": "Typically initiated at 30 mg/day, titrated in 10–20 mg increments at weekly intervals based on response and tolerability.",
+        "optimal": "Most adults stabilize at 50–70 mg/day. Optimal dose is highly individual and should be determined with a prescribing physician.",
+        "timing": "Morning dosing (before 10 AM) is essential to avoid insomnia. Duration of action is 10–14 hours. Can be taken with or without food. Capsule can be opened and contents dissolved in water for those who cannot swallow capsules.",
+        "notes": "This is a prescription-only controlled substance. Dosing must be supervised by a physician. Periodic 'drug holidays' may be discussed with the prescriber to assess ongoing need and manage tolerance. Do not adjust doses without medical guidance."
+      },
+      "benefits": [
+        "Significantly improves core ADHD symptoms: inattention, hyperactivity, and impulsivity",
+        "Smooth, long-acting effect profile (10–14 hours) with less peak-trough fluctuation than IR amphetamines",
+        "Reduced abuse potential compared to immediate-release amphetamine formulations",
+        "Improves executive function, working memory, and task completion",
+        "May improve emotional dysregulation associated with ADHD",
+        "Effective for binge eating disorder (FDA-approved indication)"
+      ],
+      "sideEffects": [
+        "Decreased appetite and potential weight loss (very common)",
+        "Insomnia or sleep onset delay (common — mitigated by morning dosing)",
+        "Dry mouth",
+        "Increased heart rate and blood pressure (requires monitoring)",
+        "Anxiety, irritability, or mood changes in some individuals",
+        "Headache",
+        "Rare: cardiovascular events (contraindicated in structural cardiac abnormalities)",
+        "Potential for psychological dependence with long-term use"
+      ],
+      "interactions": [
+        { "substance": "MAO Inhibitors (MAOIs)", "effect": "Contraindicated. Concurrent use can cause hypertensive crisis. Must be off MAOIs for ≥14 days before starting.", "severity": "severe" },
+        { "substance": "SSRIs / SNRIs", "effect": "Potential increased risk of serotonin syndrome when combined, though clinical risk is generally low at standard doses.", "severity": "moderate" },
+        { "substance": "Acidifying agents (vitamin C, citric acid)", "effect": "Urinary acidifiers increase amphetamine excretion and reduce efficacy. Avoid large doses of vitamin C near dosing time.", "severity": "mild" },
+        { "substance": "Alkalinizing agents (sodium bicarbonate, antacids)", "effect": "May increase amphetamine blood levels by reducing urinary excretion.", "severity": "mild" },
+        { "substance": "Caffeine", "effect": "Additive stimulant effects — may increase anxiety, heart rate, and blood pressure. Many patients reduce caffeine on Elvanse.", "severity": "mild" },
+        { "substance": "Trazodone", "effect": "Often co-prescribed to counteract stimulant-induced insomnia. Generally well-tolerated combination under supervision.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 350,
+        "humanStudies": 280,
+        "rcts": 85,
+        "metaAnalyses": 18,
+        "systematicReviews": 15
+      },
+      "keyFindings": [
+        { "finding": "Lisdexamfetamine significantly reduces ADHD symptom severity across all age groups, with effect sizes among the largest of any ADHD medication (SMD ≈ 0.9–1.0).", "source": "Cortese et al., 2018 — Lancet network meta-analysis of 133 RCTs", "quality": "high" },
+        { "finding": "Lisdexamfetamine has lower abuse potential than immediate-release d-amphetamine based on subjective drug-liking scores in controlled human abuse liability studies.", "source": "Jasinski & Krishnan, 2009 — Abuse liability RCT", "quality": "high" },
+        { "finding": "Long-term treatment with lisdexamfetamine (up to 2 years) maintains efficacy and is generally well-tolerated, with stable cardiovascular parameters in most patients.", "source": "Banaschewski et al., 2013 — Open-label extension study", "quality": "moderate" },
+        { "finding": "Amphetamines (including lisdexamfetamine) are the most efficacious pharmacological treatment for adult ADHD based on network meta-analysis of all available medications.", "source": "Cortese et al., 2018 — Lancet systematic review + meta-analysis", "quality": "high" }
+      ],
+      "safetyProfile": "Elvanse has a well-established safety profile when used as prescribed under medical supervision. Common side effects (appetite suppression, insomnia, dry mouth) are dose-dependent and often manageable. Cardiovascular monitoring (heart rate, blood pressure) is recommended at baseline and periodically. It is contraindicated in patients with structural cardiac abnormalities, severe hypertension, or hyperthyroidism. As a Schedule II substance, it carries potential for misuse, though the prodrug mechanism significantly reduces this risk compared to other amphetamine formulations. Sudden discontinuation after long-term use should be gradual to avoid withdrawal symptoms (fatigue, depressed mood).",
+      "populationNotes": "Approved for ADHD in patients ≥6 years old. Particularly suitable for patients requiring all-day coverage (students, professionals) or those with a history of stimulant misuse due to its lower abuse potential. Not recommended during pregnancy (Category C). Patients with anxiety disorders may experience worsening anxiety. Cardiovascular screening recommended before initiation.",
+      "references": [
+        "Cortese, S. et al. (2018). Comparative efficacy and tolerability of medications for attention-deficit hyperactivity disorder in children, adolescents, and adults: a systematic review and network meta-analysis. The Lancet Psychiatry, 5(9), 727–738.",
+        "Jasinski, D.R. & Krishnan, S. (2009). Abuse liability and safety of oral lisdexamfetamine dimesylate in individuals with a history of stimulant abuse. Journal of Psychopharmacology, 23(4), 419–427.",
+        "Banaschewski, T. et al. (2013). Long-acting medications for the treatment of hyperkinetic disorders: a systematic review and European treatment guideline. European Child & Adolescent Psychiatry, 22(12), 133–149.",
+        "Coghill, D.R. et al. (2017). A systematic review of the evidence for the effectiveness and safety of lisdexamfetamine dimesylate. CNS Drugs, 31(7), 587–601."
+      ]
+    },
+    {
+      "id": "trazodone",
+      "name": "Trazodon (Trazodone)",
+      "aliases": ["Trazodone", "Trazodone HCl", "Trittico", "Desyrel", "Trazodon"],
+      "categories": ["medication", "sleep", "mood"],
+      "tagline": "An atypical antidepressant widely repurposed as a first-line pharmacological treatment for insomnia, prized for its non-addictive sleep-promoting properties.",
+      "overview": "Trazodone is a second-generation antidepressant belonging to the serotonin antagonist and reuptake inhibitor (SARI) class. While originally developed and approved for major depressive disorder, it is now far more commonly prescribed off-label at low doses (25–150 mg) for insomnia — making it one of the most prescribed sleep medications worldwide. Unlike benzodiazepines and Z-drugs, trazodone is not a controlled substance, carries no meaningful abuse potential, does not suppress slow-wave or REM sleep, and may actually improve sleep architecture. At higher doses (150–600 mg), it retains antidepressant efficacy through serotonergic mechanisms. Its dual utility for sleep and mood makes it particularly valuable for patients with comorbid depression and insomnia, or for counteracting stimulant-induced insomnia (e.g., from ADHD medications like Elvanse).",
+      "mechanismOfAction": "Trazodone's pharmacology is dose-dependent and involves multiple receptor targets. At low doses (25–100 mg, used for insomnia): it acts primarily as a potent antagonist at 5-HT₂A serotonin receptors and H₁ histamine receptors, both of which promote sedation and sleep initiation. It also blocks α₁-adrenergic receptors, contributing to its sedative and hypotensive effects. At higher doses (150–600 mg, antidepressant range): serotonin reuptake inhibition (SRI) becomes more prominent, increasing serotonergic tone in the synapse — the classical antidepressant mechanism. Importantly, trazodone does not significantly affect GABAergic neurotransmission (unlike benzodiazepines), which is why it lacks abuse potential and does not cause tolerance, dependence, or rebound insomnia. Its active metabolite, meta-chlorophenylpiperazine (mCPP), is a serotonin agonist that may contribute to some side effects at higher doses.",
+      "forms": [
+        { "name": "Trazodone IR (Immediate-Release)", "description": "Standard tablet form. Rapid onset (30–60 min). Most commonly used for insomnia. Available in 25, 50, 100, 150, 300 mg.", "recommended": true },
+        { "name": "Trazodone ER/XR (Extended-Release)", "description": "Slow-release formulation (Oleptro/Trittico retard). Designed for once-daily antidepressant dosing. Less commonly used for insomnia alone.", "recommended": false },
+        { "name": "Trazodone drops (oral solution)", "description": "Liquid formulation available in some markets. Useful for dose titration or patients who cannot swallow tablets.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "25–100 mg at bedtime (insomnia); 150–400 mg/day (depression)",
+        "loading": "Not applicable. Start low (25–50 mg) and titrate to effect over 1–2 weeks.",
+        "optimal": "For insomnia: 50–100 mg taken 30–60 minutes before bed. For depression: 150–300 mg/day, typically taken in the evening due to sedation. Maximum: 600 mg/day for inpatient depression.",
+        "timing": "Always taken in the evening or at bedtime due to sedating effects. Should be taken with a small snack/meal to improve absorption and reduce orthostatic hypotension risk. Onset of sleep-promoting effects: 30–60 minutes.",
+        "notes": "Prescription-only medication. Lower doses (25–50 mg) are often sufficient for insomnia, especially when combined with sleep hygiene. Antidepressant effects require higher doses and 2–4 weeks to manifest. Half-life is 5–9 hours (IR form), making it suitable for sleep onset but some patients may experience morning grogginess."
+      },
+      "benefits": [
+        "Effective sleep aid without addiction potential or controlled substance classification",
+        "Does not suppress slow-wave (deep) sleep or REM sleep — may improve sleep architecture",
+        "No tolerance development or rebound insomnia with long-term use",
+        "Dual benefit for patients with comorbid depression and insomnia",
+        "Useful for counteracting stimulant-induced insomnia (e.g., from ADHD medications)",
+        "Anxiolytic properties at moderate doses"
+      ],
+      "sideEffects": [
+        "Morning sedation/grogginess (dose-dependent, typically resolves with dose adjustment)",
+        "Orthostatic hypotension (dizziness upon standing — take with food and rise slowly)",
+        "Dry mouth",
+        "Headache",
+        "Nausea (especially at higher doses or on empty stomach)",
+        "Rare: priapism (prolonged erection) — medical emergency, estimated incidence 1 in 6,000–8,000",
+        "Rare: cardiac arrhythmias at high doses, particularly in patients with pre-existing heart conditions"
+      ],
+      "interactions": [
+        { "substance": "MAO Inhibitors (MAOIs)", "effect": "Contraindicated. Risk of serotonin syndrome. Must wait ≥14 days between discontinuing MAOIs and starting trazodone.", "severity": "severe" },
+        { "substance": "SSRIs / SNRIs", "effect": "Potential increased risk of serotonin syndrome, though low-dose trazodone for sleep is commonly and safely co-prescribed with SSRIs under medical supervision.", "severity": "moderate" },
+        { "substance": "CYP3A4 inhibitors (ketoconazole, ritonavir)", "effect": "May increase trazodone blood levels. Dose reduction may be needed.", "severity": "moderate" },
+        { "substance": "Alcohol", "effect": "Additive CNS depression. Avoid alcohol while taking trazodone.", "severity": "moderate" },
+        { "substance": "Stimulants (Elvanse, methylphenidate)", "effect": "Commonly co-prescribed: trazodone for sleep + stimulant for ADHD during the day. Generally well-tolerated combination.", "severity": "mild" },
+        { "substance": "Antihypertensives", "effect": "Additive blood pressure lowering. Monitor for hypotension.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 500,
+        "humanStudies": 350,
+        "rcts": 95,
+        "metaAnalyses": 12,
+        "systematicReviews": 16
+      },
+      "keyFindings": [
+        { "finding": "Low-dose trazodone (50–100 mg) significantly improves subjective and objective sleep quality in patients with insomnia, with sustained efficacy over weeks without tolerance development.", "source": "Mendelson, 2005 — Review of clinical trials", "quality": "high" },
+        { "finding": "Trazodone preserves or improves slow-wave sleep percentage, unlike benzodiazepines and Z-drugs which tend to suppress it.", "source": "Sharpley et al., 1996 — Polysomnographic study", "quality": "high" },
+        { "finding": "In a head-to-head comparison, trazodone showed comparable short-term efficacy to zolpidem for primary insomnia, but with a more favorable long-term profile (no tolerance or dependence).", "source": "Walsh et al., 1998 — RCT", "quality": "moderate" },
+        { "finding": "Trazodone is the most commonly prescribed medication for insomnia in the United States, reflecting both its efficacy and favorable safety/addiction profile relative to alternatives.", "source": "Wichniak et al., 2017 — Epidemiological review", "quality": "moderate" }
+      ],
+      "safetyProfile": "Trazodone has a well-characterized safety profile from decades of clinical use. At low doses used for insomnia (25–100 mg), side effects are generally mild and manageable. It lacks the dependence, tolerance, and withdrawal concerns of benzodiazepines and Z-drugs, making it preferred for long-term insomnia management. The most serious rare side effect is priapism (incidence ~1:6,000–8,000 in males), which requires immediate medical attention. Cardiac monitoring may be warranted at higher antidepressant doses, especially in patients with pre-existing cardiac conditions. Overdose is generally less lethal than tricyclic antidepressants, though ECG monitoring is advised in intentional overdose situations.",
+      "populationNotes": "Particularly valuable for patients with comorbid insomnia and depression, older adults (preferred over benzodiazepines due to lower fall risk and no cognitive impairment), and ADHD patients on stimulants needing a sleep aid. Males should be counseled about the rare risk of priapism. Use during pregnancy is Category C — risk-benefit assessment required. Dose adjustment may be needed in hepatic impairment. Elderly patients should start at the lowest effective dose (25 mg).",
+      "references": [
+        "Mendelson, W.B. (2005). A review of the evidence for the efficacy and safety of trazodone in insomnia. Journal of Clinical Psychiatry, 66(4), 469–476.",
+        "Sharpley, A.L. et al. (1996). Slow wave sleep in humans: role of 5-HT2A and 5-HT2C receptors. Neuropharmacology, 35(4), 477–482.",
+        "Walsh, J.K. et al. (1998). Nightly treatment of primary insomnia with trazodone: a placebo-controlled trial. Sleep, 21, 78-79.",
+        "Jaffer, K.Y. et al. (2017). Trazodone for Insomnia: A Systematic Review. Innovations in Clinical Neuroscience, 14(7-8), 24-34."
+      ]
+    },
+    {
+      "id": "l-tyrosine",
+      "name": "L-Tyrosin (L-Tyrosine)",
+      "aliases": ["L-Tyrosine", "Tyrosine", "4-Hydroxyphenylalanine", "N-Acetyl-L-Tyrosine", "NALT"],
+      "categories": ["cognitive", "mood", "performance"],
+      "tagline": "A precursor amino acid to dopamine, norepinephrine, and adrenaline — supports focus and stress resilience by replenishing catecholamine reserves.",
+      "overview": "L-Tyrosine is a non-essential amino acid that serves as the direct biochemical precursor to the catecholamine neurotransmitters: dopamine, norepinephrine (noradrenaline), and epinephrine (adrenaline). It is also a precursor to thyroid hormones (T3 and T4) and melanin. While the body can synthesize tyrosine from phenylalanine, supplementation is most beneficial under conditions that deplete catecholamine stores — acute stress, sleep deprivation, cold exposure, prolonged cognitive demands, and multitasking. Under these conditions, tyrosine hydroxylase (the rate-limiting enzyme in catecholamine synthesis) operates at maximum capacity, and providing additional substrate (tyrosine) can maintain dopamine and norepinephrine levels that would otherwise decline. L-Tyrosine does NOT enhance cognition in rested, non-stressed states — its primary value is as a buffer against stress-induced cognitive decline.",
+      "mechanismOfAction": "L-Tyrosine is hydroxylated by the enzyme tyrosine hydroxylase (TH) to form L-DOPA, the rate-limiting step in catecholamine biosynthesis. L-DOPA is then decarboxylated to dopamine, which can be further converted to norepinephrine by dopamine β-hydroxylase, and then to epinephrine by phenylethanolamine N-methyltransferase. Under normal resting conditions, tyrosine hydroxylase is not substrate-limited — meaning extra tyrosine doesn't significantly increase catecholamine production. However, during stress (physiological or psychological), catecholamine turnover increases dramatically, and TH approaches substrate saturation. In this depleted state, supplemental tyrosine provides additional substrate to maintain neurotransmitter synthesis. Tyrosine crosses the blood-brain barrier via the large neutral amino acid transporter (LAT1) — absorption is improved when taken on an empty stomach to avoid competition with other amino acids.",
+      "forms": [
+        { "name": "L-Tyrosine (free-form)", "description": "Pure free-form amino acid. Best studied form. Superior bioavailability. Standard choice.", "recommended": true },
+        { "name": "N-Acetyl-L-Tyrosine (NALT)", "description": "Acetylated form with better water solubility. However, conversion to free tyrosine is poor (~25%), overall less effective for raising tyrosine levels.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "500–2000 mg daily",
+        "loading": "Not required. Effects are acute (within 30–60 minutes of ingestion).",
+        "optimal": "500–1000 mg taken 30–60 minutes before a stressful or demanding task, on an empty stomach. Can repeat once if needed (total ≤2000 mg/day).",
+        "timing": "Best taken on an empty stomach (at least 30 min before meals) for maximal brain uptake. Morning or pre-task timing is ideal. Avoid taking with protein-rich meals, as other amino acids compete for BBB transport.",
+        "notes": "L-Tyrosine is a situational supplement — most effective under conditions of stress, sleep deprivation, or prolonged cognitive demand. It is NOT a general cognitive enhancer in rested, fed, non-stressed individuals. Doses above 2000 mg have not shown additional benefit. Military research has used doses up to 150 mg/kg body weight in acute stress scenarios."
+      },
+      "benefits": [
+        "Preserves cognitive function during acute stress (military, cold stress, sleep deprivation research)",
+        "Maintains working memory and executive function under demanding multitasking conditions",
+        "Supports dopamine and norepinephrine synthesis during catecholamine depletion",
+        "May improve focus and attention during prolonged cognitive tasks",
+        "Supports thyroid hormone production (tyrosine is a component of T3 and T4)",
+        "Potential benefit for mood under high-stress conditions"
+      ],
+      "sideEffects": [
+        "Generally very well tolerated at standard doses",
+        "Headache (rare, usually at higher doses)",
+        "Nausea or GI discomfort (rare, especially on empty stomach in sensitive individuals)",
+        "Insomnia if taken too late in the day (due to catecholamine increase)",
+        "Theoretical concern: may exacerbate hyperthyroidism (provides substrate for thyroid hormones)"
+      ],
+      "interactions": [
+        { "substance": "Levodopa (L-DOPA)", "effect": "Tyrosine may compete with L-DOPA for absorption and brain uptake. Should not be combined without medical guidance in Parkinson's patients.", "severity": "moderate" },
+        { "substance": "MAO Inhibitors", "effect": "Increased catecholamine levels from tyrosine combined with MAO inhibition could theoretically cause hypertensive crisis. Avoid combination.", "severity": "moderate" },
+        { "substance": "Thyroid medications", "effect": "Tyrosine is a thyroid hormone precursor. May affect thyroid hormone levels — monitor in patients on thyroid medication.", "severity": "mild" },
+        { "substance": "Stimulants (Elvanse, caffeine)", "effect": "Additive catecholaminergic effects. Generally well-tolerated but monitor for over-stimulation (anxiety, elevated HR).", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 120,
+        "humanStudies": 50,
+        "rcts": 22,
+        "metaAnalyses": 3,
+        "systematicReviews": 5
+      },
+      "keyFindings": [
+        { "finding": "Tyrosine supplementation (150 mg/kg) significantly improved cognitive performance (working memory, reasoning) during demanding military stress scenarios including cold exposure, sleep deprivation, and high-altitude simulation.", "source": "Mahoney et al., 2007 — US Military RCT", "quality": "high" },
+        { "finding": "A meta-analysis found that tyrosine reliably improves cognitive flexibility (the ability to switch between tasks) under stress, but does not enhance cognition in non-stressful baseline conditions.", "source": "Jongkees et al., 2015 — Meta-analysis of 15 studies", "quality": "high" },
+        { "finding": "Tyrosine (2 g) prevented the decline in working memory performance caused by demanding multitasking conditions in healthy adults.", "source": "Thomas et al., 1999 — Controlled crossover study", "quality": "moderate" },
+        { "finding": "Cold stress-induced cognitive impairment was attenuated by tyrosine supplementation, maintaining reaction time and vigilance performance.", "source": "Shurtleff et al., 1994 — US Navy placebo-controlled study", "quality": "moderate" }
+      ],
+      "safetyProfile": "L-Tyrosine has an excellent safety profile. As a naturally occurring amino acid found in protein-rich foods (cheese, turkey, fish, eggs), it is well-tolerated by the vast majority of people. No significant adverse effects have been reported in clinical studies at doses up to 150 mg/kg (approximately 10+ g for an average adult), though such high doses are not necessary or recommended for routine use. Long-term supplementation studies are limited, but no safety concerns have emerged. It is not a stimulant and does not cause dependence or withdrawal. Individuals with hyperthyroidism or those taking MAOIs should avoid supplementation.",
+      "populationNotes": "Most beneficial for individuals facing acute or chronic stress, sleep deprivation, demanding cognitive work, or ADHD (as an adjunct). Students during exam periods, shift workers, military personnel, and athletes in intense training may benefit most. Individuals already on stimulant medication (e.g., Elvanse) should monitor for over-stimulation. Not recommended for those with hyperthyroidism. Vegans/vegetarians may have lower dietary intake and potentially greater benefit.",
+      "references": [
+        "Jongkees, B.J. et al. (2015). Effect of tyrosine supplementation on clinical and healthy populations under stress or cognitive demands: A review. Journal of Psychiatric Research, 70, 50–57.",
+        "Mahoney, C.R. et al. (2007). Tyrosine supplementation mitigates working memory decrements during cold exposure. Physiology & Behavior, 92(4), 575–582.",
+        "Thomas, J.R. et al. (1999). Tyrosine improves working memory in a multitasking environment. Pharmacology Biochemistry and Behavior, 64(3), 495–500.",
+        "Hase, A. et al. (2015). Behavioral and cognitive effects of tyrosine intake in healthy human adults. Pharmacology Biochemistry and Behavior, 133, 1–6."
+      ]
+    },
+    {
+      "id": "nac",
+      "name": "N-Acetyl-L-Cysteine (NAC)",
+      "aliases": ["NAC", "N-A-C", "N-Acetylcysteine", "Acetylcysteine"],
+      "categories": ["longevity", "mood", "recovery", "cognitive"],
+      "tagline": "A powerful precursor to glutathione — the body's master antioxidant — with broad applications from liver protection and detoxification to mental health and respiratory support.",
+      "overview": "N-Acetyl-L-Cysteine (NAC) is the acetylated form of the amino acid L-cysteine. It is the rate-limiting precursor to glutathione (GSH), the body's most abundant and important intracellular antioxidant. Glutathione is essential for neutralizing reactive oxygen species (ROS), detoxifying xenobiotics and heavy metals, maintaining redox balance, supporting immune function, and recycling other antioxidants (vitamins C and E). NAC has been used clinically for decades as the standard treatment for acetaminophen (paracetamol) overdose and as a mucolytic agent in respiratory conditions. More recently, research has expanded into psychiatric applications — NAC shows promise for OCD, depression, addiction, and compulsive behaviors — as well as longevity, neuroprotection, and exercise recovery. NAC's ability to replenish glutathione stores that decline with age makes it a key compound in anti-aging protocols.",
+      "mechanismOfAction": "NAC exerts its effects through multiple interconnected mechanisms: (1) Glutathione replenishment: NAC provides L-cysteine — the rate-limiting amino acid for glutathione synthesis — to the γ-glutamylcysteine synthetase enzyme, directly boosting intracellular GSH levels. (2) Direct antioxidant activity: The free sulfhydryl (-SH) group on NAC can directly scavenge certain ROS, including hypochlorous acid and hydroxyl radicals. (3) Glutamate modulation: NAC modulates the cystine-glutamate antiporter (system xc−), increasing extracellular glutamate in the nucleus accumbens, which activates inhibitory metabotropic glutamate receptors (mGluR2/3). This reduces excitatory neurotransmission and may underlie its benefits in OCD, addiction, and compulsive disorders. (4) Anti-inflammatory effects: NAC inhibits NF-κB activation and reduces pro-inflammatory cytokines (TNF-α, IL-6, IL-1β). (5) Chelation: NAC can chelate heavy metals (lead, mercury, cadmium) via its thiol group, supporting detoxification.",
+      "forms": [
+        { "name": "NAC (standard oral capsules/powder)", "description": "Standard N-Acetyl-L-Cysteine. Well-studied, affordable, effective. Most common form.", "recommended": true },
+        { "name": "NAC Sustained-Release", "description": "Extended-release formulation. May improve tolerability and maintain more stable GSH levels. Limited comparative data.", "recommended": false },
+        { "name": "IV N-Acetylcysteine", "description": "Intravenous form used in hospital settings (acetaminophen overdose). Not applicable for supplementation.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "600–1800 mg daily",
+        "loading": "Not required. Glutathione repletion is gradual over days to weeks of consistent use.",
+        "optimal": "600 mg 2× daily (1200 mg total). For psychiatric applications, studies typically use 1200–2400 mg/day in divided doses.",
+        "timing": "Best taken on an empty stomach or between meals for optimal absorption. Can be split into 2–3 doses throughout the day. Taking with a small amount of vitamin C may enhance glutathione synthesis.",
+        "notes": "Higher doses (2400–3600 mg/day) have been used in clinical trials for psychiatric conditions. NAC has a sulphurous taste/smell — capsules are preferred over powder by most users. Some protocols combine NAC with glycine (as 'GlyNAC') for enhanced glutathione support."
+      },
+      "benefits": [
+        "Replenishes glutathione — the body's master antioxidant",
+        "Powerful hepatoprotective (liver-protective) properties",
+        "Evidence for reducing OCD symptoms, compulsive behaviors, and addiction cravings",
+        "Anti-inflammatory via NF-κB inhibition",
+        "Mucolytic — thins mucus in respiratory conditions",
+        "May support exercise recovery by reducing oxidative stress",
+        "Heavy metal chelation and detoxification support",
+        "Potential neuroprotective effects against age-related cognitive decline"
+      ],
+      "sideEffects": [
+        "GI discomfort (nausea, bloating, diarrhea) — dose-dependent",
+        "Sulphurous taste and smell",
+        "Headache (uncommon)",
+        "Rare: may act as a pro-oxidant at very high doses in certain contexts (theoretical)",
+        "Rare: allergic reactions (rash, bronchospasm — more common with IV form)"
+      ],
+      "interactions": [
+        { "substance": "Nitroglycerin", "effect": "NAC potentiates the vasodilatory effects of nitroglycerin, potentially causing severe hypotension and headache.", "severity": "severe" },
+        { "substance": "Activated charcoal", "effect": "Activated charcoal reduces oral NAC absorption. Separate administration by at least 2 hours.", "severity": "moderate" },
+        { "substance": "Chemotherapy agents", "effect": "NAC's antioxidant properties could theoretically interfere with oxidative-stress-dependent chemotherapy mechanisms. Discuss with oncologist.", "severity": "moderate" },
+        { "substance": "ACE inhibitors", "effect": "Additive blood-pressure-lowering effects possible. Monitor.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 800,
+        "humanStudies": 400,
+        "rcts": 150,
+        "metaAnalyses": 20,
+        "systematicReviews": 25
+      },
+      "keyFindings": [
+        { "finding": "NAC significantly reduces glutathione depletion and oxidative stress biomarkers in a wide range of clinical populations, including elderly, HIV-positive, and critically ill patients.", "source": "Rushworth & Megson, 2014 — Systematic review", "quality": "high" },
+        { "finding": "NAC (2400 mg/day) significantly reduced OCD symptom severity as an adjunct to SSRIs in a double-blind RCT, with a mean Y-BOCS reduction of 4.5 points vs. placebo.", "source": "Afshar et al., 2012 — Double-blind RCT", "quality": "high" },
+        { "finding": "A combination of NAC + glycine ('GlyNAC') corrected glutathione deficiency in older adults and improved multiple hallmarks of aging including oxidative stress, mitochondrial dysfunction, insulin resistance, and physical function.", "source": "Kumar et al., 2023 — RCT", "quality": "high" },
+        { "finding": "NAC reduced craving and self-reported cocaine use in cocaine-dependent individuals, likely through glutamate modulation in the nucleus accumbens.", "source": "LaRowe et al., 2013 — Double-blind crossover RCT", "quality": "moderate" }
+      ],
+      "safetyProfile": "NAC has a well-established safety profile from decades of clinical use in both hospital (acetaminophen overdose, mucolytic) and supplemental contexts. Oral NAC at doses up to 2400 mg/day is generally well-tolerated. GI side effects are the most common complaint and are usually mild. In the US, the FDA has controversially attempted to restrict NAC's sale as a supplement (arguing it was first approved as a drug), though enforcement has been minimal and NAC remains widely available. No significant safety concerns at standard supplemental doses.",
+      "populationNotes": "Beneficial for individuals with oxidative stress, liver health concerns, respiratory conditions, or psychiatric symptoms (OCD, compulsive behaviors). Older adults benefit from glutathione repletion as GSH levels decline with age. The GlyNAC protocol (NAC + glycine) shows particular promise for aging populations. Athletes may benefit from reduced exercise-induced oxidative damage. Caution with concurrent nitrate medications.",
+      "references": [
+        "Rushworth, G.F. & Megson, I.L. (2014). Existing and potential therapeutic uses for N-acetylcysteine: the need for conversion to intracellular glutathione for antioxidant benefits. Pharmacology & Therapeutics, 141(2), 150–159.",
+        "Afshar, H. et al. (2012). N-Acetylcysteine add-on treatment in refractory obsessive-compulsive disorder: a randomized, double-blind, placebo-controlled trial. Journal of Clinical Psychopharmacology, 32(6), 797–803.",
+        "Kumar, P. et al. (2023). Supplementing Glycine and N-Acetylcysteine (GlyNAC) in Older Adults Improves Glutathione Deficiency, Oxidative Stress, Mitochondrial Dysfunction, Inflammation, Physical Function, and Aging Hallmarks. The Journals of Gerontology: Series A, 78(1), 75–89.",
+        "Berk, M. et al. (2013). The promise of N-acetylcysteine in neuropsychiatry. Trends in Pharmacological Sciences, 34(3), 167–177."
+      ]
+    },
+    {
+      "id": "gn-vitamins-sports-complex",
+      "name": "GN Vitamins Sports Complex",
+      "aliases": ["GN Sports Complex", "GN Multivitamin", "Genetic Nutrition Sports Complex"],
+      "categories": ["foundational", "performance", "recovery"],
+      "tagline": "A comprehensive sports-oriented multivitamin-mineral complex designed to cover micronutrient gaps in physically active individuals.",
+      "overview": "GN Vitamins Sports Complex is a multi-ingredient micronutrient formula designed for athletes and physically active individuals. Sports multivitamins like this aim to address the increased micronutrient demands created by intense training — including elevated losses of B-vitamins through energy metabolism, minerals through sweat (zinc, magnesium, sodium), and antioxidant depletion from exercise-induced oxidative stress. While a well-designed whole-food diet should theoretically supply all essential micronutrients, research consistently shows that many athletes and active individuals have suboptimal intakes of vitamin D, magnesium, zinc, iron (especially females), and B-vitamins. A sports complex serves as nutritional insurance — filling gaps rather than replacing dietary quality. The evidence for multivitamins is best understood as deficiency prevention rather than performance enhancement: they don't make a well-nourished athlete faster, but they prevent the performance decrements caused by micronutrient insufficiencies.",
+      "mechanismOfAction": "The mechanisms of a multivitamin-mineral complex are inherently multi-target, as each constituent nutrient participates in distinct biochemical pathways. Key mechanisms relevant to sport and health include: B-vitamins (B1, B2, B3, B5, B6, B12, folate) serve as coenzymes in energy metabolism — glycolysis, the TCA cycle, oxidative phosphorylation, and amino acid metabolism. Vitamin D regulates calcium absorption, bone mineralization, muscle function, and immune modulation. Vitamin C and E function as antioxidants, scavenging ROS generated during intense exercise. Zinc is a cofactor for >300 enzymes including those involved in protein synthesis, testosterone production, and immune cell function. Iron is essential for hemoglobin synthesis and oxygen transport. Magnesium supports ATP production, muscle contraction, and neuromuscular function. Collectively, these micronutrients support the biochemical infrastructure required for athletic performance, recovery, and long-term health.",
+      "forms": [
+        { "name": "GN Vitamins Sports Complex (tablets/capsules)", "description": "Multi-ingredient sports formula. Convenience of a single product covering multiple micronutrient needs.", "recommended": true },
+        { "name": "Individual vitamin/mineral supplements", "description": "Targeted single-nutrient supplements. Allows precise dosing but requires managing multiple products. Preferred when specific deficiencies are identified via blood work.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "As directed on label (typically 1–2 servings daily)",
+        "loading": "Not applicable. Consistent daily use is key.",
+        "optimal": "Follow the manufacturer's recommended serving. Take with a meal containing dietary fat for optimal absorption of fat-soluble vitamins (A, D, E, K).",
+        "timing": "With breakfast or lunch (not on empty stomach — may cause nausea). Avoid late-evening dosing as B-vitamins may be mildly energizing. Fat-soluble vitamins require dietary fat for absorption.",
+        "notes": "A multivitamin is foundational insurance, not a substitute for a nutrient-dense diet. For specific micronutrients where you have a confirmed deficiency (e.g., vitamin D, iron), standalone supplementation at targeted doses is more effective than relying on a multi alone. Blood work is the gold standard for identifying actual deficiencies."
+      },
+      "benefits": [
+        "Covers micronutrient gaps common in active individuals",
+        "Supports energy metabolism via B-vitamin cofactors",
+        "Provides antioxidant support (vitamins C, E, selenium)",
+        "Supports immune function — critical during heavy training loads",
+        "Convenient single-product approach to baseline micronutrition",
+        "May prevent performance decrements from subclinical deficiencies"
+      ],
+      "sideEffects": [
+        "Nausea if taken on an empty stomach",
+        "Bright yellow urine (harmless — excess riboflavin / B2 excretion)",
+        "GI discomfort from iron content in some individuals",
+        "Potential for exceeding upper intake levels of certain nutrients if combining with other supplements"
+      ],
+      "interactions": [
+        { "substance": "Iron-containing supplements", "effect": "If the complex contains iron, stacking with additional iron supplements risks exceeding safe intake. Monitor total iron intake.", "severity": "moderate" },
+        { "substance": "Calcium supplements", "effect": "Calcium can inhibit iron and zinc absorption when taken simultaneously. Separate if possible.", "severity": "mild" },
+        { "substance": "Antibiotics (tetracyclines, fluoroquinolones)", "effect": "Minerals (calcium, magnesium, zinc, iron) in the complex can chelate these antibiotics and reduce their absorption. Separate by 2–4 hours.", "severity": "moderate" },
+        { "substance": "Blood thinners (warfarin)", "effect": "Vitamin K in the complex may counteract anticoagulant effects. Consult physician.", "severity": "moderate" }
+      ],
+      "evidence": {
+        "totalStudies": 200,
+        "humanStudies": 150,
+        "rcts": 40,
+        "metaAnalyses": 10,
+        "systematicReviews": 12
+      },
+      "keyFindings": [
+        { "finding": "A systematic review found that 50–90% of athletes do not meet the Estimated Average Requirement (EAR) for multiple micronutrients from diet alone, supporting the rationale for multivitamin supplementation in active populations.", "source": "Thomas et al., 2016 — ACSM/AND/DC Joint Position Statement", "quality": "high" },
+        { "finding": "Multivitamin supplementation does not enhance performance in well-nourished athletes, but correcting micronutrient deficiencies restores impaired performance to baseline.", "source": "Lukaski, 2004 — Review in Nutrition", "quality": "high" },
+        { "finding": "Daily multivitamin use for 3+ years was associated with a modest reduction in total cancer incidence in the Physicians' Health Study II (HR 0.92).", "source": "Gaziano et al., 2012 — Large-scale RCT (n=14,641)", "quality": "high" },
+        { "finding": "Multivitamin/mineral supplementation improved self-reported energy, stress, and well-being in healthy adults in a meta-analysis of 8 RCTs.", "source": "Long & Benton, 2013 — Meta-analysis", "quality": "moderate" }
+      ],
+      "safetyProfile": "Sports multivitamins are generally safe when taken as directed. The primary risk is inadvertently exceeding the Tolerable Upper Intake Level (UL) for specific nutrients when combining a multivitamin with additional standalone supplements — particularly iron, vitamin A, zinc, and selenium. Fat-soluble vitamins (A, D, E, K) can accumulate in the body, making chronic mega-dosing risky. Most well-formulated sports complexes keep individual nutrient levels at or near 100% of the Daily Value, which is safe for long-term use. Always check for overlap with other supplements in your stack.",
+      "populationNotes": "Athletes, individuals with restricted diets (vegetarian/vegan, caloric restriction), and those with increased micronutrient demands benefit most. Not a substitute for dietary quality. Pregnant women should use a dedicated prenatal formula instead. Individuals on anticoagulants should note vitamin K content. Those with hemochromatosis or iron overload should choose an iron-free formula.",
+      "references": [
+        "Thomas, D.T. et al. (2016). Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance. Journal of the Academy of Nutrition and Dietetics, 116(3), 501–528.",
+        "Lukaski, H.C. (2004). Vitamin and mineral status: Effects on physical performance. Nutrition, 20(7-8), 632–644.",
+        "Gaziano, J.M. et al. (2012). Multivitamins in the prevention of cancer in men: the Physicians' Health Study II randomized controlled trial. JAMA, 308(18), 1871–1880.",
+        "Long, S.J. & Benton, D. (2013). Effects of vitamin and mineral supplementation on stress, mild psychiatric symptoms, and mood in nonclinical samples: a meta-analysis. Psychosomatic Medicine, 75(2), 144–153."
+      ]
+    },
+    {
+      "id": "vitamin-d3-k2",
+      "name": "Vitamin D3 + K2",
+      "aliases": ["Cholecalciferol + Menaquinone", "Vitamin D3", "Vitamin K2", "D3/K2", "MK-7"],
+      "categories": ["foundational", "longevity", "performance", "recovery"],
+      "tagline": "The synergistic pairing of the 'sunshine vitamin' with its essential cofactor — directing calcium to bones and away from arteries.",
+      "overview": "Vitamin D3 (cholecalciferol) and Vitamin K2 (menaquinone, typically MK-7) are a synergistic pair that work together to regulate calcium metabolism. Vitamin D3 enhances intestinal calcium absorption, but without adequate Vitamin K2, that calcium may deposit in soft tissues (arteries, kidneys) rather than being directed to bones and teeth. K2 activates osteocalcin (which deposits calcium into bone matrix) and matrix GLA protein (which prevents arterial calcification). Vitamin D deficiency is a global pandemic — an estimated 1 billion people worldwide have insufficient levels (<30 ng/mL), and many experts argue that optimal levels (40–60 ng/mL) require supplementation for most people, especially those living above 35° latitude, working indoors, or with darker skin. Beyond bone health, Vitamin D functions as a secosteroid hormone with receptors in virtually every cell, influencing immune regulation, mood, muscle function, gene expression (over 1,000 genes), and chronic disease risk.",
+      "mechanismOfAction": "Vitamin D3 is converted in the liver to 25-hydroxyvitamin D (calcidiol — the form measured in blood tests), then activated in the kidneys to 1,25-dihydroxyvitamin D (calcitriol), the hormonally active form. Calcitriol binds to the vitamin D receptor (VDR), a nuclear receptor present in most human cells, forming a complex that regulates the transcription of over 1,000 genes. Key actions include: (1) Calcium/phosphorus homeostasis: upregulates intestinal calcium absorption proteins (calbindin). (2) Immune modulation: enhances innate immunity (cathelicidin antimicrobial peptide production) while modulating adaptive immunity (reducing excessive Th1/Th17 responses, promoting Treg cells). (3) Muscle function: VDR activation in muscle cells supports contractile function. Vitamin K2 (MK-7) activates two critical calcium-regulatory proteins via gamma-carboxylation: osteocalcin (directs calcium to bones) and matrix GLA protein (MGP, prevents calcium deposition in arterial walls). Without K2, these proteins remain inactive (undercarboxylated), and calcium regulation becomes dysfunctional.",
+      "forms": [
+        { "name": "Vitamin D3 (Cholecalciferol) + K2 (MK-7)", "description": "The gold standard combination. D3 is far more effective than D2 (ergocalciferol) at raising blood levels. MK-7 has the longest half-life (~72 hours) of all K2 forms, providing stable 24/7 activity.", "recommended": true },
+        { "name": "Vitamin D3 alone", "description": "Effective for raising 25(OH)D levels but lacks the calcium-directing synergy of K2. Risk of soft-tissue calcification at high doses without K2.", "recommended": false },
+        { "name": "Vitamin D2 (Ergocalciferol)", "description": "Plant-derived form. 30–50% less effective than D3 at raising blood levels. Shorter half-life. Not recommended.", "recommended": false },
+        { "name": "K2 as MK-4", "description": "Shorter half-life (4–6 hours) than MK-7. Requires multiple daily doses. Used in Japanese osteoporosis studies at 45 mg/day. Less practical for supplementation.", "recommended": false }
+      ],
+      "dosage": {
+        "standard": "1,000–5,000 IU D3 + 100–200 μg K2 (MK-7) daily",
+        "loading": "For documented deficiency (<20 ng/mL): 10,000 IU/day D3 for 8–12 weeks under physician monitoring, then retest and reduce to maintenance.",
+        "optimal": "2,000–5,000 IU D3 + 200 μg K2 (MK-7) daily to maintain 25(OH)D levels of 40–60 ng/mL (100–150 nmol/L). Exact dose depends on baseline levels, body weight, skin color, and sun exposure. Dose by blood test.",
+        "timing": "Take with the largest fat-containing meal of the day (both D3 and K2 are fat-soluble — absorption increases ~30–50% with dietary fat). Morning or lunch preferred; some report sleep disturbance with evening D3 dosing.",
+        "notes": "The only way to determine your ideal dose is blood testing for 25(OH)D. Target: 40–60 ng/mL (100–150 nmol/L). Obese individuals may need 2–3× standard doses due to D3 sequestration in adipose tissue. People with darker skin synthesize less cutaneous D3 and typically need higher supplemental doses. Vitamin D toxicity is extremely rare below 10,000 IU/day but can occur with chronic mega-dosing (>50,000 IU/day)."
+      },
+      "benefits": [
+        "Maintains optimal calcium absorption and bone mineral density",
+        "K2 directs calcium to bones and prevents arterial calcification",
+        "Supports immune function — reduces risk and severity of respiratory infections",
+        "Associated with reduced all-cause mortality at optimal levels (40-60 ng/mL)",
+        "Supports muscle function, strength, and reduces fall risk in elderly",
+        "May reduce risk of autoimmune diseases, certain cancers, and cardiovascular disease",
+        "Mood support — deficiency associated with depression and SAD",
+        "Supports testosterone levels (in deficient men)"
+      ],
+      "sideEffects": [
+        "Very rare at standard doses (1,000–5,000 IU D3)",
+        "Hypercalcemia only at chronic very high doses (>50,000 IU/day) — symptoms include nausea, weakness, kidney stones",
+        "K2 has no known toxicity and no established upper intake level",
+        "Rare: GI discomfort"
+      ],
+      "interactions": [
+        { "substance": "Anticoagulants (warfarin)", "effect": "Vitamin K2 directly counteracts warfarin's mechanism (which works by inhibiting vitamin K recycling). Patients on warfarin should NOT take K2 without physician guidance.", "severity": "severe" },
+        { "substance": "Thiazide diuretics", "effect": "Reduce calcium excretion. Combined with vitamin D (which increases calcium absorption), risk of hypercalcemia increases.", "severity": "moderate" },
+        { "substance": "Steroids (corticosteroids)", "effect": "Long-term corticosteroid use depletes vitamin D and reduces calcium absorption. Higher supplemental doses may be needed.", "severity": "mild" },
+        { "substance": "Statins", "effect": "Some evidence that vitamin D may enhance statin efficacy. Vitamin K2 and statins may have complementary cardiovascular benefits. Generally positive interaction.", "severity": "mild" },
+        { "substance": "Magnesium", "effect": "Magnesium is required for vitamin D activation (conversion to active calcitriol). Co-supplementation is synergistic and recommended.", "severity": "mild" }
+      ],
+      "evidence": {
+        "totalStudies": 5000,
+        "humanStudies": 3000,
+        "rcts": 500,
+        "metaAnalyses": 80,
+        "systematicReviews": 60
+      },
+      "keyFindings": [
+        { "finding": "Vitamin D supplementation reduced the risk of acute respiratory tract infections by 12% overall, with stronger effects (42% reduction) in those with baseline 25(OH)D levels <25 nmol/L.", "source": "Martineau et al., 2017 — Meta-analysis of 25 RCTs (n=11,321)", "quality": "high" },
+        { "finding": "Vitamin D3 supplementation (2,000 IU/day) reduced the incidence of autoimmune diseases by 22% over a 5-year period in the VITAL study.", "source": "Hahn et al., 2022 — VITAL RCT ancillary study (n=25,871)", "quality": "high" },
+        { "finding": "Vitamin K2 (MK-7, 180 μg/day for 3 years) significantly reduced age-related arterial stiffening compared to placebo, demonstrating cardiovascular protective effects.", "source": "Knapen et al., 2015 — Double-blind RCT (n=244)", "quality": "high" },
+        { "finding": "Serum 25(OH)D levels of 40–60 ng/mL are associated with the lowest all-cause mortality risk, with a J-shaped curve showing increased risk at both very low (<20 ng/mL) and very high (>100 ng/mL) levels.", "source": "Garland et al., 2014 — Meta-analysis of prospective cohort studies", "quality": "high" }
+      ],
+      "safetyProfile": "Vitamin D3 at doses up to 4,000 IU/day is considered safe by the Endocrine Society, and many vitamin D researchers argue that 10,000 IU/day is the true safe upper limit for most adults. Toxicity is extremely rare below 10,000 IU/day and virtually absent below 4,000 IU/day. The key safety metric is blood level — toxicity is associated with 25(OH)D levels >150 ng/mL (375 nmol/L), which requires sustained mega-dosing. Vitamin K2 (MK-7) has no known toxicity even at high doses (up to 1,080 μg/day studied with no adverse effects) and has no established Upper Intake Level. The sole critical contraindication is K2 + warfarin/coumarin anticoagulants.",
+      "populationNotes": "Virtually everyone in temperate climates benefits from D3 supplementation, especially during winter months. Higher-risk groups: dark-skinned individuals, elderly (reduced cutaneous synthesis), obese (D3 sequestration in fat), indoor workers, veiled/covered populations. K2 is particularly important for postmenopausal women (bone health) and anyone taking moderate-to-high dose D3. Athletes benefit from D3's effects on muscle function and immune resilience during heavy training. Pregnant women need adequate D3 (most prenatal vitamins provide only 400–600 IU, which may be insufficient).",
+      "references": [
+        "Martineau, A.R. et al. (2017). Vitamin D supplementation to prevent acute respiratory tract infections: systematic review and meta-analysis. BMJ, 356, i6583.",
+        "Hahn, J. et al. (2022). Vitamin D and marine omega 3 fatty acid supplementation and incident autoimmune disease. BMJ, 376, e066452.",
+        "Knapen, M.H. et al. (2015). Menaquinone-7 supplementation improves arterial stiffness in healthy postmenopausal women. A double-blind randomized clinical trial. Thrombosis and Haemostasis, 113(5), 1135–1144.",
+        "Garland, C.F. et al. (2014). Meta-analysis of All-Cause Mortality According to Serum 25-Hydroxyvitamin D. American Journal of Public Health, 104(8), e43–e50."
+      ]
+    }
+  ]
+}

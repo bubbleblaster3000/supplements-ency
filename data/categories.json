@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": "sleep",
+      "name": "Sleep & Recovery",
+      "icon": "🌙",
+      "description": "Supplements that support sleep quality, circadian rhythm regulation, and nighttime recovery processes.",
+      "color": "#6C63FF"
+    },
+    {
+      "id": "cognitive",
+      "name": "Focus & Cognition",
+      "icon": "🧠",
+      "description": "Nootropics and compounds that enhance memory, focus, attention, and overall cognitive performance.",
+      "color": "#00BFA6"
+    },
+    {
+      "id": "performance",
+      "name": "Performance & Energy",
+      "icon": "⚡",
+      "description": "Ergogenic aids that improve physical performance, strength, power output, and energy metabolism.",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": "longevity",
+      "name": "Longevity & Anti-Aging",
+      "icon": "🧬",
+      "description": "Compounds researched for their potential to slow biological aging, extend healthspan, and promote cellular repair.",
+      "color": "#FFD93D"
+    },
+    {
+      "id": "mood",
+      "name": "Mood & Stress",
+      "icon": "🧘",
+      "description": "Adaptogens and supplements that support emotional regulation, stress resilience, and mental well-being.",
+      "color": "#A8E6CF"
+    },
+    {
+      "id": "recovery",
+      "name": "Recovery & Repair",
+      "icon": "💪",
+      "description": "Supplements that accelerate post-exercise recovery, reduce inflammation, and support tissue repair.",
+      "color": "#FF8A65"
+    },
+    {
+      "id": "foundational",
+      "name": "Foundational Health",
+      "icon": "🏛️",
+      "description": "Essential vitamins, minerals, and multi-nutrient complexes that form the baseline of a well-designed supplement protocol.",
+      "color": "#78909C"
+    },
+    {
+      "id": "medication",
+      "name": "Prescription Medications",
+      "icon": "💊",
+      "description": "Prescription pharmaceuticals used for ADHD, sleep disorders, mood regulation, and other clinical purposes. Included for reference — these require medical supervision.",
+      "color": "#E040FB"
+    }
+  ]
+}
