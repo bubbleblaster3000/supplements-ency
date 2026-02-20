@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-style="typewriter">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,12 @@
   <nav class="navbar">
     <div class="container navbar__inner">
       <a href="index.html" class="navbar__brand">
-        <span class="navbar__brand-icon">🧪</span>
+        <span class="navbar__brand-icon"><span class="si-e">🧪</span><span class="si-t">[SE]</span></span>
         <span>SupplementsEncy</span>
       </a>
 
       <div class="navbar__search">
-        <span class="navbar__search-icon">🔍</span>
+        <span class="navbar__search-icon"><span class="si-e">🔍</span><span class="si-t">&gt;</span></span>
         <input 
           type="text" 
           id="search-input" 
@@ -30,8 +30,9 @@
       </div>
 
       <div class="navbar__actions">
-        <a href="builder.html" class="navbar__builder-link">🛠️ Stack Builder</a>
-        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">☀️</button>
+        <a href="builder.html" class="navbar__builder-link"><span class="si-e">🛠️ </span>Stack Builder</a>
+        <button id="style-toggle" class="style-toggle" title="Switch style">classic</button>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">[T]</button>
       </div>
     </div>
   </nav>
@@ -58,6 +59,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       App.initThemeToggle();
+      App.initStyleToggle();
       App.initCategoryPage();
     });
   </script>

@@ -162,3 +162,15 @@ const EvidenceScoring = (() => {
   };
 
 })();
+
+/**
+ * Style Icon helper — renders both emoji and text-alternative spans.
+ * CSS controls which one is visible based on [data-style] attribute.
+ *
+ * @param {string} emoji  - Content to show in classic mode
+ * @param {string} text   - Content to show in typewriter mode
+ * @returns {string} HTML with both variants
+ */
+window.SI = function(emoji, text) {
+  return '<span class="si-e">' + emoji + '</span><span class="si-t">' + text + '</span>';
+};

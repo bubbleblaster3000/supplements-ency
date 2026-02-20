@@ -72,7 +72,7 @@ const Render = (() => {
   function categoryTag(categoryId, categories) {
     const cat = categories.find(c => c.id === categoryId);
     if (!cat) return '';
-    return `<a href="category.html?id=${cat.id}" class="category-tag" style="--cat-color: ${cat.color}">${cat.icon} ${cat.name}</a>`;
+    return `<a href="category.html?id=${cat.id}" class="category-tag" style="--cat-color: ${cat.color}">${SI(cat.icon + ' ', '')}${cat.name}</a>`;
   }
 
   // ──────────────────────────────
@@ -87,7 +87,7 @@ const Render = (() => {
 
       return `
         <a href="category.html?id=${cat.id}" class="category-card" style="--cat-color: ${cat.color}">
-          <div class="category-card__icon">${cat.icon}</div>
+          <div class="category-card__icon">${SI(cat.icon, '')}</div>
           <h2 class="category-card__name">${cat.name}</h2>
           <p class="category-card__description">${cat.description}</p>
           <div class="category-card__count">${catSupplements.length} supplement${catSupplements.length !== 1 ? 's' : ''}</div>
@@ -150,7 +150,7 @@ const Render = (() => {
         <div class="container">
           <div class="builder-cta">
             <div class="builder-cta__text">
-              <h2 class="builder-cta__title">🛠️ Custom Stack Builder</h2>
+              <h2 class="builder-cta__title">${SI('🛠️ ', '')}Custom Stack Builder</h2>
               <p class="builder-cta__description">Build your own supplement stack from our database. Get instant synergy detection, risk analysis, category coverage scoring, and a full evidence breakdown — all in real time.</p>
             </div>
             <a href="builder.html" class="btn builder-cta__btn">Open Stack Builder →</a>
@@ -203,7 +203,7 @@ const Render = (() => {
             <div class="supplement-row__categories">
               ${s.categories.map(cid => {
                 const cat = categories.find(c => c.id === cid);
-                return cat ? `<span class="supplement-row__cat" style="--cat-color: ${cat.color}">${cat.icon} ${cat.name}</span>` : '';
+                return cat ? `<span class="supplement-row__cat" style="--cat-color: ${cat.color}">${SI(cat.icon + ' ', '')}${cat.name}</span>` : '';
               }).join('')}
             </div>
           </div>
@@ -241,7 +241,7 @@ const Render = (() => {
             <span class="breadcrumb__sep">›</span>
             <span>${category.name}</span>
           </nav>
-          <div class="category-hero__icon">${category.icon}</div>
+          <div class="category-hero__icon">${SI(category.icon, '')}</div>
           <h1 class="category-hero__title">${category.name}</h1>
           <p class="category-hero__description">${category.description}</p>
           <div class="category-hero__count">${catSupplements.length} supplement${catSupplements.length !== 1 ? 's' : ''}</div>
@@ -253,10 +253,10 @@ const Render = (() => {
           <div class="sort-controls">
             <span class="sort-controls__label">Sort by:</span>
             <button class="sort-btn ${sortMode === 'evidence' ? 'sort-btn--active' : ''}" data-sort="evidence">
-              🔬 Evidence Strength
+              ${SI('🔬 ', '')}Evidence Strength
             </button>
             <button class="sort-btn ${sortMode === 'alpha' ? 'sort-btn--active' : ''}" data-sort="alpha">
-              🔤 Alphabetical
+              ${SI('🔤 ', '')}Alphabetical
             </button>
           </div>
           ${supplementList(sorted, allCategories)}
@@ -383,7 +383,7 @@ const Render = (() => {
       <div class="form-card ${form.recommended ? 'form-card--recommended' : ''}">
         <div class="form-card__header">
           <h4 class="form-card__name">${form.name}</h4>
-          ${form.recommended ? '<span class="form-card__badge">✓ Recommended</span>' : ''}
+          ${form.recommended ? `<span class="form-card__badge">${SI('✓', '[*]')} Recommended</span>` : ''}
         </div>
         <p class="form-card__description">${form.description}</p>
       </div>
@@ -444,7 +444,7 @@ const Render = (() => {
       const qualityClass = `finding--${f.quality}`;
       return `
         <div class="finding ${qualityClass}">
-          <div class="finding__quality">${f.quality === 'high' ? '⬆ High Quality' : '◆ Moderate Quality'}</div>
+          <div class="finding__quality">${f.quality === 'high' ? SI('⬆ High Quality', 'HIGH QUALITY') : SI('◆ Moderate Quality', 'MODERATE QUALITY')}</div>
           <p class="finding__text">"${f.finding}"</p>
           <cite class="finding__source">${f.source}</cite>
         </div>
@@ -511,7 +511,7 @@ const Render = (() => {
     return `
       <a href="stack.html?id=${stack.id}" class="stack-card">
         <div class="stack-card__header">
-          <div class="stack-card__icon">📋</div>
+          <div class="stack-card__icon">${SI('📋', '')}</div>
           <div class="stack-card__tier" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
             <span class="stack-card__tier-letter">${tierInfo.tier}</span>
             <span class="stack-card__tier-score">${stack.evidenceAssessment.overallScore}</span>
@@ -520,15 +520,15 @@ const Render = (() => {
         <h3 class="stack-card__name">${stack.name}</h3>
         <p class="stack-card__tagline">${stack.tagline}</p>
         <div class="stack-card__meta">
-          <span class="stack-card__meta-item">🕐 ${blockCount} timing blocks</span>
-          <span class="stack-card__meta-item">💊 ${totalItems} supplements</span>
-          <span class="stack-card__meta-item">🔗 ${synergyCount} synergies</span>
+          <span class="stack-card__meta-item">${SI('🕖 ', '')}${blockCount} timing blocks</span>
+          <span class="stack-card__meta-item">${SI('💊 ', '')}${totalItems} supplements</span>
+          <span class="stack-card__meta-item">${SI('🔗 ', '')}${synergyCount} synergies</span>
         </div>
         <div class="stack-card__potency">
           ${stack.categoryPotency.slice(0, 4).map(cp => {
             const filled = cp.rating;
             const empty = cp.maxRating - cp.rating;
-            return `<span class="stack-card__potency-item" title="${cp.categoryId}: ${cp.rating}/${cp.maxRating}">${cp.categoryId === 'cognitive' ? '🧠' : cp.categoryId === 'sleep' ? '🌙' : cp.categoryId === 'recovery' ? '💪' : cp.categoryId === 'performance' ? '⚡' : cp.categoryId === 'foundational' ? '🏛️' : cp.categoryId === 'longevity' ? '🧬' : cp.categoryId === 'mood' ? '🧘' : '📊'} ${'●'.repeat(filled)}${'○'.repeat(empty)}</span>`;
+            return `<span class="stack-card__potency-item" title="${cp.categoryId}: ${cp.rating}/${cp.maxRating}">${cp.categoryId}: ${'#'.repeat(filled)}${'.'.repeat(empty)}</span>`;
           }).join('')}
         </div>
       </a>
@@ -576,9 +576,9 @@ const Render = (() => {
               <h1 class="stack-hero__title">${stack.name}</h1>
               <p class="stack-hero__tagline">${stack.tagline}</p>
               <div class="stack-hero__stats">
-                <span class="stack-hero__stat">🕐 ${stack.blocks.length} Timing Blocks</span>
-                <span class="stack-hero__stat">💊 ${totalItems} Supplements</span>
-                <span class="stack-hero__stat">🔗 ${stack.synergies.length} Synergies</span>
+                <span class="stack-hero__stat">${SI('📦 ', '')}${stack.blocks.length} Timing Blocks</span>
+                <span class="stack-hero__stat">${SI('💊 ', '')}${totalItems} Supplements</span>
+                <span class="stack-hero__stat">${SI('🔗 ', '')}${stack.synergies.length} Synergies</span>
               </div>
             </div>
             <div class="stack-hero__evidence">
@@ -603,7 +603,7 @@ const Render = (() => {
               <ul class="sidebar-nav__list">
                 <li><a href="#overview" class="sidebar-nav__link">Overview</a></li>
                 <li><a href="#timeline" class="sidebar-nav__link">Daily Timeline</a></li>
-                ${stack.blocks.map(b => `<li><a href="#block-${b.id}" class="sidebar-nav__link sidebar-nav__link--indent">${b.icon} ${b.name.split(' (')[0]}</a></li>`).join('')}
+                ${stack.blocks.map((b, i) => `<li><a href="#block-${b.id}" class="sidebar-nav__link sidebar-nav__link--indent">${SI(b.icon + ' ', '[' + (i + 1) + '] ')}${b.name.split(' (')[0]}</a></li>`).join('')}
                 <li><a href="#synergies" class="sidebar-nav__link">Synergies</a></li>
                 <li><a href="#potency" class="sidebar-nav__link">Category Potency</a></li>
                 <li><a href="#evidence" class="sidebar-nav__link">Evidence Assessment</a></li>
@@ -658,7 +658,7 @@ const Render = (() => {
     const timelineHtml = blocks.map((block, index) => `
       <div class="timeline-block">
         <div class="timeline-block__marker">
-          <span class="timeline-block__icon">${block.icon}</span>
+          <span class="timeline-block__icon">${SI(block.icon, '[' + (index + 1) + ']')}</span>
           ${index < blocks.length - 1 ? '<div class="timeline-block__line"></div>' : ''}
         </div>
         <div class="timeline-block__content">
@@ -680,7 +680,7 @@ const Render = (() => {
   }
 
   function renderStackBlocks(blocks, supplements) {
-    return blocks.map(block => {
+    return blocks.map((block, index) => {
       const itemsHtml = block.items.map(item => {
         const linkedClass = item.supplementId ? 'stack-item--linked' : '';
         const linkStart = item.supplementId ? `<a href="supplement.html?id=${item.supplementId}" class="stack-item__link">` : '';
@@ -701,7 +701,7 @@ const Render = (() => {
       return `
         <section id="block-${block.id}" class="content-section stack-block">
           <div class="stack-block__header">
-            <span class="stack-block__icon">${block.icon}</span>
+            <span class="stack-block__icon">${SI(block.icon, '[' + (index + 1) + ']')}</span>
             <div>
               <h2 class="content-section__title">${block.name}</h2>
               <p class="stack-block__timing">${block.timing}</p>
@@ -758,7 +758,7 @@ const Render = (() => {
 
     const html = potencies.map(cp => {
       const cat = categories.find(c => c.id === cp.categoryId);
-      const icon = cat ? cat.icon : '📊';
+      const icon = cat ? cat.icon : '';
       const name = cat ? cat.name : cp.categoryId;
       const color = cat ? cat.color : '#8B949E';
       const pct = (cp.rating / cp.maxRating) * 100;
@@ -766,8 +766,7 @@ const Render = (() => {
       return `
         <div class="potency-row">
           <div class="potency-row__label">
-            <span class="potency-row__icon">${icon}</span>
-            <span class="potency-row__name">${name}</span>
+            ${SI(icon + ' ', '')}<span class="potency-row__name">${name}</span>
           </div>
           <div class="potency-row__bar-container">
             <div class="potency-row__bar" style="width: ${pct}%; background: ${color}"></div>
@@ -801,13 +800,13 @@ const Render = (() => {
 
         <div class="stack-evidence__columns">
           <div class="stack-evidence__col stack-evidence__col--strong">
-            <h4>✅ Strongest Components</h4>
+            <h4>${SI('✅ ', '[+] ')}Strongest Components</h4>
             <ul>
               ${assessment.strongestComponents.map(c => `<li>${c}</li>`).join('')}
             </ul>
           </div>
           <div class="stack-evidence__col stack-evidence__col--weak">
-            <h4>⚠️ Weakest Components</h4>
+            <h4>${SI('⚠️ ', '[!] ')}Weakest Components</h4>
             <ul>
               ${assessment.weakestComponents.map(c => `<li>${c}</li>`).join('')}
             </ul>
@@ -826,7 +825,7 @@ const Render = (() => {
       <div class="stack-warnings">
         ${warnings.map(w => `
           <div class="stack-warning">
-            <span class="stack-warning__icon">⚠️</span>
+            <span class="stack-warning__icon">${SI('⚠️', '[!]')}</span>
             <p class="stack-warning__text">${w}</p>
           </div>
         `).join('')}

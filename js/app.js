@@ -288,8 +288,34 @@ const App = (() => {
   }
 
   function updateThemeIcon(toggle, theme) {
-    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    toggle.innerHTML = theme === 'dark' ? SI('☀️', '[light]') : SI('🌙', '[dark]');
     toggle.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+  }
+
+  // ──────────────────────────────
+  // STYLE TOGGLE (typewriter / classic)
+  // ──────────────────────────────
+
+  function initStyleToggle() {
+    const toggle = document.getElementById('style-toggle');
+    if (!toggle) return;
+
+    const savedStyle = localStorage.getItem('uiStyle') || 'typewriter';
+    document.documentElement.setAttribute('data-style', savedStyle);
+    updateStyleLabel(toggle, savedStyle);
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-style') || 'typewriter';
+      const next = current === 'typewriter' ? 'classic' : 'typewriter';
+      document.documentElement.setAttribute('data-style', next);
+      localStorage.setItem('uiStyle', next);
+      updateStyleLabel(toggle, next);
+    });
+  }
+
+  function updateStyleLabel(toggle, style) {
+    toggle.textContent = style === 'typewriter' ? 'classic' : 'typewriter';
+    toggle.title = style === 'typewriter' ? 'Switch to classic style' : 'Switch to typewriter style';
   }
 
   // ──────────────────────────────
@@ -302,6 +328,7 @@ const App = (() => {
     initSupplementPage,
     initStackPage,
     initThemeToggle,
+    initStyleToggle,
     loadData
   };
 

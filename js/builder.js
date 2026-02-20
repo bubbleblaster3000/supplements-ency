@@ -14,10 +14,47 @@ const StackBuilder = (() => {
 
   let allSupplements = [];
   let allCategories = [];
-  let selectedSupplements = []; // array of { supplement, customDose? }
+  let selectedSupplements = []; // array of { supplement, config: { dose, unit, timing, withFood, frequency, notes } }
   let savedStacks = [];
   let currentStackName = '';
   let currentStackId = null;
+  let expandedConfigId = null; // which supplement's config panel is open
+
+  const TIMING_OPTIONS = [
+    { value: '', label: 'Not set' },
+    { value: 'morning', label: 'Morning' },
+    { value: 'midday', label: 'Midday' },
+    { value: 'afternoon', label: 'Afternoon' },
+    { value: 'evening', label: 'Evening' },
+    { value: 'bedtime', label: 'Bedtime' },
+    { value: 'pre-workout', label: 'Pre-Workout' },
+    { value: 'post-workout', label: 'Post-Workout' },
+    { value: 'split', label: 'Split Doses' }
+  ];
+
+  const FOOD_OPTIONS = [
+    { value: '', label: 'Not set' },
+    { value: 'with-food', label: 'With food' },
+    { value: 'without-food', label: 'On empty stomach' },
+    { value: 'with-fat', label: 'With fat-containing meal' },
+    { value: 'either', label: 'Either way' }
+  ];
+
+  const FREQUENCY_OPTIONS = [
+    { value: '', label: 'Not set' },
+    { value: 'once-daily', label: 'Once daily' },
+    { value: 'twice-daily', label: 'Twice daily' },
+    { value: 'three-daily', label: 'Three times daily' },
+    { value: 'as-needed', label: 'As needed' },
+    { value: 'cycling', label: 'Cycling (on/off)' },
+    { value: 'weekly', label: 'Weekly' }
+  ];
+
+  const UNIT_OPTIONS = ['mg', 'g', 'µg', 'mcg', 'IU', 'mL', 'drops', 'capsules', 'tablets'];
+
+  function defaultConfig() {
+    return { dose: '', unit: 'mg', timing: '', withFood: '', frequency: '', notes: '' };
+  }
 
   const STORAGE_KEY = 'supplementsEncy_customStacks';
 
@@ -255,6 +292,10 @@ const StackBuilder = (() => {
       id: currentStackId || `custom-${Date.now()}`,
       name: name,
       supplementIds: selectedSupplements.map(s => s.supplement.id),
+      supplementConfigs: selectedSupplements.reduce((acc, s) => {
+        acc[s.supplement.id] = s.config;
+        return acc;
+      }, {}),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
@@ -280,11 +321,15 @@ const StackBuilder = (() => {
     selectedSupplements = [];
     stack.supplementIds.forEach(id => {
       const supp = allSupplements.find(s => s.id === id);
-      if (supp) selectedSupplements.push({ supplement: supp });
+      if (supp) {
+        const config = (stack.supplementConfigs && stack.supplementConfigs[id]) || defaultConfig();
+        selectedSupplements.push({ supplement: supp, config: { ...defaultConfig(), ...config } });
+      }
     });
 
     currentStackId = stack.id;
     currentStackName = stack.name;
+    expandedConfigId = null;
     renderPage();
   }
 
@@ -307,7 +352,8 @@ const StackBuilder = (() => {
     if (selectedSupplements.some(s => s.supplement.id === supplementId)) return;
     const supp = allSupplements.find(s => s.id === supplementId);
     if (!supp) return;
-    selectedSupplements.push({ supplement: supp });
+    selectedSupplements.push({ supplement: supp, config: defaultConfig() });
+    expandedConfigId = supplementId; // auto-open config for newly added
     renderPage();
   }
 
@@ -320,6 +366,67 @@ const StackBuilder = (() => {
     selectedSupplements = [];
     currentStackId = null;
     currentStackName = '';
+    expandedConfigId = null;
+    renderPage();
+  }
+
+  function updateConfig(supplementId, field, value) {
+    const entry = selectedSupplements.find(s => s.supplement.id === supplementId);
+    if (entry) {
+      entry.config[field] = value;
+    }
+  }
+
+  function toggleConfigPanel(supplementId) {
+    expandedConfigId = expandedConfigId === supplementId ? null : supplementId;
+    renderPage();
+  }
+
+  function autoFillFromRecommended(supplementId) {
+    const entry = selectedSupplements.find(s => s.supplement.id === supplementId);
+    if (!entry) return;
+    const supp = entry.supplement;
+    const dosage = supp.dosage;
+
+    // Parse dose + unit from standard dosage string
+    const doseMatch = dosage.standard.match(/([\d.,–\-]+)\s*(mg|g|µg|mcg|IU|mL)/i);
+    if (doseMatch) {
+      entry.config.dose = doseMatch[1];
+      entry.config.unit = doseMatch[2].toLowerCase() === 'mcg' ? 'µg' : doseMatch[2];
+    }
+
+    // Parse timing hints
+    const timingStr = (dosage.timing || '').toLowerCase();
+    if (timingStr.includes('morning') || timingStr.includes('upon waking')) {
+      entry.config.timing = 'morning';
+    } else if (timingStr.includes('evening') || timingStr.includes('bedtime') || timingStr.includes('before bed')) {
+      entry.config.timing = timingStr.includes('bedtime') || timingStr.includes('before bed') ? 'bedtime' : 'evening';
+    } else if (timingStr.includes('pre-workout')) {
+      entry.config.timing = 'pre-workout';
+    } else if (timingStr.includes('split') || timingStr.includes('divided') || timingStr.includes('am/pm')) {
+      entry.config.timing = 'split';
+    }
+
+    // Parse food hints
+    if (timingStr.includes('empty stomach')) {
+      entry.config.withFood = 'without-food';
+    } else if (timingStr.includes('fat-containing') || timingStr.includes('fat-soluble') || timingStr.includes('with dietary fat')) {
+      entry.config.withFood = 'with-fat';
+    } else if (timingStr.includes('with a meal') || timingStr.includes('with meal') || timingStr.includes('with food') || timingStr.includes('with breakfast')) {
+      entry.config.withFood = 'with-food';
+    } else if (timingStr.includes('with or without')) {
+      entry.config.withFood = 'either';
+    }
+
+    // Default frequency
+    if (timingStr.includes('twice') || timingStr.includes('2×') || timingStr.includes('split')) {
+      entry.config.frequency = 'twice-daily';
+    } else if (timingStr.includes('three') || timingStr.includes('3×')) {
+      entry.config.frequency = 'three-daily';
+    } else {
+      entry.config.frequency = 'once-daily';
+    }
+
     renderPage();
   }
 
@@ -591,12 +698,13 @@ const StackBuilder = (() => {
   }
 
   function generateDosageSummary(supplements) {
-    return supplements.map(supp => ({
-      name: supp.name,
-      id: supp.id,
-      standard: supp.dosage.standard,
-      optimal: supp.dosage.optimal,
-      timing: supp.dosage.timing
+    return selectedSupplements.map(entry => ({
+      name: entry.supplement.name,
+      id: entry.supplement.id,
+      standard: entry.supplement.dosage.standard,
+      optimal: entry.supplement.dosage.optimal,
+      timing: entry.supplement.dosage.timing,
+      config: entry.config
     }));
   }
 
@@ -609,18 +717,14 @@ const StackBuilder = (() => {
     const analysis = analyzeStack();
 
     container.innerHTML = `
-      <section class="builder-hero">
+      <section class="builder-hero builder-hero--compact">
         <div class="container">
           <nav class="breadcrumb">
             <a href="index.html">Home</a>
             <span class="breadcrumb__sep">›</span>
             <span>Stack Builder</span>
           </nav>
-          <h1 class="builder-hero__title">🛠️ Custom Stack Builder</h1>
-          <p class="builder-hero__subtitle">
-            Select supplements from the encyclopedia database to build and analyze your own custom stack.
-            Get instant synergy detection, risk analysis, category coverage, and evidence scoring.
-          </p>
+          <h1 class="builder-hero__title">${SI('🛠️ ', '')}Stack Builder</h1>
         </div>
       </section>
 
@@ -631,7 +735,7 @@ const StackBuilder = (() => {
             <div class="builder-picker__header">
               <h2 class="builder-picker__title">Add Supplements</h2>
               <div class="builder-picker__search-wrap">
-                <span class="builder-picker__search-icon">🔍</span>
+                <span class="builder-picker__search-icon">${SI('🔍', '>')}</span>
                 <input 
                   type="text" 
                   id="builder-search" 
@@ -721,7 +825,7 @@ const StackBuilder = (() => {
 
         return `
           <div class="catalog-group">
-            <h3 class="catalog-group__title" style="--cat-color: ${cat.color}">${cat.icon} ${cat.name}</h3>
+            <h3 class="catalog-group__title" style="--cat-color: ${cat.color}">${SI(cat.icon + ' ', '')}${cat.name}</h3>
             ${items}
           </div>
         `;
@@ -740,8 +844,8 @@ const StackBuilder = (() => {
             <span class="saved-stack__meta">${stack.supplementIds.length} supplements</span>
           </div>
           <div class="saved-stack__actions">
-            <button class="saved-stack__btn saved-stack__btn--load" data-action="load" data-stack-id="${stack.id}" title="Load">📂</button>
-            <button class="saved-stack__btn saved-stack__btn--delete" data-action="delete" data-stack-id="${stack.id}" title="Delete">🗑️</button>
+            <button class="saved-stack__btn saved-stack__btn--load" data-action="load" data-stack-id="${stack.id}" title="Load">${SI('📂', '[L]')}</button>
+            <button class="saved-stack__btn saved-stack__btn--delete" data-action="delete" data-stack-id="${stack.id}" title="Delete">${SI('🗑️', '[x]')}</button>
           </div>
         </div>
       `;
@@ -749,7 +853,7 @@ const StackBuilder = (() => {
 
     return `
       <div class="saved-stacks">
-        <h3 class="saved-stacks__title">💾 Saved Stacks</h3>
+        <h3 class="saved-stacks__title">${SI('💾 ', '')}Saved Stacks</h3>
         ${stackItems}
       </div>
     `;
@@ -758,28 +862,107 @@ const StackBuilder = (() => {
   function renderSelectedSupplements() {
     if (selectedSupplements.length === 0) return '';
 
-    const pills = selectedSupplements.map(({ supplement: s }) => {
+    const cards = selectedSupplements.map(({ supplement: s, config }) => {
       const assessment = EvidenceScoring.assess(s.evidence);
+      const isExpanded = expandedConfigId === s.id;
+      const hasConfig = config.dose || config.timing || config.withFood || config.frequency;
+
+      // Summary chips for collapsed view
+      const chips = [];
+      if (config.dose) chips.push(`${config.dose} ${config.unit}`);
+      const timingOpt = TIMING_OPTIONS.find(t => t.value === config.timing);
+      if (timingOpt && config.timing) chips.push(timingOpt.label);
+      const foodOpt = FOOD_OPTIONS.find(f => f.value === config.withFood);
+      if (foodOpt && config.withFood) chips.push(foodOpt.label);
+      const freqOpt = FREQUENCY_OPTIONS.find(f => f.value === config.frequency);
+      if (freqOpt && config.frequency) chips.push(freqOpt.label);
+
+      const selectOptions = (opts, current) => opts.map(o =>
+        `<option value="${o.value}" ${o.value === current ? 'selected' : ''}>${o.label}</option>`
+      ).join('');
+
       return `
-        <div class="selected-pill">
-          <span class="selected-pill__tier" style="color: ${assessment.color}">${assessment.tier}</span>
-          <a href="supplement.html?id=${s.id}" class="selected-pill__name">${s.name}</a>
-          <button class="selected-pill__remove" data-action="remove" data-id="${s.id}">✕</button>
+        <div class="stack-card ${isExpanded ? 'stack-card--expanded' : ''} ${hasConfig ? 'stack-card--configured' : ''}">
+          <div class="stack-card__header">
+            <div class="stack-card__identity">
+              <span class="stack-card__tier" style="color: ${assessment.color}">${assessment.tier}</span>
+              <a href="supplement.html?id=${s.id}" class="stack-card__name">${s.name}</a>
+            </div>
+            ${!isExpanded && chips.length > 0 ? `
+              <div class="stack-card__chips">
+                ${chips.map(c => `<span class="stack-card__chip">${c}</span>`).join('')}
+              </div>
+            ` : ''}
+            <div class="stack-card__actions">
+              <button class="stack-card__btn stack-card__btn--config" data-action="toggle-config" data-id="${s.id}" title="Configure dosing">
+                ${isExpanded ? SI('▲', '^') : SI('⚙️', '[cfg]')}
+              </button>
+              <button class="stack-card__btn stack-card__btn--remove" data-action="remove" data-id="${s.id}" title="Remove">✕</button>
+            </div>
+          </div>
+          ${isExpanded ? `
+            <div class="stack-card__config">
+              <div class="stack-card__config-hint">
+                Rec: ${s.dosage.standard}
+                <button class="stack-card__autofill" data-action="autofill" data-id="${s.id}" title="Auto-fill from recommended">${SI('✨ ', '')}Auto-fill</button>
+              </div>
+              <div class="stack-card__fields">
+                <div class="stack-card__field">
+                  <label class="stack-card__label">Dose</label>
+                  <div class="stack-card__dose-input">
+                    <input type="text" class="stack-card__input" placeholder="e.g. 500" value="${config.dose}"
+                      data-field="dose" data-id="${s.id}" inputmode="decimal">
+                    <select class="stack-card__select stack-card__select--unit" data-field="unit" data-id="${s.id}">
+                      ${UNIT_OPTIONS.map(u => `<option value="${u}" ${u === config.unit ? 'selected' : ''}>${u}</option>`).join('')}
+                    </select>
+                  </div>
+                </div>
+                <div class="stack-card__field">
+                  <label class="stack-card__label">Timing</label>
+                  <select class="stack-card__select" data-field="timing" data-id="${s.id}">
+                    ${selectOptions(TIMING_OPTIONS, config.timing)}
+                  </select>
+                </div>
+                <div class="stack-card__field">
+                  <label class="stack-card__label">Food</label>
+                  <select class="stack-card__select" data-field="withFood" data-id="${s.id}">
+                    ${selectOptions(FOOD_OPTIONS, config.withFood)}
+                  </select>
+                </div>
+                <div class="stack-card__field">
+                  <label class="stack-card__label">Freq</label>
+                  <select class="stack-card__select" data-field="frequency" data-id="${s.id}">
+                    ${selectOptions(FREQUENCY_OPTIONS, config.frequency)}
+                  </select>
+                </div>
+              </div>
+              <div class="stack-card__field stack-card__field--notes">
+                <input type="text" class="stack-card__input stack-card__input--notes" placeholder="Personal notes…" 
+                  value="${(config.notes || '').replace(/"/g, '&quot;')}" data-field="notes" data-id="${s.id}">
+              </div>
+            </div>
+          ` : ''}
         </div>
       `;
     }).join('');
 
+    // Count how many are configured
+    const configuredCount = selectedSupplements.filter(s =>
+      s.config.dose || s.config.timing || s.config.withFood || s.config.frequency
+    ).length;
+
     return `
       <div class="builder-selected">
         <div class="builder-selected__header">
-          <h2 class="builder-selected__title">Your Stack (${selectedSupplements.length})</h2>
+          <h2 class="builder-selected__title">Your Stack (${selectedSupplements.length})${configuredCount > 0 ? ` <span class="builder-selected__configured">${configuredCount} configured</span>` : ''}</h2>
           <div class="builder-selected__actions">
-            <button class="btn btn--sm btn--outline" id="btn-save-stack">💾 Save</button>
-            <button class="btn btn--sm btn--outline btn--danger" id="btn-clear-stack">Clear All</button>
+            <button class="btn btn--xs btn--outline" id="btn-autofill-all" title="Auto-fill all from recommended dosages">${SI('✨ ', '')}Fill All</button>
+            <button class="btn btn--xs btn--outline" id="btn-save-stack">${SI('💾 ', '')}Save</button>
+            <button class="btn btn--xs btn--outline btn--danger" id="btn-clear-stack">Clear</button>
           </div>
         </div>
-        <div class="builder-selected__pills">
-          ${pills}
+        <div class="builder-selected__cards">
+          ${cards}
         </div>
       </div>
     `;
@@ -788,17 +971,17 @@ const StackBuilder = (() => {
   function renderEmptyState() {
     return `
       <div class="builder-empty">
-        <div class="builder-empty__icon">🧪</div>
+        <div class="builder-empty__icon">${SI('🧪', '---')}</div>
         <h3 class="builder-empty__title">Start Building Your Stack</h3>
         <p class="builder-empty__text">
           Add supplements from the catalog on the left to see a comprehensive analysis including synergies, 
           interactions, category coverage, and evidence scoring.
         </p>
         <div class="builder-empty__hints">
-          <div class="builder-empty__hint">💡 Click <strong>+</strong> next to any supplement to add it</div>
-          <div class="builder-empty__hint">🔗 Synergies are automatically detected between your selections</div>
-          <div class="builder-empty__hint">⚠️ Interactions and risks are flagged in real-time</div>
-          <div class="builder-empty__hint">💾 Save your stacks for later — they persist in your browser</div>
+          <div class="builder-empty__hint">${SI('●', '--')} Click <strong>+</strong> next to any supplement to add it</div>
+          <div class="builder-empty__hint">${SI('●', '--')} Synergies are automatically detected between your selections</div>
+          <div class="builder-empty__hint">${SI('●', '--')} Interactions and risks are flagged in real-time</div>
+          <div class="builder-empty__hint">${SI('●', '--')} Save your stacks for later — they persist in your browser</div>
         </div>
       </div>
     `;
@@ -806,13 +989,23 @@ const StackBuilder = (() => {
 
   function renderAnalysis(analysis) {
     return `
-      ${renderCategoryRadar(analysis.categoryCoverage)}
-      ${renderSynergies(analysis.synergies)}
-      ${renderRisks(analysis.interactions, analysis.warnings)}
-      ${renderEvidenceOverview(analysis.evidence)}
-      ${renderBenefitsList(analysis.benefits)}
-      ${renderSideEffectsList(analysis.sideEffects)}
       ${renderDosageGuide(analysis.dosageSummary)}
+      ${renderRisks(analysis.interactions, analysis.warnings)}
+      ${renderSynergies(analysis.synergies)}
+      ${renderCategoryRadar(analysis.categoryCoverage)}
+      ${renderCollapsibleSection('evidence', SI('🔬 ', '') + 'Evidence', renderEvidenceContent(analysis.evidence))}
+      ${renderCollapsibleSection('benefits', SI('✅ ', '') + 'Benefits (' + analysis.benefits.length + ')', renderBenefitsContent(analysis.benefits))}
+      ${renderCollapsibleSection('side-effects', SI('⚠️ ', '') + 'Side Effects (' + analysis.sideEffects.length + ')', renderSideEffectsContent(analysis.sideEffects))}
+    `;
+  }
+
+  function renderCollapsibleSection(id, title, content) {
+    if (!content) return '';
+    return `
+      <details class="builder-section builder-section--collapsible">
+        <summary class="builder-section__summary">${title}</summary>
+        <div class="builder-section__body">${content}</div>
+      </details>
     `;
   }
 
@@ -826,25 +1019,21 @@ const StackBuilder = (() => {
     const bars = entries.map(entry => {
       const pct = (entry.rating / entry.maxRating) * 100;
       return `
-        <div class="potency-row">
-          <div class="potency-row__label">
-            <span class="potency-row__icon">${entry.category.icon}</span>
-            <span class="potency-row__name">${entry.category.name}</span>
-          </div>
+        <div class="potency-row potency-row--compact">
+          <span class="potency-row__icon">${SI(entry.category.icon, '')}</span>
+          <span class="potency-row__name">${entry.category.name}</span>
           <div class="potency-row__bar-container">
             <div class="potency-row__bar" style="width: ${pct}%; background: ${entry.category.color}"></div>
           </div>
           <span class="potency-row__score">${entry.rating}/${entry.maxRating}</span>
-          <p class="potency-row__rationale">${entry.count} supplement${entry.count !== 1 ? 's' : ''}: ${entry.supplements.join(', ')}</p>
         </div>
       `;
     }).join('');
 
     return `
       <section class="builder-section">
-        <h2 class="builder-section__title">📊 Category Coverage</h2>
-        <p class="builder-section__subtitle">How this stack performs across each category based on supplement coverage and evidence quality</p>
-        <div class="potency-grid">${bars}</div>
+        <h2 class="builder-section__title">${SI('📊 ', '')}Category Coverage</h2>
+        <div class="potency-grid potency-grid--compact">${bars}</div>
       </section>
     `;
   }
@@ -853,7 +1042,7 @@ const StackBuilder = (() => {
     if (synergies.length === 0) {
       return `
         <section class="builder-section">
-          <h2 class="builder-section__title">🔗 Synergies (0)</h2>
+          <h2 class="builder-section__title">${SI('🔗 ', '')}Synergies (0)</h2>
           <p class="builder-section__empty">No known synergies detected between your selected supplements. Try adding complementary supplements.</p>
         </section>
       `;
@@ -868,29 +1057,24 @@ const StackBuilder = (() => {
     const cards = synergies.map(syn => {
       const color = strengthColors[syn.strength] || '#8B949E';
       return `
-        <div class="synergy-card" style="--synergy-color: ${color}">
-          <div class="synergy-card__header">
+        <details class="synergy-card synergy-card--compact" style="--synergy-color: ${color}">
+          <summary class="synergy-card__header">
             <div class="synergy-card__supplements">
               ${syn.supplementNames.map(s => `<span class="synergy-card__pill">${s}</span>`).join('<span class="synergy-card__connector">+</span>')}
             </div>
-            <div class="synergy-card__badges">
-              <span class="synergy-card__strength">${syn.strength}</span>
-              <span class="synergy-card__evidence">${syn.evidenceLevel} evidence</span>
-            </div>
+            <span class="synergy-card__strength">${syn.strength}</span>
+          </summary>
+          <div class="synergy-card__body">
+            <p class="synergy-card__description">${syn.description}</p>
+            <p class="synergy-card__mechanism"><strong>Mechanism:</strong> ${syn.mechanism}</p>
           </div>
-          <span class="synergy-card__type">${syn.type.replace(/-/g, ' ')}</span>
-          <p class="synergy-card__description">${syn.description}</p>
-          <div class="synergy-card__mechanism">
-            <strong>Mechanism:</strong> ${syn.mechanism}
-          </div>
-        </div>
+        </details>
       `;
     }).join('');
 
     return `
       <section class="builder-section">
-        <h2 class="builder-section__title">🔗 Synergies (${synergies.length})</h2>
-        <p class="builder-section__subtitle">Beneficial interactions detected between your selected supplements</p>
+        <h2 class="builder-section__title">${SI('🔗 ', '')}Synergies (${synergies.length})</h2>
         <div class="synergies-grid">${cards}</div>
       </section>
     `;
@@ -900,8 +1084,8 @@ const StackBuilder = (() => {
     if (interactions.length === 0 && warnings.length === 0) {
       return `
         <section class="builder-section">
-          <h2 class="builder-section__title">⚠️ Risks & Interactions (0)</h2>
-          <p class="builder-section__empty builder-section__empty--good">✅ No known interactions or risks detected between your selected supplements.</p>
+          <h2 class="builder-section__title">${SI('⚠️ ', '')}Risks & Interactions (0)</h2>
+          <p class="builder-section__empty builder-section__empty--good">${SI('✅', '[OK]')} No known interactions or risks detected between your selected supplements.</p>
         </section>
       `;
     }
@@ -910,7 +1094,7 @@ const StackBuilder = (() => {
       const severityClass = `builder-warning--${w.severity}`;
       return `
         <div class="builder-warning ${severityClass}">
-          <span class="builder-warning__icon">${w.severity === 'severe' ? '🚨' : w.severity === 'moderate' ? '⚠️' : 'ℹ️'}</span>
+          <span class="builder-warning__icon">${w.severity === 'severe' ? SI('🚨', '[!!]') : w.severity === 'moderate' ? SI('⚠️', '[!]') : SI('ℹ️', '[i]')}</span>
           <p class="builder-warning__text">${w.text}</p>
         </div>
       `;
@@ -931,7 +1115,7 @@ const StackBuilder = (() => {
 
     return `
       <section class="builder-section">
-        <h2 class="builder-section__title">⚠️ Risks & Interactions (${interactions.length + warnings.length})</h2>
+        <h2 class="builder-section__title">${SI('⚠️ ', '')}Risks & Interactions (${interactions.length + warnings.length})</h2>
         ${warnings.length > 0 ? `<div class="builder-warnings">${warningCards}</div>` : ''}
         ${interactions.length > 0 ? `
           <h3 class="builder-section__sub">Known Interactions</h3>
@@ -941,14 +1125,14 @@ const StackBuilder = (() => {
     `;
   }
 
-  function renderEvidenceOverview(evidence) {
-    const { avgScore, tierInfo, tiers, totals, strongest, weakest, individualScores } = evidence;
+  function renderEvidenceContent(evidence) {
+    const { avgScore, tierInfo, tiers, totals, individualScores } = evidence;
 
     const tierBadges = Object.entries(tiers)
       .filter(([, count]) => count > 0)
       .map(([tier, count]) => {
         const info = EvidenceScoring.getTier(tier === 'S' ? 95 : tier === 'A' ? 80 : tier === 'B' ? 60 : tier === 'C' ? 40 : 15);
-        return `<span class="builder-tier-badge" style="--badge-color: ${info.color}; --badge-bg: ${info.bgColor}">${tier} × ${count}</span>`;
+        return `<span class="builder-tier-badge" style="--badge-color: ${info.color}; --badge-bg: ${info.bgColor}">${tier}×${count}</span>`;
       }).join('');
 
     const scoreRows = individualScores
@@ -958,114 +1142,123 @@ const StackBuilder = (() => {
           <span class="builder-evidence-row__tier" style="color: ${s.assessment.color}">${s.assessment.tier}</span>
           <a href="supplement.html?id=${s.id}" class="builder-evidence-row__name">${s.name}</a>
           <div class="builder-evidence-row__bar">
-            <div class="evidence-bar">
-              <div class="evidence-bar__fill" style="width: ${s.assessment.score}%; background: ${s.assessment.color}"></div>
-            </div>
+            <div class="evidence-bar"><div class="evidence-bar__fill" style="width: ${s.assessment.score}%; background: ${s.assessment.color}"></div></div>
           </div>
           <span class="builder-evidence-row__score">${s.assessment.score}</span>
         </div>
       `).join('');
 
     return `
-      <section class="builder-section">
-        <h2 class="builder-section__title">🔬 Evidence Overview</h2>
-        <div class="builder-evidence">
-          <div class="builder-evidence__summary">
-            <div class="evidence-badge" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
-              <span class="evidence-badge__tier">${tierInfo.tier}</span>
-              <span class="evidence-badge__score">${avgScore}</span>
-            </div>
-            <div class="builder-evidence__meta">
-              <h3>${tierInfo.label}</h3>
-              <p>Average evidence score across ${selectedSupplements.length} supplements</p>
-              <div class="builder-evidence__tiers">${tierBadges}</div>
-            </div>
+      <div class="builder-evidence">
+        <div class="builder-evidence__summary">
+          <div class="evidence-badge" style="--badge-color: ${tierInfo.color}; --badge-bg: ${tierInfo.bgColor}">
+            <span class="evidence-badge__tier">${tierInfo.tier}</span>
+            <span class="evidence-badge__score">${avgScore}</span>
           </div>
-          <div class="builder-evidence__totals">
-            <div class="evidence-stat">
-              <span class="evidence-stat__value">${totals.totalStudies.toLocaleString()}</span>
-              <span class="evidence-stat__label">Total Studies</span>
-            </div>
-            <div class="evidence-stat">
-              <span class="evidence-stat__value">${totals.totalHuman.toLocaleString()}</span>
-              <span class="evidence-stat__label">Human Studies</span>
-            </div>
-            <div class="evidence-stat">
-              <span class="evidence-stat__value">${totals.totalRCTs.toLocaleString()}</span>
-              <span class="evidence-stat__label">RCTs</span>
-            </div>
-            <div class="evidence-stat">
-              <span class="evidence-stat__value">${totals.totalMeta}</span>
-              <span class="evidence-stat__label">Meta-Analyses</span>
-            </div>
-            <div class="evidence-stat">
-              <span class="evidence-stat__value">${totals.totalSR}</span>
-              <span class="evidence-stat__label">Systematic Reviews</span>
-            </div>
+          <div class="builder-evidence__meta">
+            <span>Avg: ${tierInfo.label} · ${tierBadges}</span>
+            <span class="builder-evidence__stats">${totals.totalStudies.toLocaleString()} studies · ${totals.totalRCTs.toLocaleString()} RCTs · ${totals.totalMeta} meta-analyses</span>
           </div>
-          <h3 class="builder-section__sub">Individual Evidence Scores</h3>
-          <div class="builder-evidence__individual">${scoreRows}</div>
         </div>
-      </section>
+        <div class="builder-evidence__individual">${scoreRows}</div>
+      </div>
     `;
   }
 
-  function renderBenefitsList(benefits) {
+  function renderBenefitsContent(benefits) {
     if (benefits.length === 0) return '';
-
-    const items = benefits.map(b => `
+    return `<ul class="builder-benefits-list">${benefits.map(b => `
       <li class="builder-benefit-item">
-        <span class="builder-benefit-item__text">${b.text}</span>
-        ${b.sources.length > 0 ? `<span class="builder-benefit-item__sources">via ${b.sources.join(', ')}</span>` : ''}
+        ${b.text}
+        ${b.sources.length > 0 ? `<span class="builder-item__sources">— ${b.sources.join(', ')}</span>` : ''}
       </li>
-    `).join('');
-
-    return `
-      <section class="builder-section">
-        <h2 class="builder-section__title">✅ Combined Benefits (${benefits.length})</h2>
-        <ul class="builder-benefits-list">${items}</ul>
-      </section>
-    `;
+    `).join('')}</ul>`;
   }
 
-  function renderSideEffectsList(sideEffects) {
+  function renderSideEffectsContent(sideEffects) {
     if (sideEffects.length === 0) return '';
-
-    const items = sideEffects.map(e => `
+    return `<ul class="builder-sideeffects-list">${sideEffects.map(e => `
       <li class="builder-sideeffect-item">
-        <span class="builder-sideeffect-item__text">${e.text}</span>
-        ${e.sources.length > 0 ? `<span class="builder-sideeffect-item__sources">via ${e.sources.join(', ')}</span>` : ''}
+        ${e.text}
+        ${e.sources.length > 0 ? `<span class="builder-item__sources">— ${e.sources.join(', ')}</span>` : ''}
       </li>
-    `).join('');
-
-    return `
-      <section class="builder-section">
-        <h2 class="builder-section__title">⚡ Potential Side Effects (${sideEffects.length})</h2>
-        <ul class="builder-sideeffects-list">${items}</ul>
-      </section>
-    `;
+    `).join('')}</ul>`;
   }
 
   function renderDosageGuide(dosageSummary) {
     if (dosageSummary.length === 0) return '';
 
-    const rows = dosageSummary.map(d => `
-      <div class="builder-dosage-row">
-        <div class="builder-dosage-row__header">
+    // Group by timing for schedule view
+    const timingGroups = {};
+    const unconfigured = [];
+
+    dosageSummary.forEach(d => {
+      if (d.config && d.config.timing) {
+        const key = d.config.timing;
+        if (!timingGroups[key]) timingGroups[key] = [];
+        timingGroups[key].push(d);
+      } else {
+        unconfigured.push(d);
+      }
+    });
+
+    const timingOrder = ['morning', 'midday', 'pre-workout', 'afternoon', 'post-workout', 'evening', 'bedtime', 'split'];
+    const hasSchedule = Object.keys(timingGroups).length > 0;
+
+    if (!hasSchedule) {
+      // Simple compact table when nothing is configured
+      const rows = dosageSummary.map(d => `
+        <div class="builder-dosage-row">
           <a href="supplement.html?id=${d.id}" class="builder-dosage-row__name">${d.name}</a>
           <span class="builder-dosage-row__dose">${d.standard}</span>
         </div>
-        <div class="builder-dosage-row__details">
-          ${d.optimal ? `<span class="builder-dosage-row__optimal"><strong>Optimal:</strong> ${d.optimal}</span>` : ''}
-          <span class="builder-dosage-row__timing"><strong>Timing:</strong> ${d.timing}</span>
+      `).join('');
+
+      return `
+        <section class="builder-section">
+          <h2 class="builder-section__title">${SI('💊 ', '')}Dosage Guide</h2>
+          <p class="builder-section__hint">Configure timing via ${SI('⚙️', '[cfg]')} on each supplement to see your daily schedule.</p>
+          <div class="builder-dosage-list">${rows}</div>
+        </section>
+      `;
+    }
+
+    // Timeline view
+    const timelineHTML = timingOrder.filter(t => timingGroups[t]).map(timingKey => {
+      const timingLabel = TIMING_OPTIONS.find(t => t.value === timingKey)?.label || timingKey;
+      const items = timingGroups[timingKey];
+      return `
+        <div class="dosage-timeline__block">
+          <div class="dosage-timeline__time">${timingLabel}</div>
+          <div class="dosage-timeline__items">
+            ${items.map(d => {
+              const foodLabel = FOOD_OPTIONS.find(f => f.value === d.config?.withFood)?.label || '';
+              return `
+                <div class="dosage-timeline__item">
+                  <a href="supplement.html?id=${d.id}" class="dosage-timeline__name">${d.name}</a>
+                  <span class="dosage-timeline__dose">${d.config?.dose ? `${d.config.dose} ${d.config.unit}` : d.standard}</span>
+                  ${foodLabel ? `<span class="dosage-timeline__tag">${foodLabel}</span>` : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
         </div>
+      `;
+    }).join('');
+
+    // Unconfigured supplements shown compactly
+    const unconfiguredHTML = unconfigured.length > 0 ? `
+      <div class="dosage-timeline__unconfigured">
+        <span class="dosage-timeline__unconfigured-label">Not scheduled:</span>
+        ${unconfigured.map(d => `<span class="dosage-timeline__unconfigured-item">${d.name} (${d.standard})</span>`).join('')}
       </div>
-    `).join('');
+    ` : '';
 
     return `
       <section class="builder-section">
-        <h2 class="builder-section__title">💊 Dosage Guide</h2>
-        <div class="builder-dosage-list">${rows}</div>
+        <h2 class="builder-section__title">${SI('📋 ', '')}Daily Schedule</h2>
+        <div class="dosage-timeline">${timelineHTML}</div>
+        ${unconfiguredHTML}
       </section>
     `;
   }
@@ -1086,10 +1279,59 @@ const StackBuilder = (() => {
       });
     });
 
-    // Selected pill remove buttons
-    document.querySelectorAll('.selected-pill__remove').forEach(btn => {
+    // Stack card remove & toggle config buttons
+    document.querySelectorAll('.stack-card__btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        removeSupplement(btn.dataset.id);
+        const action = btn.dataset.action;
+        const id = btn.dataset.id;
+        if (action === 'remove') removeSupplement(id);
+        else if (action === 'toggle-config') toggleConfigPanel(id);
+      });
+    });
+
+    // Auto-fill buttons (individual)
+    document.querySelectorAll('.stack-card__autofill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        autoFillFromRecommended(btn.dataset.id);
+      });
+    });
+
+    // Auto-fill all button
+    const autofillAllBtn = document.getElementById('btn-autofill-all');
+    if (autofillAllBtn) {
+      autofillAllBtn.addEventListener('click', () => {
+        selectedSupplements.forEach(s => {
+          // Inline autofill without re-render
+          const supp = s.supplement;
+          const dosage = supp.dosage;
+          const doseMatch = dosage.standard.match(/([\d.,\u2013\-]+)\s*(mg|g|µg|mcg|IU|mL)/i);
+          if (doseMatch) {
+            s.config.dose = doseMatch[1];
+            s.config.unit = doseMatch[2].toLowerCase() === 'mcg' ? 'µg' : doseMatch[2];
+          }
+          const timingStr = (dosage.timing || '').toLowerCase();
+          if (timingStr.includes('morning') || timingStr.includes('upon waking')) s.config.timing = 'morning';
+          else if (timingStr.includes('bedtime') || timingStr.includes('before bed')) s.config.timing = 'bedtime';
+          else if (timingStr.includes('evening')) s.config.timing = 'evening';
+          else if (timingStr.includes('pre-workout')) s.config.timing = 'pre-workout';
+          else if (timingStr.includes('split') || timingStr.includes('divided') || timingStr.includes('am/pm')) s.config.timing = 'split';
+          if (timingStr.includes('empty stomach')) s.config.withFood = 'without-food';
+          else if (timingStr.includes('fat-containing') || timingStr.includes('fat-soluble') || timingStr.includes('with dietary fat')) s.config.withFood = 'with-fat';
+          else if (timingStr.includes('with a meal') || timingStr.includes('with meal') || timingStr.includes('with food') || timingStr.includes('with breakfast')) s.config.withFood = 'with-food';
+          else if (timingStr.includes('with or without')) s.config.withFood = 'either';
+          if (timingStr.includes('twice') || timingStr.includes('2×') || timingStr.includes('split')) s.config.frequency = 'twice-daily';
+          else if (timingStr.includes('three') || timingStr.includes('3×')) s.config.frequency = 'three-daily';
+          else s.config.frequency = 'once-daily';
+        });
+        renderPage();
+      });
+    }
+
+    // Config field changes (inputs, selects, textareas)
+    document.querySelectorAll('.stack-card__input, .stack-card__select').forEach(el => {
+      const eventType = el.tagName === 'SELECT' ? 'change' : 'input';
+      el.addEventListener(eventType, () => {
+        updateConfig(el.dataset.id, el.dataset.field, el.value);
       });
     });
 
